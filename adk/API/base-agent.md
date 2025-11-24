@@ -21,8 +21,7 @@ from adk.base_agent import BaseAgent
 - ### `env: gymnasium.Env | None`
     + **Description**: The internal reference to the Gymnasium Env the `AgentInterface` interacts
     with. May be a custom environment or an instance of a default one provided with the ADK. May
-    also be left empty if a completely custom internally handled env is desired. The only
-    requirement is that 
+    also be left empty if a completely custom internally handled env is desired.
 
     :::warning
     An implementation of `BaseAgent` must still implement the abstract `gymnasium.Env` interface even if
@@ -32,10 +31,9 @@ from adk.base_agent import BaseAgent
 
 &nbsp;
 
-- ### `env_data: models.agent.EnvData | None`
+- ### `env_data: models.agent.EnvData`
     + **Description**: Information relevant to constructing the internal `env` member or other such
-    internal environment interface. See (`TODO`: Refer to `Specification` and `make_env` once
-    documentation is written) for more info.
+    internal environment interface. See (`TODO`: Refer to `EnvData` once documentation is written) for more info.
 
 &nbsp;
 
@@ -43,62 +41,73 @@ from adk.base_agent import BaseAgent
     + **Description**: Information relevant to constructing the internal agent interface. See
     (`TODO`: Refer to `AgentData` once documentation is written) for more info.
 
-&nbsp;
-
-- ### `specification: models.agent.Specification`
-    + **Description**: Raw target specification for the system being optimized. See (`TODO`: Refer
-    to `Specification` once documentation is written) for more info.
-
 ## Methods
 
 - ### __init__
-    + **Description**: Initialize the agent with the given data and specification.
+    + **Description**: Initialize the agent with the given data.
     + **Takes**:
+        + `env_data: EnvData`: The environment-specific data used for initialization.
         + `agent_data: AgentData`: The agent-specific data used for initialization.
-        + `specification: Specification`: The environment and behavior specification for the agent.
     + **Returns: Nothing**
 
 &nbsp;
 
-- ### make_env
-    + **Description**: Construct a basic env data from a specification. Saves implementations the
-    work of having to write a custom function to make an env data from a specification themselves.
-    + **Takes**:
-        + `specification: models.agent.Specification`: The specification to be "translated" into a
-        relevant env data.
-    + **Returns**:
-        + `env_data: models.agent.EnvData`: The env data constructed from the specification.
-
-&nbsp;
-
 - ### load_sensitivities
-    + **Description**: Load the sensitivity calculator's internal state from the specified path on
+    + **Description**: Load the correlation calculator's internal state from the specified path on
     the filesystem.
     + **Takes**:
-        + `load_from: Path`: The filesystem path from which the state is to be loaded.
+        + `path: Path`: The filesystem path from which the state is to be loaded.
     + **Returns: Nothing**
 
 &nbsp;
 
 - ### save_sensitivities
-    + **Description**: Save the sensitivity calculator's internal state to the specified path on
+    + **Description**: Save the correlation calculator's internal state to the specified path on
     the filesystem.
     + **Takes**:
-        + `save_to: Path`: The filesystem path to which the state is to be saved.
+        + `path: Path`: The filesystem path to which the state is to be saved.
     + **Returns: Nothing**
 
 &nbsp;
 
 - ### calculate_sensitivities
-    + **Description**: Calculate the world controls - world observation sensitivities.
+    + **Description**: Calculate the world controls - world observation sensitivities using the correlation calculator.
     + **Takes: Nothing**
     + **Returns**:
-        + `sensitivities:`: Calculated sensitivities.
+        + `sensitivities`: Calculated sensitivity matrix from the correlation calculator, or default sensitivities if no env is present.
 
 &nbsp;
 
-- ### sample_env_parameters
-    + **Description**: Default override for [`sample_env_parameters`](agent-interface.md#sample_env_parameters).
-    + **Takes: Nothing**
+- ### transfer_nn_arch
+    + **Description**: Static method for transferring neural network architecture from one model to another. Must be implemented by agent implementations.
+    + **Takes**:
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_nn_arch: dict`: The neural network architecture dictionary to transfer from.
     + **Returns**:
-        + `env_parameters: list`: Randomly sampled stochastic parameters.
+        + `nn_arch: dict`: The transferred neural network architecture dictionary.
+    + **Raises**: `NotImplementedError` in the base class.
+
+&nbsp;
+
+- ### transfer_specifics
+    + **Description**: Static method for transferring model specifics from one model to another. Must be implemented by agent implementations.
+    + **Takes**:
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_specifics: dict`: The specifics dictionary to transfer from.
+    + **Returns**:
+        + `specifics: dict`: The transferred specifics dictionary.
+    + **Raises**: `NotImplementedError` in the base class.
+
+&nbsp;
+
+- ### transfer_models
+    + **Description**: Static method for transferring trained model files from one location to another. Must be implemented by agent implementations.
+    + **Takes**:
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_model_path: Path`: The filesystem path to the source model files.
+        + `to_model_path: Path`: The filesystem path to the destination model files.
+    + **Returns: Nothing**
+    + **Raises**: `NotImplementedError` in the base class.

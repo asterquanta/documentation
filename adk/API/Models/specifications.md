@@ -12,7 +12,6 @@ class Specification(BaseModel):
     design_parameters: Actions
     targets: dict[str, Target]
     genie_model: GenieModel
-    env_parameters: EnvParameters
     graphs: list[networkx.Graph]
     raw_representations: list[Any] 
 
@@ -35,11 +34,6 @@ class Specification(BaseModel):
 
 - ### `genie_model: GenieModel`
     + **Description**: The GenieModel instance containing the model's hyperparameters, metadata, and specification details relevant to the agent.
-
-&nbsp;
-
-- ### `env_parameters: EnvParameters`
-    + **Description**: Parameters describing the environment in which the agent operates, such as configuration or constraints.
 
 &nbsp;
 

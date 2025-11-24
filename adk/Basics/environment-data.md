@@ -15,12 +15,7 @@ implementations to optimize a system. It is a data structure that is a special e
 
 + **World Observation Space**: The space of all observable **evaluated** observations.
 
-+ **Environment Parameters**: Raw stochastic parameter information. Rarely used.
-
 + **Default World Controls**: The default starting state of the optimizable parameters.
-
-+ **Default Selected Environment Parameters**: The default starting state of the stochastic
-parameters.
 
 + **[Target Specifications](adk\API\Models\target-specifications.md)**: The target specifications of the model selected to optimize the system.
 

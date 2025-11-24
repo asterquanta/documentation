@@ -21,6 +21,10 @@ subsequently loaded with `save_models` and `load_models` respectively. A loaded 
 # Definition
 ```py
 class AgentInterface(ABC):
+    env: gymnasium.Env
+    env_data: EnvData
+    agent_data: AgentData
+
     @abstractmethod
     def compute_action(self, observation: ObservationType, info: dict[str, Any]) -> ActionType: pass
 
@@ -46,14 +50,38 @@ class AgentInterface(ABC):
     @abstractmethod
     def load_models(self, load_from: Path) -> None: pass
 
+    @staticmethod
     @abstractmethod
-    def sample_env_parameters(self) -> list: pass
+    def transfer_nn_arch(from_genie_model: GenieModel, transfer_data: TransferModel, from_nn_arch: dict) -> dict: pass
+
+    @staticmethod
+    @abstractmethod
+    def transfer_specifics(from_genie_model: GenieModel, transfer_data: TransferModel, from_specifics: dict) -> dict: pass
+
+    @staticmethod
+    @abstractmethod
+    def transfer_models(from_genie_model: GenieModel, transfer_data: TransferModel, from_model_path: Path, to_model_path: Path): pass
 ```
 
 ## Import
 ```py
 from adk.agent_interface import AgentInterface
 ```
+
+## Members
+
+- ### `env: gymnasium.Env`
+    + **Description**: The Gymnasium environment that the agent interacts with.
+
+&nbsp;
+
+- ### `env_data: EnvData`
+    + **Description**: Information relevant to constructing the internal environment interface. See (`TODO`: Refer to `EnvData` once documentation is written) for more info.
+
+&nbsp;
+
+- ### `agent_data: AgentData`
+    + **Description**: Information relevant to constructing the internal agent interface. See (`TODO`: Refer to `AgentData` once documentation is written) for more info.
 
 
 ## Methods
@@ -63,7 +91,7 @@ from adk.agent_interface import AgentInterface
         + `observation: ObservationType`: The observation from the environment.
         + `info: dict[str, Any]`: Auxiliary diagnostic information for the agent (helpful for
         debugging, learning, and logging). This might, for instance, contain: metrics that describe
-        the agent’s performance state, variables that are hidden from observations, or individual
+        the agent's performance state, variables that are hidden from observations, or individual
         reward terms that are combined to produce the total reward.
     + **Returns**:
         + `action: ActionType`: Action taken based on the `observation` and `info`.
@@ -146,66 +174,54 @@ from adk.agent_interface import AgentInterface
 
 &nbsp;
 
-- ### sample_env_parameters
-    + **Description**: Sample stochastic parameters (sampled based on nothing other than
-    a predefined sampling scheme.)
-    + **Takes: Nothing**
-    + **Returns**:
-        + `env_parameters: list`: Randomly sampled stochastic parameters.
-
-- **Reference**:
-    ```py
-    @abstractmethod
-    def sample_env_parameters(self) -> list: pass
-    ```
-    :::info
-    Note that stochastically / randomly sampled does not necessarily mean sampled from a
-    uniform distribution.
-    :::
-
-&nbsp;
-
 - ### transfer_nn_arch
-    + **Description**: Transfer a neural network architecture from a source `GenieModel` using the provided `TransferModel` and existing architecture dictionary.
+    + **Description**: Static method for transferring neural network architecture from one model to another. Must be implemented by agent implementations.
     + **Takes**:
-        + `from_genie_model: GenieModel`: The source model from which the architecture is being transferred.
-        + `transfer_data: TransferModel`: The data structure containing parameters and rules for the transfer process.
-        + `from_nn_arch: dict`: The existing neural network architecture dictionary to be used as the base for transfer.
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_nn_arch: dict`: The neural network architecture dictionary to transfer from.
     + **Returns**:
-        + `new_nn_arch: dict`: A new dictionary representing the transferred neural network architecture.
+        + `nn_arch: dict`: The transferred neural network architecture dictionary.
 
 - **Reference**:
     ```py
+    @staticmethod
+    @abstractmethod
     def transfer_nn_arch(from_genie_model: GenieModel, transfer_data: TransferModel, from_nn_arch: dict) -> dict: pass
     ```
+
 &nbsp;
 
 - ### transfer_specifics  
-    + **Description**: Transfer model-specific configuration data from a source `GenieModel` using the `TransferModel` and an existing `from_specifics` dictionary.  
+    + **Description**: Static method for transferring model specifics from one model to another. Must be implemented by agent implementations.
     + **Takes**:  
-        + `from_genie_model: GenieModel`: The source model containing the specifics to transfer.  
-        + `transfer_data: TransferModel`: Metadata and rules guiding the transfer of specific attributes.  
-        + `from_specifics: dict`: Dictionary containing specific configurations or parameters to be transferred.  
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_specifics: dict`: The specifics dictionary to transfer from.
     + **Returns**:  
-        + `new_specifics: dict`: A dictionary containing the transferred and possibly modified specifics.  
+        + `specifics: dict`: The transferred specifics dictionary.
 
 - **Reference**:  
     ```py
+    @staticmethod
+    @abstractmethod
     def transfer_specifics(from_genie_model: GenieModel, transfer_data: TransferModel, from_specifics: dict) -> dict: pass
     ```  
 &nbsp;
 
 - ### transfer_models  
-    + **Description**: Transfer model files and associated resources from a source `GenieModel` using `TransferModel` metadata, updating paths accordingly.  
+    + **Description**: Static method for transferring trained model files from one location to another. Must be implemented by agent implementations.
     + **Takes**:  
-        + `from_genie_model: GenieModel`: The source model containing the data and files to transfer.  
-        + `transfer_data: TransferModel`: Transfer metadata that governs how model components are migrated.  
-        + `from_model_path: Path`: Filesystem path to the source model directory.  
-        + `to_model_path: Path`: Filesystem path to the target model directory where the data will be copied.  
+        + `from_genie_model: GenieModel`: The source Genie model.
+        + `transfer_data: TransferModel`: Data specifying the transfer configuration.
+        + `from_model_path: Path`: Filesystem path to the source model files.
+        + `to_model_path: Path`: Filesystem path to the destination model files.
     + **Returns: Nothing**
 
 - **Reference**:  
     ```py
+    @staticmethod
+    @abstractmethod
     def transfer_models(from_genie_model: GenieModel, transfer_data: TransferModel, from_model_path: Path, to_model_path: Path): pass
     ```  
 &nbsp;
