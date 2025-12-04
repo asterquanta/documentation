@@ -1,46 +1,128 @@
----
-title: Frequently Asked Questions (FAQ)
-description: Common questions about the platform and its features
----
+# Frequently Asked Questions (FAQs)
 
-# Frequently Asked Questions (FAQ)
+## What is a Project in the platform?
 
-## What is this platform used for?
+A project is the main workspace where users build, simulate, and manage circuit-based or AI-driven workflows. It contains circuits, agents, simulations, optimization runs, and results, all organized under a single design environment.
 
-This platform allows users to build, simulate, and manage AI-driven or circuit-based projects using connectors, agents, and orchestration tools.
+## How can I create a new Project?
 
-## What is a Connector?
+1. Sign in to the platform dashboard
+2. Click "Create Project"
+3. Enter a project name, choose the design template
+4. Click Create to initialize your workspace
 
-A Connector is a module that links your project to an external service or system, allowing communication and data exchange through WebSocket connections.
+## What is a Circuit and where can I create one?
 
-## What is a Domain?
+A circuit is a modular block containing components, connections, and parameters.
 
-A Domain defines how messages and requests are handled within a specific area of functionality, such as simulation or circuit analysis.
+To create a circuit:
+1. Open your project
+2. Navigate to the Circuits section
+3. Click "New Circuit"
+4. Upload a circuit schematic or netlist
 
-## What is the Orchestrator?
+## What is a Simulation and how do I run it?
 
-The Orchestrator is the central service that manages and coordinates all connectors, agents, and communication across the platform.
+A simulation evaluates your circuit or workflow against fixed design parameters.
 
-## How do I register a Connector?
+To run a simulation:
+1. Open your circuit
+2. Click Simulate
+3. Set the input parameters
+4. View results in the simulation output panel
 
-You can register a connector using the `register()` function, which connects it to the Orchestrator and sends the necessary configuration data.
+## What is AI Optimization?
 
-## What is Middleware used for?
+AI Optimization uses intelligent agents to automatically search and select optimal parameters for your circuit or workflow. The system evaluates multiple combinations of parameters and converges on the best-performing solution.
 
-Middleware helps process requests before and after they reach the main handler, often used for synchronization, logging, or performance tracking.
+## How do I run AI Optimization in my project?
 
-## What is SPICE in this platform?
+1. Navigate to Genie → AI-Driven Mode
+2. Set scalar or vector targets
+3. Define constraints or parameter search ranges
+4. Click Start Optimization
 
-SPICE (Simulation Program with Integrated Circuit Emphasis) is used to simulate electronic circuits and analyze their behavior.
+The AI agent handles all iterations automatically.
 
-## What is the difference between a Personal and a Professional account?
+## What are Scalar Targets?
 
-A Personal account is for individual users working alone, while a Professional account supports small teams and collaboration.
+Scalar targets represent single-value performance goals such as:
+- Power
+- Gain
+- Latency
 
-## How do I start a simulation?
+## What are Vector Targets?
 
-Use the Simulator module to send a simulation request with your circuit data; it will process the request and return the results.
+Vector targets represent multi-point or curve-based measurements such as:
+- VIN vs VOUT curves
+- Frequency response curves
+- Load regulation sweeps
 
-## What should I do if my WebSocket connection fails?
+These are used when performance must be measured across a range of input values.
 
-Check your internet connection, verify your configuration settings, and ensure the Orchestrator service is running properly.
+## What is an Agent in the platform?
+
+An agent is an AI-driven module that performs specialized tasks such as:
+- Parameter optimization
+- Data processing
+
+Agents automate repetitive or complex steps in your design.
+
+## How do I manage multiple circuits within a project?
+
+You can manage circuits using the Circuits sidebar.
+
+Options include:
+- Copy circuit
+- Rename circuit
+- Create sub-circuits
+- Delete unused circuits
+
+This helps maintain an organized design hierarchy for complex projects.
+
+## How do I publish a project?
+
+1. Go to your project
+2. Click on 'Publish Project'
+3. Enter a name for your project
+4. Click 'Proceed'
+
+## What does optimizing do to my project parameters?
+
+Optimizing a project, either locally or globally, will change your project parameters, specifically, your project's Design Parameters.
+
+## How do I add people to my project?
+
+You can add team members to your project by going to the 'Update Project' page in your project. Under which, you can search for and add team members. You can also assign them roles, if you are the owner of the project.
+
+## Is it possible to access pre-existing projects or circuits?
+
+Yes, it is possible to access pre-existing projects and circuits.
+
+1. Navigate to the 'Public Projects' page. This page contains projects that have been authorised for publishing and public viewing by the authors
+2. Click on 'Clone' and enter a name for the project
+3. The project is now cloned in your dashboard with the name you have provided
+
+## Is it compulsory to add tags to all my projects?
+
+No, it is not compulsory to add tags to your projects. Tags are simply to help users easily identify and locate projects.
+
+## What are the electronic circuit simulators that the platform supports that I can use to create circuits for my project?
+
+The electronic circuit simulators that the platform supports that you can use to create circuits for your project are ngSpice and ltSpice.
+
+## Can I retrieve a deleted project?
+
+No, you can not retrieve a deleted project.
+
+## How do I know which agent to use?
+
+Depending on what circuit you are trying to optimize, a list of models are available to choose from to optimize your appropriate circuit.
+
+## Is it possible to edit circuits or projects after uploading the schematic or netlist?
+
+Yes, it is possible to edit circuits or projects after uploading the schematic or netlist. Navigate to the Netlist tab in a circuit and click on 'Edit'. Once you are done making changes, click on the tick option.
+
+## What is import and export feature?
+
+Import and export feature allows you to either import pre-existing values for the circuit from elsewhere onto the project or export the current values for the circuit from the project to elsewhere.
