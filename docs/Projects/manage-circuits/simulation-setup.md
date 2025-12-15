@@ -19,7 +19,7 @@ The **Simulation Setup** section displays important metadata and tools related t
 ## Tools
 
 - **Logs**: Access detailed logs related to the simulation process. These logs help diagnose errors or performance issues.
-- **Netlist**: View the automatically generated netlist based on the uploaded circuit. This netlist is what the simulation engine actually processes.
+- **Netlist**: View the updated netlist generated after the simulation, which includes the optimized design parameters. This netlist reflects the final circuit configuration processed by the simulation engine.
 
 ---
 

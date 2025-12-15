@@ -6,7 +6,7 @@ sidebar_position: 3
 
 A **Netlist** is a machine-readable representation of an electronic circuit. It contains information about the components used in the circuit, their connections, parameters, and instructions for simulation.
 
-When you upload a circuit, the system either generates a Netlist based on the schematic or allows you to provide one. This file is crucial for accurate simulation and analysis of the circuit.
+When you upload a circuit, the system generates a Netlist based on the schematic. This file is crucial for accurate simulation and analysis of the circuit.
 
 The Netlist includes:
 

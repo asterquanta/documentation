@@ -15,5 +15,3 @@ Here, you can explore a variety of authorized projects across different categori
 
 ## Cloning a Project
 If you wish to work on any of the public projects, you can easily clone them to your own account by clicking the **Clone** button next to the project. This will add the project to your **My Projects** section, where you can further modify it.
-
-> **Note**: Public projects are fully authorized for use and modification, but be sure to respect any licensing terms provided by the original creators.

@@ -33,7 +33,7 @@ Each parameter row allows users to define conditions for the optimization run:
 4. **Value Fields (Numeric Inputs):** The range values for validation. Example: *3.25 – 3.35*.
 5. **Add Row (+ Button):** Adds additional parameter-output pairs for configuration.
 
-## Model Details Popup (Second Screenshot)
+## Model Details Popup
 
 When **Model details** is clicked, a popup displays:
 
