@@ -1,51 +1,66 @@
 ---
 sidebar_position: 3
+title: Models
 ---
 
 # Models
-## Explanation
-A model is the ADK's approach to the **D**on't **R**epeat **Y**ourself principle. Models solve the
-problem of having to develop / copy-paste the same agent across different directories for each
-system being optimized. Instead, the agent can be implemented once and the system-specific details
-can be part of the model.
 
-This seperates the concerns between developing a generic algorithm / method to optimize systems
-(for an agent), and tuning specific details to optimize a specific system (for a model).
+## What is a Model?
 
-## Creating a model
-In the ADK's eyes, a model is a directory within an agent's `models/` directory with the following
-contents:
-+ `models/`: A directory containing agent specific model files (NN checkpoints, stats, etc.),
-completely controlled by the developer.
+A model represents a reusable optimization setup that can be applied to different systems or projects without starting from scratch each time.
 
-+ `hyper_parameters.json`: A file containing the [hyper parameters](adk\API\Models\hyper-parameters.md) for the agent's training / the
-hyper parameters the agent was trained with. See [Hyper Parameters](../API/Models/hyper-parameters.md)
-for more info.
+Instead of redefining the same optimization logic repeatedly, a model allows you to:
 
-+ `metadata.json`: A file containing the model [metadata](adk\API\Models\metadata.md). See [Metadata](../API/Models/metadata.md)
-for more info.
+- Reuse proven optimization intelligence
+- Apply it to different systems by changing only system-specific settings
+- Maintain consistency across projects
 
-+ `target_specifications.json`: A file containing the [target specifications](adk\API\Models\target-specifications.md) that can be defined
-for the model. See [Target Specifications](../API/Models/target-specifications.md) for more info.
+In simple terms:
 
-+ `world_control_specifications.json`: A file containing the [world controls](adk\API\Models\world-controls.md) (**controllable parameters**
-of the system) that the model can optimize for. See [World Controls](../API/Models/world-controls.md)
-for more info.
+- The agent defines how optimization works
+- The model defines what is being optimized and under what conditions
 
-Run `genie model add` in an agent directory and follow the instructions in order to conveniently
-create a model for that agent.
+This separation makes it easier to adapt optimization workflows to new systems while keeping the core logic unchanged.
 
-:::note
-The `adk` package has to be installed before it and its related tools such as `genie` can be used.
-It is highly recommended that one uses a python venv for installing the ADK.
-:::
+## Creating a Model
 
-## What next?
-Once an agent with the above structure has been successfully created either manually or through
-`genie model add`, one can register the model and run the respective model's **agent** and see
-the model appear in the platform's model selection dialogue.
+A model groups together all the information needed to apply optimization to a specific type of system. This includes:
 
-The `model` sub-command for `genie` provides a convenient interface for adding, listing,
-registering and committing an agent's models, run `genie model` for more info.
+- Configuration settings
+- Parameter ranges
+- Target performance goals
+- System controls that can be adjusted during optimization
 
-[Transfer Learning](./transfer-learning.md) is a section under the Genie tab's Agent area that allows users to configure model-specific settings through the Model Details page. It includes three sub-sections: Details (showing model name and description), Design Parameter [Specification](adk\API\Models\specifications.md) (where users map controllable parameters to model-trained specifications), and [Target Specifications](adk\API\Models\target-specifications.md) (defining output parameters, precision targets, and mapping expressions to model-defined targets). Once configured, users can initiate model transfer into the project environment.
+Models can be created easily using the Genie workflow, which guides you step by step through the process and ensures everything is set up correctly.
+
+## Using a Model
+
+Once a model is created and registered:
+
+- It becomes available in the platform's model selection dialog
+- You can choose it while setting up or running an optimization task
+- The platform automatically applies the model's predefined rules and settings
+
+This allows users to focus on design intent and results, rather than setup complexity.
+
+## Model Configuration (Transfer Learning)
+
+Within the Genie section of the platform, users can fine-tune how a selected model is applied to their project using Transfer Learning.
+
+This includes:
+
+- **Model Details**: View the model's name and description
+- **Design Parameter Specification**: Map your project's controllable parameters to the model's expected inputs
+- **Target Specifications**: Define desired outputs, accuracy goals, and how results should be interpreted
+
+Once configured, the model can be transferred into the project environment and used directly for optimization.
+
+## What's Next?
+
+After selecting and configuring a model:
+
+- Run optimization tasks using the chosen model
+- Compare results across different models
+- Reuse the same model across multiple projects for faster workflows
+
+This approach ensures flexibility, consistency, and scalability for users working on repeated or evolving design problems.
