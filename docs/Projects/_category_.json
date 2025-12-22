@@ -3,6 +3,6 @@
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "About projects"
+    "description": "Projects provide a structured workspace to create, manage, and optimize circuit designs. Within a project, you can upload circuits, configure parameters, run simulations, and apply AI-based optimization using Genie. Projects also support collaboration, allowing you to share work, authorize access, and work together with teammates while tracking progress efficiently."
   }
 }

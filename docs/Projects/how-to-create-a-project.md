@@ -30,12 +30,18 @@ After saving, you will be redirected to the Upload Circuit page.
 On the Upload Circuit page, you can add circuit files and configuration details.
 
 Enter the following information:
-- Base Circuit Name
-- Tool
-- Description (optional)
-- Circuit Image (optional)
-- Circuit Schematic
-- Circuit Dependencies (optional)
+- Circuit Name - Must start with a letter and include only letters, numbers, and underscores.
+- Tool - Tool used for simulation
+- Description (optional) - Write a short note about the circuit
+- Circuit Image (optional) - To add circuit images. You can add up to 10 images.
+- Circuit Schematic or Netlist - To set the circuit schematic or netlist
+- Circuit Dependencies (optional) - To select the dependency type (between Models, Sub-Circuits, Libraries, and Symbols) and add your dependency files.
+
+:::info
+
+Dependencies are additional resources required for a circuit to function correctly. These include models, sub-circuits, libraries, and symbols that support accurate simulation, validation, and optimization.
+
+:::
 
 You may also choose to **Import Circuit** if you have a previously saved circuit configuration.
 
