@@ -27,23 +27,45 @@ After saving, you will be redirected to the Upload Circuit page.
 
 ## 2. Upload Circuit Information
 
-On the Upload Circuit page, you can add circuit files and configuration details.
+The Upload Circuit page allows you to define your circuit by adding all the files and details required for simulation and optimization. This step helps the platform understand how your circuit is structured, which tools it should use, and what additional resources are needed to run it correctly.
 
-Enter the following information:
-- Circuit Name - Must start with a letter and include only letters, numbers, and underscores.
-- Tool - Tool used for simulation
-- Description (optional) - Write a short note about the circuit
-- Circuit Image (optional) - To add circuit images. You can add up to 10 images.
-- Circuit Schematic or Netlist - To set the circuit schematic or netlist
-- Circuit Dependencies (optional) - To select the dependency type (between Models, Sub-Circuits, Libraries, and Symbols) and add your dependency files.
+### Circuit Details
 
-:::info
+**Circuit Name**  
+Provide a clear and meaningful name for your circuit. The name should begin with a letter and may contain letters, numbers, and underscores. This helps you easily identify and manage your circuit within the project.
 
-Dependencies are additional resources required for a circuit to function correctly. These include models, sub-circuits, libraries, and symbols that support accurate simulation, validation, and optimization.
+**Tool**  
+Select the simulation tool used to create or run this circuit. You can choose between LTspice and NGspice, depending on the tool used to design or simulate your circuit. This ensures compatibility and allows the platform to process the circuit correctly during simulations and optimizations.
 
-:::
+![Tools](/img/tools.png)
+
+**Description (Optional)**  
+Add a short description explaining the purpose or functionality of the circuit. This is useful for documentation, collaboration, and future reference.
+
+**Circuit Image (Optional)**  
+Upload images of your circuit schematic or layout to visually represent the design. The platform supports JPG, JPEG, and PNG image formats, and you can add up to 10 images, which helps others quickly understand the circuit without opening the schematic file.
+
+**Circuit Schematic or Netlist**  
+Upload the main circuit file, either as a schematic or a netlist. This is the core definition of your circuit and is required for simulation and analysis.
+
+### Circuit Dependencies (Optional)
+
+**Dependencies**  
+Select the type of dependency and upload the required files. Dependencies can include Models, Sub-Circuits, Libraries, or Symbols that your circuit relies on.
+
+Dependencies are supporting resources that enable accurate simulation, validation, and optimization of your circuit. Adding the correct dependencies ensures that all components behave as expected and that simulations run without errors.
+
+To understand what each dependency type represents and when to use them, refer to the [**Dependencies**](dependencies.md) page for a detailed explanation and examples.
+
+---
 
 You may also choose to **Import Circuit** if you have a previously saved circuit configuration.
+
+![Import Circuit Button](/img/importcircuit1.png)
+
+When you click on that button, this is what you will see:
+
+![Import Circuit Dialog](/img/importcircuit2.png)
 
 **Available actions:**
 - Save Circuit

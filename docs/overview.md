@@ -5,7 +5,7 @@ title: Overview
 
 # Overview
 
-![DGenie Architecture Overview](/img/overview.jpg)
+![DGenie Architecture Overview](/img/overview.jpeg)
 
 The diagram above shows how DGenie fits between your simulation tools and AI engines, acting as a bridge that allows both to work together in a closed loop.
 

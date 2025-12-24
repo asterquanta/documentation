@@ -1,5 +1,5 @@
 ---
-id: golbal-optimization
+id: global-optimization
 title: Global Optimization
 sidebar_position: 7
 ---

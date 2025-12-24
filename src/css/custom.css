@@ -31,3 +31,8 @@
   --aq-svg-path: white;
 
 }
+
+/* Justify text in generated index descriptions */
+div[class*="generatedIndexPage"] header p {
+  text-align: justify !important;
+}
