@@ -20,7 +20,7 @@ This page is used to create and register a new circuit within a project.
 
 Click **Save** to store the circuit in the current working project.
 
-![Creating a new circuit](./ct_ldo_s1.jpeg)
+![Creating a new circuit](/img/ct_ldo_s1.jpeg)
 *Fig. 1 - Creating a new circuit*
 
 ---
@@ -37,7 +37,7 @@ In this tutorial, testbenches are created for Transient Analysis and Stability (
 
 **Circuit Image (Recommended)**: Upload a schematic image or plots showing self-designed values. This is useful for post-optimization comparison and analysis.
 
-![Uploading testbenches](./ct_ldo_s2.jpeg)
+![Uploading testbenches](/img/ct_ldo_s2.jpeg)
 *Fig. 2 - Uploading testbenches*
 
 ---
@@ -50,7 +50,7 @@ Each parameter appears with a **Value** (the default value defined in the netlis
 
 Properly setting limits ensures stable and meaningful optimization.
 
-![Design parameters](./ct_ldo_s3.jpeg)
+![Design parameters](/img/ct_ldo_s3.jpeg)
 *Fig. 3 - Design parameters configuration*
 
 ---
@@ -61,7 +61,7 @@ This section displays the complete netlist associated with each testbench. It co
 
 This view helps users verify that the uploaded netlist is correct and all components and connections are properly defined.
 
-![Netlist view](./ct_ldo_s4.jpeg)
+![Netlist view](/img/ct_ldo_s4.jpeg)
 *Fig. 4 - Netlist view*
 
 ---
@@ -74,7 +74,7 @@ Measurement types vary depending on the testbench. In this example, AC Analysis 
 
 Using the **Data Capture** feature, required values are extracted from simulation logs. These captured values are later used for optimization.
 
-![Measurements configuration](./ct_ldo_s5.jpeg)
+![Measurements configuration](/img/ct_ldo_s5.jpeg)
 *Fig. 5 - Measurements setup*
 
 ---
@@ -85,7 +85,7 @@ Before optimization, the circuit must be simulated with default parameter values
 
 This step allows you to verify circuit outputs and ensure results match outputs from external EDA tools. Successful simulation confirms that there are no platform-related issues and the testbench is ready for AI-driven optimization.
 
-![Running simulation](./ct_ldo_s6.jpeg)
+![Running simulation](/img/ct_ldo_s6.jpeg)
 *Fig. 6 - Simulation results*
 
 ---
@@ -102,23 +102,23 @@ In this tutorial, stability optimization uses scalar targets. **Arithmetic Opera
 
 After optimization, generated charts can be analyzed and results can be used to further improve circuit robustness and performance.
 
-![Genie optimization setup - Step 1](./ct_ldo_s7.jpeg)
+![Genie optimization setup - Step 1](/img/ct_ldo_s7.jpeg)
 *Fig. 7 - Genie optimization setup*
 
-![Genie optimization setup - Step 2](./ct_ldo_s8.jpeg)
+![Genie optimization setup - Step 2](/img/ct_ldo_s8.jpeg)
 *Fig. 8 - Optimization configuration*
 
-![Genie optimization setup - Step 3](./ct_ldo_s9.jpeg)
+![Genie optimization setup - Step 3](/img/ct_ldo_s9.jpeg)
 *Fig. 9 - Target measurements*
 
-![Genie optimization setup - Step 4](./ct_ldo_s10.jpeg)
+![Genie optimization setup - Step 4](/img/ct_ldo_s10.jpeg)
 *Fig. 10 - Agent configuration*
 
-![Genie optimization setup - Step 5](./ct_ldo_s11.jpeg)
+![Genie optimization setup - Step 5](/img/ct_ldo_s11.jpeg)
 *Fig. 11 - Optimization parameters*
 
-![Genie optimization setup - Step 6](./ct_ldo_s12.jpeg)
+![Genie optimization setup - Step 6](/img/ct_ldo_s12.jpeg)
 *Fig. 12 - Optimization results*
 
-![Genie optimization setup - Step 7](./ct_ldo_s13.jpeg)
+![Genie optimization setup - Step 7](/img/ct_ldo_s13.jpeg)
 *Fig. 13 - Performance analysis*
