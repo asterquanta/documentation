@@ -1,7 +1,7 @@
 ---
 id: notifications
 title: Notifications
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 # Notifications

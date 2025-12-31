@@ -1,7 +1,7 @@
 ---
 id: profile-logout
 title: Profile and Logout
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 ## User Profile and Logout
