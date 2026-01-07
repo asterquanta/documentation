@@ -6,7 +6,7 @@ This tutorial walks through the complete workflow of creating, simulating, and a
 
 ## 1. Creating a New Project
 
-Begin by creating a new project from the Projects tab. A single project can contain multiple related circuits, allowing you to organize and manage designs efficiently.
+Begin by creating a new [projects](/docs/category/projects) from the Projects tab. A single project can contain multiple related circuits, allowing you to organize and manage designs efficiently.
 
 1. Click **Add New Project**.
 2. Enter the **Project Name**.
