@@ -67,7 +67,7 @@ The following tabs will be visible:
 
 Each tab is explained in the sections below.
 
-![Circuit Tutorial 4](/img/Ct4.jpg)
+![Circuit Tutorial 4](/img/ct4.jpg)
 
 ### Netlist
 
