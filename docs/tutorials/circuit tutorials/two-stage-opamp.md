@@ -67,7 +67,7 @@ The following tabs will be visible:
 
 Each tab is explained in the sections below.
 
-![Circuit Tutorial 4](/img/ct4.jpg)
+![Circuit Tutorial 4](/img/Ct4.jpg)
 
 ### Netlist
 
@@ -82,7 +82,7 @@ Uploaded circuit images can be viewed by clicking the Image icon next to the Edi
 
 ### Design Parameters
 
-![Circuit Tutorial 7](/img/ct7.jpg)
+![Circuit Tutorial 7](/img/Ct7.jpg)
 
 This tab displays all parameters defined in the uploaded netlist along with their current values.
 
@@ -156,7 +156,7 @@ Vector measurements can also be used in Data Capture by:
 
 ### Simulation Setup
 
-![Circuit Tutorial 12](/img/ct12.jpg)
+![Circuit Tutorial 12](/img/Ct12.jpg)
 
 Manage Dependencies must be completed before running simulations.
 
@@ -168,13 +168,13 @@ Once dependencies are connected, click Simulate.
 
 Simulation results can be viewed in the Log file.
 
-![Circuit Tutorial 13](/img/ct13.jpg)
+![Circuit Tutorial 13](/img/Ct13.jpg)
 
 The results displayed correspond to the default design parameter values specified in the Design Parameters tab.
 
 ### Genie (Optimization)
 
-![Circuit Tutorial 14](/img/ct14.jpg)
+![Circuit Tutorial 14](/img/Ct14.jpg)
 ![Circuit Tutorial 15](/img/ct15.jpg)
 
 The Genie page is where circuit optimization is performed.
@@ -231,5 +231,319 @@ Open the Chart view to monitor:
 Each optimization iteration is displayed in real time.
 
 Previous iterations can be viewed by enabling Show Trail.
+
+Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+
+## Transient Analysis
+
+After uploading the circuit, add a new testbench by clicking the Plus (+) icon.
+
+![Circuit Tutorial 19](/img/ct19.jpg)
+
+Upload the required `.spice` file along with the waveform images for the analysis, then click Save Circuit.
+
+Once saved, click on the newly created testbench. The following tabs will be available:
+
+- Netlist
+- Design Parameters
+- Measurements
+- Simulation Setup
+- Genie
+- Analytics
+
+Each tab is explained in the sections below.
+
+### Netlist
+
+The Netlist tab displays the uploaded netlist file.
+
+You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required for different simulation results.
+
+Uploaded circuit images can be viewed by clicking the Image icon next to the Edit icon.
+
+![Circuit Tutorial 20](/img/ct20.jpg)
+
+The images uploaded for the transient analysis are shown below:
+
+![Circuit Tutorial 21](/img/ct21.jpg)
+![Circuit Tutorial 22](/img/ct22.jpg)
+
+### Design Parameters
+
+![Circuit Tutorial 23](/img/ct23.jpg)
+
+This tab displays all parameters defined in the uploaded netlist along with their current values.
+
+For optimization, you can select the parameters that the AI agent is allowed to modify.
+
+You can also define the allowed range of each parameter by adjusting:
+
+- Minimum Value
+- Maximum Value
+
+By default, these are set to half and twice the typical parameter value.
+
+### Measurements
+
+![Circuit Tutorial 24](/img/ct24.jpg)
+
+Measurement statements define the values that will be evaluated during simulation.
+
+The measurement type depends on the requirement:
+
+- Scalar
+- Vector
+
+Under Transient Analysis, click the Custom button and provide a variable name.
+
+Enter the measurement statement in the generated input box.
+
+For this tutorial, a vector measurement is used to evaluate values at multiple instances.
+
+The required voltage/time values can be:
+
+- Entered manually, or
+- Uploaded using a CSV file (via the menu icon beside Transient Analysis)
+
+To enable vector measurement:
+
+- Click the menu icon in the top-right corner of the measurement box
+- Enable Vector Mode
+- Provide:
+  - The variable name (e.g., `[time]`)
+  - The instances at which measurements are taken, separated by commas
+
+### Simulation Setup
+
+This tab displays the results of the measurement statements added under the Measurements tab.
+
+Before running the simulation, Manage Dependencies must be completed.
+
+To add dependencies:
+
+- Click the menu button below Publish Project (top-right corner)
+- Select Manage Dependencies
+- Click the Chain icon to connect the required models and libraries
+
+After linking dependencies:
+
+- Click Simulate
+- View the results in the Log file
+
+![Circuit Tutorial 25](/img/ct25.jpg)
+
+### Genie (Optimization)
+
+This page is where circuit optimization is performed, and targets are assigned for the AI agent to achieve.
+
+![Circuit Tutorial 26](/img/ct26.jpg)
+
+All measurement variables (both scalar and vector) defined earlier will be displayed on the top-left of the Genie page.
+
+You may rename expressions if required.
+
+To configure optimization:
+
+- Click Enter Expression
+- Select the measurement variable
+- Define the optimization goal:
+  - Minimum
+  - Maximum
+  - Range
+  - Equal to a value
+- Provide the target value/range (for scalar measurements)
+
+Multiple expressions can be added using the Plus (+) icon.
+
+For vector measurements, targets must be assigned using Graph Mode, since optimization occurs across multiple instances.
+
+Click Open Graph to assign vector targets.
+
+![Circuit Tutorial 27](/img/ct27.jpg)
+
+Select the X-axis label (e.g., `output`). The instances entered in the Measurements tab will be listed automatically.
+
+Targets (Y-values) can be set:
+
+- Manually (for a small number of points), or
+- By uploading a CSV file (for larger datasets)
+
+![Circuit Tutorial 28](/img/ct28.jpg)
+
+Targets can also be assigned by importing a JSON file using Import from File.
+
+![Circuit Tutorial 29](/img/ct29.jpg)
+
+Select the appropriate optimization agent. For this tutorial, the agent `two_stage_closed_transient` is used.
+
+Then click Genie Optimize at the bottom-right of the Genie page.
+
+Open the Chart view to monitor:
+
+- Current iteration measurement
+- Best measurement achieved
+- Target value
+
+Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.
+
+Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+
+## AC Analysis
+
+Add a new testbench by clicking the Plus (+) icon.
+
+![Circuit Tutorial 30](/img/ct30.jpg)
+
+Upload the required `.spice` file along with the waveform images, then click Save Circuit.
+
+After uploading, click on the testbench. The following tabs will be visible:
+
+- Netlist
+- Design Parameters
+- Measurements
+- Simulation Setup
+- Genie
+- Analytics
+
+Each tab is explained in the sections below.
+
+### Netlist
+
+The Netlist tab displays the uploaded netlist file.
+
+You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required for different simulation results.
+
+Uploaded circuit images can be viewed by clicking the Image icon next to the Edit icon.
+
+![Circuit Tutorial 31](/img/ct31.jpg)
+
+The images uploaded for the AC analysis are shown below:
+
+![Circuit Tutorial 32](/img/ct32.jpg)
+![Circuit Tutorial 33](/img/ct33.jpg)
+
+### Design Parameters
+
+![Circuit Tutorial 34](/img/ct34.jpg)
+
+This tab displays all parameters defined in the uploaded netlist along with their current values.
+
+For optimization, select the parameters that the AI agent is allowed to modify.
+
+For each enabled parameter, specify its optimization range by adjusting:
+
+- Minimum Value
+- Maximum Value
+
+By default, these values are set to half and twice the typical parameter value.
+
+### Measurements
+
+![Circuit Tutorial 35](/img/ct35.jpg)
+
+Measurement statements define the values that will be evaluated during simulation.
+
+The measurement type depends on the requirement:
+
+- Scalar
+- Vector
+
+Under AC Analysis, click the Custom button and provide a variable name.
+
+Enter the measurement statement in the generated input box.
+
+For this tutorial, a vector measurement is used to evaluate values at multiple frequency instances.
+
+The required values can be:
+
+- Entered manually, or
+- Uploaded using a CSV file (via the menu icon beside AC Analysis)
+
+To enable vector measurement:
+
+- Click the menu icon in the top-right corner of the measurement box
+- Enable Vector Mode
+- Provide:
+  - The variable name (e.g., `[freq]`)
+  - The frequency instances separated by commas
+
+#### Data Capture
+
+![Circuit Tutorial 36](/img/ct36.jpg)
+
+To extract variables directly from the netlist, a Data Capture measurement is used.
+
+This method is suitable for measurements involving let statements.
+
+![Circuit Tutorial 37](/img/ct37.jpg)
+
+In this tutorial, the variables `ubw` and `pm` are calculated using let statements. Therefore, Data Capture is used.
+
+To add a Data Capture measurement:
+
+- Click the Plus (+) icon under Data Capture
+- Enter the variable name exactly as defined in the netlist
+
+Vector measurements can also be used in Data Capture by:
+
+- Changing the measurement type from Scalar to Vector
+- Entering multiple variable names separated by commas
+
+### Simulation Setup
+
+This tab displays the results of the measurement statements added under the Measurements tab.
+
+Before running the simulation, Manage Dependencies must be completed.
+
+To include dependencies:
+
+- Click the menu button below Publish Project (top-right corner)
+- Select Manage Dependencies
+- Click the Chain icon to connect the required models and libraries
+
+After linking dependencies:
+
+- Click Simulate
+- View the results in the Log file
+
+![Circuit Tutorial 38](/img/ct38.jpg)
+
+### Genie (Optimization)
+
+This page is where circuit optimization is performed, and targets are assigned for the AI agent.
+
+![Circuit Tutorial 39](/img/ct39.jpg)
+
+All measurement variables (both scalar and vector) defined earlier will be visible on the top-left of the Genie page.
+
+You may rename expressions if required.
+
+To configure optimization:
+
+- Click Enter Expression
+- Select the measurement variable
+- Define the optimization goal:
+  - Minimum
+  - Maximum
+  - Range
+  - Equal to a value
+- Provide the target value/range (for scalar measurements)
+
+Multiple expressions can be added using the Plus (+) icon.
+
+![Circuit Tutorial 40](/img/ct40.jpg)
+![Circuit Tutorial 41](/img/ct41.jpg)
+
+Select the appropriate optimization agent. For this tutorial, the agent `two_stage_closed_ac` is used.
+
+Click Genie Optimize at the bottom-right of the Genie page.
+
+Open the Chart view to monitor:
+
+- Current iteration measurement
+- Best measurement achieved
+- Target value
+
+Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
