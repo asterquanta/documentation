@@ -82,7 +82,7 @@ Uploaded circuit images can be viewed by clicking the Image icon next to the Edi
 
 ### Design Parameters
 
-![Circuit Tutorial 7](/img/Ct7.jpg)
+![Circuit Tutorial 7](/img/ct7.jpg)
 
 This tab displays all parameters defined in the uploaded netlist along with their current values.
 
@@ -156,7 +156,7 @@ Vector measurements can also be used in Data Capture by:
 
 ### Simulation Setup
 
-![Circuit Tutorial 12](/img/Ct12.jpg)
+![Circuit Tutorial 12](/img/ct12.jpg)
 
 Manage Dependencies must be completed before running simulations.
 
@@ -168,13 +168,13 @@ Once dependencies are connected, click Simulate.
 
 Simulation results can be viewed in the Log file.
 
-![Circuit Tutorial 13](/img/Ct13.jpg)
+![Circuit Tutorial 13](/img/ct13.jpg)
 
 The results displayed correspond to the default design parameter values specified in the Design Parameters tab.
 
 ### Genie (Optimization)
 
-![Circuit Tutorial 14](/img/Ct14.jpg)
+![Circuit Tutorial 14](/img/ct14.jpg)
 ![Circuit Tutorial 15](/img/ct15.jpg)
 
 The Genie page is where circuit optimization is performed.
