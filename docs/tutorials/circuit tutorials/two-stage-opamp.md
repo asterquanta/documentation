@@ -1,7 +1,8 @@
 # Two-Stage Op-Amp
 
-:::info Resources
-All files needed for this tutorial can be accessed from this link: [https://drive.google.com/drive/folders/1AF0CRgLRTJzCPkyfKrpjCE--CNfL3W-x](https://drive.google.com/drive/folders/1AF0CRgLRTJzCPkyfKrpjCE--CNfL3W-x)
+:::info Download All Tutorial Resources
+Click here to download the complete tutorial resource package:
+[Download Tutorial Resources (ZIP)](/resources/tutorial_resources.zip)
 :::
 
 ## Creating a New Project
