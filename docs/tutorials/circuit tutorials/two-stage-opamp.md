@@ -96,6 +96,8 @@ By default, these are set to half and twice the typical parameter value.
 
 Select the testbench (`two_stage_closed_DC`) and enable the parameters that should be optimized by the AI agent.
 
+**Note:** Design Parameter values can only be changed by accessing the Design Parameters tab from the Base Circuit page, not from the Design Parameters tab within the Test Bench Circuit page.
+
 ### Environment Parameters
 
 ![Circuit Tutorial 8](/img/ct8.jpg)
