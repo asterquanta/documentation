@@ -8,7 +8,7 @@ Let's get started with the **ADK in less than 10 minutes**.
 
 
 ## What you'll need
-- An [AsterQuanta](https://www.asterquanta.com/) account.
+- An [AsterQuanta](https://genie.asterquanta.com) account.
 - [Python](https://www.python.org/) version 3.11 or 3.12 **only** (will be less restrictive in future versions).
 
 
