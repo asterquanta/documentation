@@ -172,12 +172,12 @@ Once dependencies are connected, click Simulate.
 Simulation results can be viewed in the Log file.
 
 ![Circuit Tutorial 13](/img/ct13.jpg)
+![Circuit Tutorial 14](/img/ct14.jpg)
 
 The results displayed correspond to the default design parameter values specified in the Design Parameters tab.
 
 ### Genie (Optimization)
 
-![Circuit Tutorial 14](/img/ct14.jpg)
 ![Circuit Tutorial 15](/img/ct15.jpg)
 
 The Genie page is where circuit optimization is performed.
@@ -197,7 +197,7 @@ Provide the target value or range for scalar measurements.
 
 Multiple expressions can be added using the Plus (+) icon.
 
-For vector measurements, targets must be assigned using Graph Mode, since optimization occurs across multiple instances.
+For vector measurements, targets can be assigned using Graph Mode, since optimization occurs across multiple instances.
 
 Click Open Graph to assign vector targets.
 
@@ -212,15 +212,15 @@ Set Y-values either:
 - Manually (for a small number of points), or
 - By uploading a CSV file (for larger datasets)
 
-![Circuit Tutorial 17](/img/ct17.jpg)
-
+![Circuit Tutorial 17a](/img/ct17a.jpg)
+![Circuit Tutorial 17b](/img/ct17b.jpg)
 Targets can also be assigned by importing a JSON file using the Import from File option.
 
 The required JSON files are available in the Resources section of this document.
 
 ![Circuit Tutorial 18](/img/ct18.jpg)
 
-Select the appropriate optimization agent.
+On the bottom left of the Genie page, you can select the appropriate agent for optimization.
 (For this tutorial, `two_stage_closed_dc` is used.)
 
 Click Genie Optimize at the bottom-right of the page.
@@ -358,7 +358,7 @@ To configure optimization:
 
 Multiple expressions can be added using the Plus (+) icon.
 
-For vector measurements, targets must be assigned using Graph Mode, since optimization occurs across multiple instances.
+For vector measurements, targets can be assigned using Graph Mode, since optimization occurs across multiple instances.
 
 Click Open Graph to assign vector targets.
 
@@ -377,7 +377,7 @@ Targets can also be assigned by importing a JSON file using Import from File.
 
 ![Circuit Tutorial 29](/img/ct29.jpg)
 
-Select the appropriate optimization agent. For this tutorial, the agent `two_stage_closed_transient` is used.
+On the bottom left of the Genie page, you can select the appropriate agent for optimization. For this tutorial, the agent `two_stage_closed_transient` is used.
 
 Then click Genie Optimize at the bottom-right of the Genie page.
 
@@ -537,7 +537,7 @@ Multiple expressions can be added using the Plus (+) icon.
 ![Circuit Tutorial 40](/img/ct40.jpg)
 ![Circuit Tutorial 41](/img/ct41.jpg)
 
-Select the appropriate optimization agent. For this tutorial, the agent `two_stage_closed_ac` is used.
+On the bottom left of the Genie page, you can select the appropriate agent for optimization. For this tutorial, the agent `two_stage_closed_ac` is used.
 
 Click Genie Optimize at the bottom-right of the Genie page.
 
