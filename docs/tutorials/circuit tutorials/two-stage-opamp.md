@@ -7,6 +7,10 @@ Click here to download the complete tutorial resource package:
 
 ## Creating a New Project
 
+:::info View all the resources required for this step
+[PDK Files](https://drive.google.com/drive/folders/1zIYg6iXQLbbLojllod8T2zuteP_LU_ZK?usp=sharing)
+:::
+
 ![Circuit Tutorial 1](/img/ct1.jpg)
 
 ![Circuit Tutorial 2](/img/ct2.jpg)
@@ -52,6 +56,10 @@ For your circuit dependencies, make sure for this specific project, you add the 
 Complete the process by clicking "Save Circuit".
 
 ## DC Analysis
+
+:::info View all the resources required for DC Analysis
+[DC Analysis](https://drive.google.com/drive/folders/161FGxjcBUMcm4RzdFxPUUETK6wejpV3W?usp=sharing)
+:::
 
 After uploading the circuit, click on the testbench from the left-hand panel under Circuits.
 (In this tutorial, `two_stage_closed_DC` is used.)
@@ -239,6 +247,10 @@ Once the target is achieved, download the optimized netlist by clicking the Down
 
 ## Transient Analysis
 
+:::info View all the resources required for Transient Analysis
+[Transient Analysis](https://drive.google.com/drive/folders/16tOnG3TNY59Sic6TtS-l14wJsejf529w?usp=sharing)
+:::
+
 After uploading the circuit, add a new testbench by clicking the Plus (+) icon.
 
 ![Circuit Tutorial 19](/img/ct19.jpg)
@@ -392,6 +404,10 @@ Each optimization iteration is displayed in real time. Previous iterations can b
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
 
 ## AC Analysis
+
+:::info View all the resources required for AC Analysis
+[AC Analysis](https://drive.google.com/drive/folders/13xtlw4SFUbEUTK8fv51nppEiwzP50KCg?usp=sharing)
+:::
 
 Add a new testbench by clicking the Plus (+) icon.
 
