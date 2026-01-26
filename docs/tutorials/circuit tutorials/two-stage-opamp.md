@@ -1,14 +1,9 @@
 # Two-Stage Op-Amp
 
-:::info Download All Tutorial Resources
-Click here to download the complete tutorial resource package:
-[Download Tutorial Resources (ZIP)](/resources/tutorial_resources.zip)
-:::
-
 ## Creating a New Project
 
 :::info View all the resources required for this step
-[PDK Files](https://drive.google.com/drive/folders/1zIYg6iXQLbbLojllod8T2zuteP_LU_ZK?usp=sharing)
+[PDK Files](/resources/pdk_files.zip)
 :::
 
 ![Circuit Tutorial 1](/img/ct1.jpg)
@@ -58,7 +53,7 @@ Complete the process by clicking "Save Circuit".
 ## DC Analysis
 
 :::info View all the resources required for DC Analysis
-[DC Analysis](https://drive.google.com/drive/folders/161FGxjcBUMcm4RzdFxPUUETK6wejpV3W?usp=sharing)
+[DC Analysis](/resources/dc_analysis.zip)
 :::
 
 After uploading the circuit, click on the testbench from the left-hand panel under Circuits.
@@ -248,7 +243,7 @@ Once the target is achieved, download the optimized netlist by clicking the Down
 ## Transient Analysis
 
 :::info View all the resources required for Transient Analysis
-[Transient Analysis](https://drive.google.com/drive/folders/16tOnG3TNY59Sic6TtS-l14wJsejf529w?usp=sharing)
+[Transient Analysis](/resources/transient_analysis.zip)
 :::
 
 After uploading the circuit, add a new testbench by clicking the Plus (+) icon.
@@ -406,7 +401,7 @@ Once the target is achieved, download the optimized netlist by clicking the Down
 ## AC Analysis
 
 :::info View all the resources required for AC Analysis
-[AC Analysis](https://drive.google.com/drive/folders/13xtlw4SFUbEUTK8fv51nppEiwzP50KCg?usp=sharing)
+[AC Analysis](/resources/stability_analysis.zip)
 :::
 
 Add a new testbench by clicking the Plus (+) icon.
@@ -566,3 +561,8 @@ Open the Chart view to monitor:
 Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+
+:::info Download All Tutorial Resources
+Click here to download the complete tutorial resource package:
+[Download Tutorial Resources (ZIP)](/resources/tutorial_resources.zip)
+:::
