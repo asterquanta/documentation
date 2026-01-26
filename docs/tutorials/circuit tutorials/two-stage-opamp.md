@@ -2,10 +2,6 @@
 
 ## Creating a New Project
 
-:::info View all the resources required for this step
-[PDK Files](/resources/pdk_files.zip)
-:::
-
 ![Circuit Tutorial 1](/img/ct1.jpg)
 
 ![Circuit Tutorial 2](/img/ct2.jpg)
@@ -49,12 +45,11 @@ For your circuit dependencies, make sure for this specific project, you add the 
 - **Libraries** - Which you will also get from the PDK Files in the resources (Upload `sm141064.ngspice`)
 
 Complete the process by clicking "Save Circuit".
+:::info View all the resources required for this step
+[PDK Files](/resources/pdk_files.zip)
+:::
 
 ## DC Analysis
-
-:::info View all the resources required for DC Analysis
-[DC Analysis](/resources/dc_analysis.zip)
-:::
 
 After uploading the circuit, click on the testbench from the left-hand panel under Circuits.
 (In this tutorial, `two_stage_closed_DC` is used.)
@@ -239,12 +234,11 @@ Each optimization iteration is displayed in real time.
 Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+:::info View all the resources required for DC Analysis
+[DC Analysis](/resources/dc_analysis.zip)
+:::
 
 ## Transient Analysis
-
-:::info View all the resources required for Transient Analysis
-[Transient Analysis](/resources/transient_analysis.zip)
-:::
 
 After uploading the circuit, add a new testbench by clicking the Plus (+) icon.
 
@@ -397,12 +391,11 @@ Open the Chart view to monitor:
 Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+:::info View all the resources required for Transient Analysis
+[Transient Analysis](/resources/transient_analysis.zip)
+:::
 
 ## AC Analysis
-
-:::info View all the resources required for AC Analysis
-[AC Analysis](/resources/stability_analysis.zip)
-:::
 
 Add a new testbench by clicking the Plus (+) icon.
 
@@ -561,6 +554,11 @@ Open the Chart view to monitor:
 Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
+:::info View all the resources required for AC Analysis
+[AC Analysis](/resources/stability_analysis.zip)
+:::
+
+## Global Resources
 
 :::info Download All Tutorial Resources
 Click here to download the complete tutorial resource package:
