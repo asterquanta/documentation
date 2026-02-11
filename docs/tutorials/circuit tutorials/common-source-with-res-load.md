@@ -71,6 +71,7 @@ Select the DC testbench (cs_resistive_load_DC_tb) and enable the parameters that
 
 ### Environment Parameters
 
+![Circuit Tutorial 9](/img/CT2/ct9.jpg)
 
 This tab is used to specify simulation conditions such as process corner and temperature.
 
@@ -83,8 +84,6 @@ Measurement statements define the values to be evaluated during simulation.
 The measurement type may be Scalar or Vector, depending on the requirement.
 
 Under DC Analysis, click the Custom button and provide a variable name.
-
-![Circuit Tutorial 9](/img/CT2/ct9.jpg)
 
 Enter the measurement statement in the generated input box.
 
@@ -108,6 +107,8 @@ Manage Dependencies must be completed before running the simulation.
 
 Click the menu button below Publish Project (top-right corner), select Manage Dependencies, and click the Chain icon to link the required models and libraries.
 
+![Circuit Tutorial 14](/img/CT2/ct14.jpg)
+
 ![Circuit Tutorial 12](/img/CT2/ct12.jpg)
 
 After linking the dependencies, click Simulate.
@@ -122,7 +123,6 @@ The results displayed correspond to the default design parameter values specifie
 
 This page is used to perform circuit optimization and assign targets for the AI agent.
 
-![Circuit Tutorial 14](/img/CT2/ct14.jpg)
 
 ![Circuit Tutorial 15](/img/CT2/ct15.jpg)
 
@@ -218,6 +218,7 @@ The images uploaded for the transient analysis are shown below:
 
 ### Design Parameters
 
+![Circuit Tutorial 24](/img/CT2/ct24.jpg)
 
 All parameters defined in the netlist are displayed along with their current values.
 
@@ -227,7 +228,7 @@ Define the allowed range of each parameter using Minimum Value and Maximum Value
 
 ### Measurements
 
-![Circuit Tutorial 24](/img/CT2/ct24.jpg)
+![Circuit Tutorial 25](/img/CT2/ct25.jpg)
 
 Measurement statements define the values evaluated during simulation.
 
@@ -245,8 +246,6 @@ Enable Vector Mode from the menu icon and provide:
 - Time instances separated by commas
 
 ### Simulation Setup
-
-![Circuit Tutorial 25](/img/CT2/ct25.jpg)
 
 This tab displays the results of measurement statements added earlier.
 
