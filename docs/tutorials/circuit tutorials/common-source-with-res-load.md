@@ -56,9 +56,10 @@ Uploaded circuit images can be viewed by clicking the Image icon located next to
 
 ![Circuit Tutorial 6](/img/CT2/ct6.jpg)
 
+![Circuit Tutorial 7](/img/CT2/ct7.jpg)
+
 ### Design Parameters
 
-![Circuit Tutorial 7](/img/CT2/ct7.jpg)
 
 This tab displays all parameters defined in the uploaded netlist along with their respective values.
 
@@ -66,9 +67,10 @@ For optimization, you can specify the range of values each parameter can take by
 
 Select the DC testbench (cs_resistive_load_DC_tb) and enable the parameters that should be optimized by the AI agent.
 
+![Circuit Tutorial 8](/img/CT2/ct8.jpg)
+
 ### Environment Parameters
 
-![Circuit Tutorial 8](/img/CT2/ct8.jpg)
 
 This tab is used to specify simulation conditions such as process corner and temperature.
 
@@ -212,9 +214,10 @@ The images uploaded for the transient analysis are shown below:
 
 ![Circuit Tutorial 22](/img/CT2/ct22.jpg)
 
+![Circuit Tutorial 23](/img/CT2/ct23.jpg)
+
 ### Design Parameters
 
-![Circuit Tutorial 23](/img/CT2/ct23.jpg)
 
 All parameters defined in the netlist are displayed along with their current values.
 
