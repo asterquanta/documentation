@@ -348,7 +348,6 @@ Vector mode can also be used by selecting multiple variables separated by commas
 
 ### Simulation Setup
 
-![Circuit Tutorial 38](/img/CT2/ct38.jpg)
 
 Complete Manage Dependencies before running simulations.
 
@@ -356,6 +355,7 @@ Click Simulate and view results in the Log file.
 
 ### Genie (Optimization)
 
+![Circuit Tutorial 38](/img/CT2/ct38.jpg)
 ![Circuit Tutorial 39](/img/CT2/ct39.jpg)
 
 Configure optimization objectives using Enter Expression.
