@@ -119,12 +119,11 @@ Simulation results can be viewed in the Log file.
 
 The results displayed correspond to the default design parameter values specified in the Design Parameters tab.
 
+![Circuit Tutorial 15](/img/CT2/ct15.jpg)
+
 ### Genie (Optimization)
 
 This page is used to perform circuit optimization and assign targets for the AI agent.
-
-
-![Circuit Tutorial 15](/img/CT2/ct15.jpg)
 
 Measurement variables (scalar and vector) defined earlier are displayed in the top-left section of the Genie page.
 
@@ -179,11 +178,11 @@ Optimization iterations are displayed in real time. Previous iterations can be v
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
 
+![Circuit Tutorial 19](/img/CT2/ct19.jpg)
+
 ## Transient Analysis
 
 Add a new testbench by clicking the Plus (+) icon.
-
-![Circuit Tutorial 19](/img/CT2/ct19.jpg)
 
 Upload the required .spice file along with waveform images for the analysis, then click Save Circuit.
 
@@ -247,6 +246,8 @@ Enable Vector Mode from the menu icon and provide:
 
 ### Simulation Setup
 
+![Circuit Tutorial 26](/img/CT2/ct26.jpg)
+
 This tab displays the results of measurement statements added earlier.
 
 Complete Manage Dependencies before running the simulation.
@@ -254,8 +255,6 @@ Complete Manage Dependencies before running the simulation.
 Click Simulate and view results in the Log file.
 
 ### Genie (Optimization)
-
-![Circuit Tutorial 26](/img/CT2/ct26.jpg)
 
 Measurement variables are displayed on the top-left of the Genie page.
 
@@ -286,8 +285,6 @@ Download the optimized netlist once the target is achieved.
 ## AC Analysis
 
 Add a new testbench by clicking the Plus (+) icon.
-
-![Circuit Tutorial 30](/img/CT2/ct30.jpg)
 
 Upload the required .spice file and waveform images, then click Save Circuit.
 
