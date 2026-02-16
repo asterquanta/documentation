@@ -46,7 +46,7 @@ For your circuit dependencies, make sure for this specific project, you add the 
 
 Complete the process by clicking "Save Circuit".
 :::info View all the resources required for this step
-[PDK Files](/resources/pdk_files.zip)
+[PDK Files](/resources/ct1_pdk_files.zip)
 :::
 
 ## DC Analysis
@@ -235,7 +235,7 @@ Previous iterations can be viewed by enabling Show Trail.
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
 :::info View all the resources required for DC Analysis
-[DC Analysis](/resources/dc_analysis.zip)
+[DC Analysis](/resources/ct1_dc_analysis.zip)
 :::
 
 ## Transient Analysis
@@ -392,7 +392,7 @@ Each optimization iteration is displayed in real time. Previous iterations can b
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
 :::info View all the resources required for Transient Analysis
-[Transient Analysis](/resources/transient_analysis.zip)
+[Transient Analysis](/resources/ct1_transient_analysis.zip)
 :::
 
 ## AC Analysis
@@ -555,7 +555,7 @@ Each optimization iteration is displayed in real time. Previous iterations can b
 
 Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.
 :::info View all the resources required for AC Analysis
-[AC Analysis](/resources/stability_analysis.zip)
+[AC Analysis](/resources/ct1_stability_analysis.zip)
 :::
 
 ## Global Resources

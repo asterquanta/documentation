@@ -25,7 +25,7 @@ On the Upload Circuit page:
 
 :::info Download JSON Files
 Click here to download the Netlist for every node:
-[Download Netlists for every node (ZIP)](/resources/netlist_for_every_node.zip)
+[Download Netlists for every node (ZIP)](/resources/ct2_netlist_for_every_node.zip)
 :::
 
 ## DC Analysis
@@ -370,7 +370,7 @@ Download the optimized netlist once the target is reached.
 
 :::info Download JSON Files
 Click here to download the required JSON Files:
-[Download JSON Files (ZIP)](/resources/json_files.zip)
+[Download JSON Files (ZIP)](/resources/ct2_json_files.zip)
 :::
 
 :::info Download All Tutorial Resources
