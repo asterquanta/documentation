@@ -13,20 +13,20 @@ This section provides comprehensive documentation for building and implementing 
 
 ### CDK (Connector Development Kit)
 Core framework components for building connectors:
-- [BaseConnector](baseconnector) - Abstract base class for WebSocket-based connectors
-- [BaseDomain](basedomain) - Foundation for domain-specific request handlers
-- [Router](router) - Endpoint registration and request dispatching system
-- [Middleware](middleware) - Request/response processing pipeline
-- [CDKSettings](cdksettings) - Configuration management
-- [Registration](register) - Orchestrator registration utilities
+- [BaseConnector](cdk/baseconnector) - Abstract base class for WebSocket-based connectors
+- [BaseDomain](cdk/basedomain) - Foundation for domain-specific request handlers
+- [Router](cdk/router) - Endpoint registration and request dispatching system
+- [Middleware](cdk/middleware) - Request/response processing pipeline
+- [CDKSettings](cdk/cdksettings) - Configuration management
+- [Registration](cdk/register) - Orchestrator registration utilities
 
 ### SimPackage Implementation
 A complete connector implementation for simulation engines:
-- [SimConnector](simconnector) - Simulation-focused connector implementation
-- [SimInterface](siminterface) - Abstract interface for simulator backends
-- [Simulator](simulatordomain) - Domain handler for simulation requests
-- [Router Handlers](simcontroller) - API endpoints for simulation operations
-- [Connector Models](slim-models) - Pydantic data validation models
+- [SimConnector](simpackage/simconnector) - Simulation-focused connector implementation
+- [SimInterface](simpackage/siminterface) - Abstract interface for simulator backends
+- [Simulator](simpackage/simulatordomain) - Domain handler for simulation requests
+- [Router Handlers](simpackage/simcontroller) - API endpoints for simulation operations
+- [Connector Models](simpackage/slim-models) - Pydantic data validation models
 
 ## Architecture Overview
 
