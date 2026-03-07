@@ -6,9 +6,14 @@ sidebar_position: 1
 
 The platform supports three types of accounts, each tailored to different user needs and levels of collaboration. These are categorized under **Individual Accounts** (Personal, Professional) and **Organization Accounts**.
 
----
 
 ## Individual Account
+
+![Individual Account](/img/individual.jpg)
+
+:::info
+Since this is an **Individual Account** (either Personal or Professional), you can add users from anywhere on the platform — as seen by the search bar that allows you to find any user across the entire platform.
+:::
 
 The **Individual Account** type is currently implemented in two variants: **Personal** and **Professional**.
 
@@ -42,7 +47,7 @@ Permissions can be configured per role:
   - Manage Connectors
   - Manage Agents
 
----
+
 
 ### 2. Professional Account (Current Implementation)
 
@@ -75,9 +80,15 @@ Enables limited collaboration and team features for small groups or professional
   - Manage Connectors
   - Manage Agents
 
----
+
 
 ## Organization Account
+
+![Organization Account](/img/organization.png)
+
+:::info
+Since this is an **Organization Account**, you can add users only from within your organization — as seen by the dropdown menu that allows you to find any user exclusively within your organization.
+:::
 
 Designed for structured teams and enterprises with centralized control, role assignments, and advanced user management.
 
@@ -111,5 +122,3 @@ Designed for structured teams and enterprises with centralized control, role ass
   - Manage Keys
   - Manage Connectors
   - Manage Agents
-
----
