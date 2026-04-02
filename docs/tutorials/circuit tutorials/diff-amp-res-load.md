@@ -33,7 +33,6 @@ Upload the required models and libraries. For this tutorial, the Global Foundrie
 
 Complete the process by clicking **Save Circuit**.
 
-![Save Circuit](/img/CT4/ct3.jpg)
 
 ---
 
