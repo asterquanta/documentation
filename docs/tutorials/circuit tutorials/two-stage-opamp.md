@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Two-Stage Op-Amp
 
 ## Creating a New Project

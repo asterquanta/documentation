@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Differential Op-Amp Resistive Load
 
 ## Creating a New Project
@@ -33,7 +37,7 @@ Upload the required models and libraries. For this tutorial, the Global Foundrie
 
 Complete the process by clicking **Save Circuit**.
 
-
+![DC Analysis Tabs](/img/CT4/ct4.jpg)
 ---
 
 ## DC Analysis
@@ -50,7 +54,7 @@ The following tabs will be visible:
 - Genie
 - Analytics
 
-![DC Analysis Tabs](/img/CT4/ct4.jpg)
+![Netlist View](/img/CT4/ct5.jpg)
 
 ---
 
@@ -61,14 +65,14 @@ You can view the uploaded netlist file in the **Netlist** tab.
 - Click the **Edit** button to make changes to the netlist if required.
 - Click the **Image** icon next to the Edit button to view uploaded circuit images.
 
-![Netlist View](/img/CT4/ct5.jpg)
 ![Netlist Edit](/img/CT4/ct6.jpg)
+![Design Parameters](/img/CT4/ct7.jpg)
 
 ---
 
 ### Design Parameters
 
-![Design Parameters](/img/CT4/ct7.jpg)
+![Environment Parameters](/img/CT4/ct8.jpg)
 
 This tab displays all parameters defined in the uploaded netlist along with their respective values.
 
@@ -85,7 +89,7 @@ Select the testbench (`Diff_Amp_DC_tb`) and enable the parameters that should be
 
 ### Environment Parameters
 
-![Environment Parameters](/img/CT4/ct8.jpg)
+![Measurements](/img/CT4/ct9.jpg)
 
 This tab is used to define simulation conditions such as process corner and temperature.
 
@@ -95,7 +99,7 @@ For this tutorial, the temperature is set to **27°C**.
 
 ### Measurements
 
-![Measurements](/img/CT4/ct9.jpg)
+![Data Capture 1](/img/CT4/ct10.jpg)
 
 Measurement statements define the values that will be evaluated during simulation.
 
@@ -119,8 +123,8 @@ To enable vector measurement:
 
 #### Data Capture
 
-![Data Capture 1](/img/CT4/ct10.jpg)
 ![Data Capture 2](/img/CT4/ct11.jpg)
+![Simulation Setup 1](/img/CT4/ct12.jpg)
 
 To extract variables defined in the netlist (such as `pm`), **Data Capture** is used. In this tutorial, variables are calculated using `let` statements, so Data Capture is required.
 
@@ -137,8 +141,8 @@ Vector measurements can also be used by:
 
 ### Simulation Setup
 
-![Simulation Setup 1](/img/CT4/ct12.jpg)
 ![Simulation Setup 2](/img/CT4/ct13.jpg)
+![Genie 1](/img/CT4/ct14.jpg)
 
 Before running the simulation, **Manage Dependencies** must be completed.
 
@@ -157,8 +161,8 @@ The results correspond to the default design parameter values defined in the **D
 
 ### Genie
 
-![Genie 1](/img/CT4/ct14.jpg)
 ![Genie 2](/img/CT4/ct15.jpg)
+![Open Graph](/img/CT4/ct16.jpg)
 
 The **Genie** page is where circuit optimization is performed.
 
@@ -180,16 +184,16 @@ For vector measurements, targets must be assigned using **Graph Mode**:
 
 1. Click **Open Graph**
 
-![Open Graph](/img/CT4/ct16.jpg)
+![Graph Y-values](/img/CT4/ct17.jpg)
 
 2. Select the X-axis label (`vout_values`). The defined instances will be listed automatically.
 3. Set Y-values either manually or by uploading a CSV file
 
-![Graph Y-values](/img/CT4/ct17.jpg)
+![Import from File](/img/CT4/ct18.jpg)
 
 Targets can also be assigned using **Import from File** (JSON format). The required JSON files are available in the **Resources** section.
 
-![Import from File](/img/CT4/ct18.jpg)
+![Transient Netlist](/img/CT4/ct19.jpg)
 
 4. Select the appropriate agent. For this tutorial, the agent `Diff_Amp_DC` is used.
 5. Click **Genie Optimize**
@@ -224,21 +228,21 @@ After uploading, click on the testbench. The following tabs will be visible:
 
 ### Netlist
 
-![Transient Netlist](/img/CT4/ct19.jpg)
+![Transient Netlist Edit](/img/CT4/ct20.jpg)
 
 The **Netlist** tab displays the uploaded netlist file.
 
 - Click the **Pencil (Edit)** icon to edit the netlist.
 - Click the **Image** icon to view uploaded images.
 
-![Transient Netlist Edit](/img/CT4/ct20.jpg)
 ![Transient Netlist Image](/img/CT4/ct21.jpg)
+![Transient Design Parameters](/img/CT4/ct22.jpg)
 
 ---
 
 ### Design Parameters
 
-![Transient Design Parameters](/img/CT4/ct22.jpg)
+![Transient Measurements](/img/CT4/ct23.jpg)
 
 This tab displays all parameters defined in the netlist along with their values.
 
@@ -251,7 +255,7 @@ Select the parameters that the AI agent is allowed to modify, and specify the op
 
 ### Measurements
 
-![Transient Measurements](/img/CT4/ct23.jpg)
+![Transient Simulation Setup](/img/CT4/ct24.jpg)
 
 Measurement statements define the values evaluated during simulation.
 
@@ -267,7 +271,7 @@ To enable vector measurement:
 
 ### Simulation Setup
 
-![Transient Simulation Setup](/img/CT4/ct24.jpg)
+![Transient Genie](/img/CT4/ct25.jpg)
 
 Before running the simulation, complete **Manage Dependencies**:
 
@@ -281,7 +285,7 @@ Click **Simulate** and view results in the **Log file**.
 
 ### Genie
 
-![Transient Genie](/img/CT4/ct25.jpg)
+![Transient Graph](/img/CT4/ct26.jpg)
 
 The **Genie** page is used for optimization.
 
@@ -289,16 +293,16 @@ The **Genie** page is used for optimization.
 2. Define the optimization goal and provide target values
 3. For vector measurements, click **Open Graph**
 
-![Transient Graph](/img/CT4/ct26.jpg)
+![Transient Import](/img/CT4/ct27.jpg)
 
 4. Select the X-axis label (`output`)
 5. Set Y-values manually or upload a CSV file
 
-![Transient Import](/img/CT4/ct27.jpg)
+![Transient Agent](/img/CT4/ct28.jpg)
 
 Targets can also be assigned using **Import from File** (JSON format).
 
-![Transient Agent](/img/CT4/ct28.jpg)
+![AC Add Testbench](/img/CT4/ct29.jpg)
 
 6. Select the appropriate agent (`Diff_Amp_tran_tb`) and click **Genie Optimize**
 7. Open **Chart** to monitor progress
@@ -311,7 +315,7 @@ Once the target is achieved, download the optimized netlist.
 
 Add a new testbench by clicking the **Plus (+)** icon.
 
-![AC Add Testbench](/img/CT4/ct29.jpg)
+![AC Netlist 1](/img/CT4/ct30.jpg)
 
 Upload the required `.spice` file and waveform images, then click **Save Circuit**.
 
@@ -319,9 +323,9 @@ Upload the required `.spice` file and waveform images, then click **Save Circuit
 
 ### Netlist
 
-![AC Netlist 1](/img/CT4/ct30.jpg)
 ![AC Netlist 2](/img/CT4/ct31.jpg)
 ![AC Netlist 3](/img/CT4/ct32.jpg)
+![AC Design Parameters](/img/CT4/ct33.jpg)
 
 The **Netlist** tab displays the uploaded netlist file.
 
@@ -332,7 +336,7 @@ The **Netlist** tab displays the uploaded netlist file.
 
 ### Design Parameters
 
-![AC Design Parameters](/img/CT4/ct33.jpg)
+![AC Measurements](/img/CT4/ct34.jpg)
 
 This tab displays all parameters defined in the netlist along with their values.
 
@@ -341,8 +345,7 @@ Select the parameters for optimization and define their ranges.
 ---
 
 ### Measurements
-
-![AC Measurements](/img/CT4/ct34.jpg)
+![AC Data Capture 1](/img/CT4/ct35.jpg)
 
 Measurement statements define the values evaluated during simulation.
 
@@ -354,8 +357,8 @@ For this tutorial, a vector measurement is used. Provide:
 
 #### Data Capture
 
-![AC Data Capture 1](/img/CT4/ct35.jpg)
 ![AC Data Capture 2](/img/CT4/ct36.jpg)
+![AC Simulation Setup](/img/CT4/ct37.jpg)
 
 To extract variables defined in the netlist (such as `ubw` and `pm`), **Data Capture** is used.
 
@@ -368,7 +371,7 @@ Vector measurements can also be used if required.
 
 ### Simulation Setup
 
-![AC Simulation Setup](/img/CT4/ct37.jpg)
+![AC Genie 1](/img/CT4/ct38.jpg)
 
 Complete **Manage Dependencies** before simulation.
 
@@ -378,7 +381,6 @@ Click **Simulate** and view results in the **Log file**.
 
 ### Genie
 
-![AC Genie 1](/img/CT4/ct38.jpg)
 ![AC Genie 2](/img/CT4/ct39.jpg)
 
 The **Genie** page is used to assign optimization targets.

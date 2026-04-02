@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Common Source with Resistive Load
 
 ## Creating a New Project
