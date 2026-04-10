@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Add New Project
 
-The [**Add New Project**](https://photon.asterquanta.com/home/projects/create?kind=0) page allows you to create and save a new project. Whether you're starting from scratch or working with an existing design, this page provides a user-friendly interface to build and organize your project efficiently.
+The [**Add New Project**](https://learning-genie.asterquanta.com/home/projects/create?kind=0) page allows you to create and save a new project. Whether you're starting from scratch or working with an existing design, this page provides a user-friendly interface to build and organize your project efficiently.
 
 ## Project Name
 In the **Project Name** field, enter a unique and descriptive name for your project. This name will help you easily identify and differentiate your project from others.

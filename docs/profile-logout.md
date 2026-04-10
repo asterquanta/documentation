@@ -6,7 +6,7 @@ sidebar_position: 11
 
 ## User Profile and Logout
 
-The [**User Profile**](https://photon.asterquanta.com/home/user/profile) section allows you to view and manage your personal information and preferences within the platform. It gives you control over your account settings, project history, and display preferences.
+The [**User Profile**](https://learning-genie.asterquanta.com/home/user/profile) section allows you to view and manage your personal information and preferences within the platform. It gives you control over your account settings, project history, and display preferences.
 
 ![User Profile](/img/userprofile.jpg)
 

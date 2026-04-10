@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Public Projects
 
-The [**Public Projects**](https://photon.asterquanta.com/home/projects) page showcases a collection of projects that have been created, authorized, and published by other users. These projects have gone through an approval process and are made available for public viewing and collaboration.
+The [**Public Projects**](https://learning-genie.asterquanta.com/home/projects) page showcases a collection of projects that have been created, authorized, and published by other users. These projects have gone through an approval process and are made available for public viewing and collaboration.
 
 ## Browse Public Projects
 Here, you can explore a variety of authorized projects across different categories. These projects have been validated and are ready to be used, studied, or modified.

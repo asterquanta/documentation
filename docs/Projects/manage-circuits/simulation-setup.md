@@ -2,9 +2,9 @@
 sidebar_position: 7
 ---
 
-# Simulation Setup
+# Run Simulation
 
-The **Simulation Setup** section displays important metadata and tools related to the execution of your circuit simulation. It allows you to track timing, review logs, and access the generated netlist.
+The **Run Simulation** section displays important metadata and tools related to the execution of your circuit simulation. It allows you to track timing, review logs, and access the generated netlist.
 
 ---
 

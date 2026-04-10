@@ -8,7 +8,7 @@ Let's get started with the **ADK in less than 10 minutes**.
 
 
 ## What you'll need
-- An [AsterQuanta](https://genie.asterquanta.com) account.
+- An [AsterQuanta](https://learning-genie.asterquanta.com/home/dashboard) account.
 - [Python](https://www.python.org/) version 3.11 or 3.12 **only** (will be less restrictive in future versions).
 
 
@@ -34,18 +34,21 @@ Make a new **development environment** with the following:
 
     Now, you should be able to run `genie -h` and see the following:
     ```sh
-    $ genie -h
-    usage: genie [-h] {setup,model} ...
+    usage: genie [-h] {setup,dashboard,update,model} ...
 
     Official AsterQuanta Genie ADK wizard.
 
     options:
-    -h, --help     show this help message and exit
+    -h, --help            show this help message and exit
 
     commands:
-    {setup,model}
-        setup        Sets up the project, in a ready for development state.
-        model        Sub command tree for model related operations.
+    {setup,dashboard,update,model}
+    setup               Sets up the project, in a ready for development
+                        state.
+    dashboard           Starts the streamlit telemetry / tracking backend for
+                        the agent.
+    update              Push the updates on settings.json to AQ server.
+    model               Sub command tree for model related operations.
 
     ```
 

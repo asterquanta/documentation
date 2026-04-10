@@ -40,5 +40,4 @@ class GenieModel(BaseModel):
 
 - ### `world_control_specifications: list[WorldControlSpec]`
     + **Description**: Specifications that define the action space for an agent. The `order` members
-    of each element in the list must be unique across the list adk\API\Models\world-controls.mdfor ordering purposes. For more
-    information check [World controls](/docs/API/Models/world-controls).
+    of each element in the list must be unique across the list adk\API\Models\world-controls.mdfor ordering purposes.

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # My Projects
 
-The [**My Projects**](https://photon.asterquanta.com/home/projects) page displays all the projects that you have worked on or cloned from other users. This is your personal space to access and manage your ongoing or past projects.
+The [**My Projects**](https://learning-genie.asterquanta.com/home/projects) page displays all the projects that you have worked on or cloned from other users. This is your personal space to access and manage your ongoing or past projects.
 
 ## Project List
 All your projects are listed here, with the following information displayed for each project:

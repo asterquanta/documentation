@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Authorize Projects
 
-The [**Authorize Projects**](https://photon.asterquanta.com/home/projects) page displays the projects that you have published and are ready to authorize for public availability. After publishing a project, you must authorize it here to make it fully accessible to others.
+The [**Authorize Projects**](https://learning-genie.asterquanta.com/home/projects) page displays the projects that you have published and are ready to authorize for public availability. After publishing a project, you must authorize it here to make it fully accessible to others.
 
 ## How to Publish and Authorize Your Project
 

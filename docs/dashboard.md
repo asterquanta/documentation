@@ -4,12 +4,12 @@ sidebar_position: 4
 
 # Dashboard
 
-You should have signed into your Asterquanta account to access the [Dashboard](https://genie.asterquanta.com/home/dashboard) Page
+You should have signed into your Asterquanta account to access the [Dashboard](https://learning-genie.asterquanta.com/home/dashboard) Page
 
 ![Dashboard Screenshot](/img/dashboard.jpg)
 
 1. The Dashboard provides an overview of the various projects you have created grouped by the type of project viz., Analog, Digital, Mixed, System, Equipment  
-2. Clicking on the Project type takes you to the [My projects Listing](https://genie.asterquanta.com/home/projects) page
+2. Clicking on the Project type takes you to the [My projects Listing](https://learning-genie.asterquanta.com/home/projects) page
 
 :::note
 Currently Analog is the supported circuit type. The others will be available in the future.
