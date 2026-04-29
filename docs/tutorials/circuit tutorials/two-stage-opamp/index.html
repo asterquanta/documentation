@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorials/circuit tutorials/two-stage-opamp" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Two-Stage Op-Amp | Genie User Manual</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.genie.com/TODO"><meta data-rh="true" name="twitter:image" content="https://docs.genie.com/TODO"><meta data-rh="true" property="og:url" content="https://docs.genie.com/docs/tutorials/circuit tutorials/two-stage-opamp"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Two-Stage Op-Amp | Genie User Manual"><meta data-rh="true" name="description" content="Creating a New Project"><meta data-rh="true" property="og:description" content="Creating a New Project"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.genie.com/docs/tutorials/circuit tutorials/two-stage-opamp"><link data-rh="true" rel="alternate" href="https://docs.genie.com/docs/tutorials/circuit tutorials/two-stage-opamp" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.genie.com/docs/tutorials/circuit tutorials/two-stage-opamp" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.be3bff90.css">
+<script src="/assets/js/runtime~main.4b91aa07.js" defer="defer"></script>
+<script src="/assets/js/main.357ec21d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/favicon.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/favicon.svg" alt="Asterquanta Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/favicon.svg" alt="Asterquanta Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Genie User Manual</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/overview">Platform Tutorial</a><a class="navbar__item navbar__link" href="/adk/getting-started">ADK Documentation</a><a class="navbar__item navbar__link" href="/connectors/intro">Connectors</a><a class="navbar__item navbar__link" href="/tools/setup-docker/windows">Tools</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/overview">Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Getting Started</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/login">Sign In &amp; Forgot Password</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/dashboard">Dashboard</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/projects">Projects</a><button aria-label="Expand sidebar category &#x27;Projects&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/account-management">Account Management</a><button aria-label="Expand sidebar category &#x27;Account Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/category/tutorials">Tutorials</a><button aria-label="Collapse sidebar category &#x27;Tutorials&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/docs/category/circuit-tutorials">Circuit Tutorials</a><button aria-label="Collapse sidebar category &#x27;Circuit Tutorials&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/how-to-clone-a-project">How to clone an existing project</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/common-source-with-res-load">Common Source with Resistive Load</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/tutorials/circuit tutorials/two-stage-opamp">Two-Stage Op-Amp</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/v2i">V2I</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/diff-amp-res-load">Differential Op-Amp Resistive Load</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/settings">Settings</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/notifications">Notifications</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/profile-logout">Profile and Logout</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/faqs">Frequently Asked Questions (FAQs)</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/tutorials"><span itemprop="name">Tutorials</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/circuit-tutorials"><span itemprop="name">Circuit Tutorials</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Two-Stage Op-Amp</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Two-Stage Op-Amp</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="creating-a-new-project">Creating a New Project<a href="#creating-a-new-project" class="hash-link" aria-label="Direct link to Creating a New Project" title="Direct link to Creating a New Project">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 1" src="/assets/images/ct1-2df8d7e485f18b39390b872e12ae2816.jpg" width="1380" height="171" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 2" src="/assets/images/ct2-4f1f8d4c2c1027350c1f45424d93e365.jpg" width="1380" height="677" class="img_ev3q"></p>
+<p>Create a new project by clicking &quot;Add New Project&quot;. A single project can contain multiple related circuits.</p>
+<p>Upon clicking &quot;Add New Project&quot;, you will be prompted to enter:</p>
+<ul>
+<li><strong>Project Type</strong> - Select Analog</li>
+<li><strong>Project Name</strong> - Enter the project name</li>
+<li><strong>Description</strong> - Write a short note on the project</li>
+<li><strong>Project Tags</strong> - Used for better organization of your projects</li>
+<li><strong>Project Image</strong> - Click on Upload image to add a project image (Image of the base circuit)</li>
+</ul>
+<p>After that, you are redirected to the Upload Circuit page.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="base-circuit-details">Base Circuit Details<a href="#base-circuit-details" class="hash-link" aria-label="Direct link to Base Circuit Details" title="Direct link to Base Circuit Details">​</a></h3>
+<ul>
+<li><strong>Base Circuit Name</strong> - Enter the base circuit name</li>
+<li><strong>Tool</strong> - Select the schematic/simulation tool being used. For this tutorial, Ngspice is selected</li>
+<li><strong>Description</strong> - Enter a description for the base circuit</li>
+<li><strong>Circuit Image</strong> - Upload an image of the base circuit</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 3a" src="/assets/images/ct3a-198c4cccf6f3208ccc8f1e0270597fa1.jpg" width="1918" height="790" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-bench-details">Test Bench Details<a href="#test-bench-details" class="hash-link" aria-label="Direct link to Test Bench Details" title="Direct link to Test Bench Details">​</a></h3>
+<ul>
+<li><strong>Circuit Schematic</strong> - Upload the <code>.spice</code> (netlist) file corresponding to your circuit. In this tutorial, a two-stage op-amp (<code>two_stage_opamp</code>) is used</li>
+<li><strong>Circuit Image</strong> - Upload schematic images or screenshots. You may upload:<!-- -->
+<ul>
+<li>Circuit schematics</li>
+<li>Input waveforms</li>
+<li>Output waveforms</li>
+</ul>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 3b" src="/assets/images/ct3b-24f9b4752b8dbe543323c92cb59bdaf7.jpg" width="1918" height="715" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="circuit-dependencies">Circuit Dependencies<a href="#circuit-dependencies" class="hash-link" aria-label="Direct link to Circuit Dependencies" title="Direct link to Circuit Dependencies">​</a></h3>
+<p>For your circuit dependencies, make sure for this specific project, you add the two required ones:</p>
+<ul>
+<li><strong>Models</strong> - Which you will get from the PDK Files in the resources (Upload <code>design.ngspice</code>)</li>
+<li><strong>Libraries</strong> - Which you will also get from the PDK Files in the resources (Upload <code>sm141064.ngspice</code>)</li>
+</ul>
+<p>Complete the process by clicking &quot;Save Circuit&quot;.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for this step</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct1_pdk_files-bb3554a463fc29662c94feb43abade8f.zip" target="_blank">PDK Files</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dc-analysis">DC Analysis<a href="#dc-analysis" class="hash-link" aria-label="Direct link to DC Analysis" title="Direct link to DC Analysis">​</a></h2>
+<p>After uploading the circuit, click on the testbench from the left-hand panel under Circuits.
+(In this tutorial, <code>two_stage_closed_DC</code> is used.)</p>
+<p>The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Environment Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained in the sections below.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 4" src="/assets/images/ct4-e1e314dac26da79a262552cb7771f741.jpg" width="1560" height="714" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist">Netlist<a href="#netlist" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 5" src="/assets/images/ct5-5f2391b4b21673e88c2efd77f4ce4a1a.jpg" width="1380" height="764" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 6" src="/assets/images/ct6-cbe007102a131a9be90355b7a9ffedbc.jpg" width="1380" height="707" class="img_ev3q"></p>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Edit button, if changes are required for different simulation results.</p>
+<p>Uploaded circuit images can be viewed by clicking the Image icon next to the Edit button.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters">Design Parameters<a href="#design-parameters" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 7" src="/assets/images/ct7-fc244fd2cab2c12bdbdc78a5bfcdd07c.jpg" width="1380" height="630" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their current values.</p>
+<p>For optimization purposes, you can specify a range for each parameter by modifying:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these are set to half and twice the typical parameter value.</p>
+<p>Select the testbench (<code>two_stage_closed_DC</code>) and enable the parameters that should be optimized by the AI agent.</p>
+<p><strong>Note:</strong> Design Parameter values can only be changed by accessing the Design Parameters tab from the Base Circuit page, not from the Design Parameters tab within the Test Bench Circuit page.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="environment-parameters">Environment Parameters<a href="#environment-parameters" class="hash-link" aria-label="Direct link to Environment Parameters" title="Direct link to Environment Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 8" src="/assets/images/ct8-8b4c4dddcfa4fb20675c8b50a699e377.jpg" width="1380" height="433" class="img_ev3q"></p>
+<p>This tab is used to define simulation conditions such as:</p>
+<ul>
+<li>Process corner</li>
+<li>Temperature</li>
+</ul>
+<p>For this tutorial, the temperature is set to a default value of 27°C.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements">Measurements<a href="#measurements" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 9" src="/assets/images/ct9-0ba4501d699c4344801981bb4a85b58e.jpg" width="1154" height="768" class="img_ev3q"></p>
+<p>Measurement statements define what values should be evaluated during simulation.</p>
+<p>The type of measurement depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<p>Under DC Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement in the generated input box.</p>
+<p>For this tutorial, a vector measurement is used to evaluate values at multiple instances.</p>
+<p>Voltage values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file via the menu icon beside DC Analysis.</li>
+</ul>
+<p>Click the menu icon in the top-right corner of the measurement box and enable Vector Mode.</p>
+<p>Provide:</p>
+<ul>
+<li>The variable name (e.g., <code>[voltage]</code>)</li>
+<li>The instances at which measurements are taken, separated by commas</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture">Data Capture<a href="#data-capture" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 10" src="/assets/images/ct10-1da2f21cc7bc426cb17a16690718c07d.jpg" width="1154" height="233" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 11" src="/assets/images/ct11-5c0dd41d87e37cff51f5ed31dcc31324.jpg" width="876" height="691" class="img_ev3q"></p>
+<p>To extract variables defined within the netlist (such as offset), a Data Capture measurement is used.</p>
+<p>This method is suitable for measurements involving let statements.</p>
+<p>Click the Plus (+) icon under Data Capture.</p>
+<p>Enter the variable name exactly as defined in the netlist (e.g., <code>offset</code>).</p>
+<p>Vector measurements can also be used in Data Capture by:</p>
+<ul>
+<li>Changing the measurement type from Scalar to Vector</li>
+<li>Entering multiple variable names separated by commas</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup">Simulation Setup<a href="#simulation-setup" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 12" src="/assets/images/ct12-3aea46bc04d3df35edbb837986210c3e.jpg" width="1600" height="929" class="img_ev3q"></p>
+<p>Manage Dependencies must be completed before running simulations.</p>
+<p>Click the menu button below Publish Project (top-right corner).</p>
+<p>Select Manage Dependencies, then click the Chain Icon to link the required models and libraries.</p>
+<p>Once dependencies are connected, click Simulate.</p>
+<p>Simulation results can be viewed in the Log file.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 13" src="/assets/images/ct13-4645d9d0afe368c5082bb195bc51c1ab.jpg" width="1600" height="286" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 14" src="/assets/images/ct14-d333fbc021f795c1491f1bd0617e5c81.jpg" width="876" height="832" class="img_ev3q"></p>
+<p>The results displayed correspond to the default design parameter values specified in the Design Parameters tab.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-optimization">Genie (Optimization)<a href="#genie-optimization" class="hash-link" aria-label="Direct link to Genie (Optimization)" title="Direct link to Genie (Optimization)">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 15" src="/assets/images/ct15-779fee13acf30b5d806198233a3e78ca.jpg" width="1692" height="670" class="img_ev3q"></p>
+<p>The Genie page is where circuit optimization is performed.</p>
+<p>Measurement variables (both scalar and vector) defined earlier are displayed on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>Click Enter Expression, select the measurement variable, and define the optimization goal:</p>
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+<p>Provide the target value or range for scalar measurements.</p>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p>For vector measurements, targets can be assigned using Graph Mode, since optimization occurs across multiple instances.</p>
+<p>Click Open Graph to assign vector targets.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 16" src="/assets/images/ct16-39bdd72dcb80d1949ed696212536dc3c.jpg" width="885" height="568" class="img_ev3q"></p>
+<p>Select the X-axis label (e.g., <code>output_dc</code>).</p>
+<p>The instances defined earlier will be listed automatically.</p>
+<p>Set Y-values either:</p>
+<ul>
+<li>Manually (for a small number of points), or</li>
+<li>By uploading a CSV file (for larger datasets)</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 17a" src="/assets/images/ct17a-6183bef7a60961c7a0ba5ba333855e2d.jpg" width="1153" height="731" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 17b" src="/assets/images/ct17b-725e19658a90b41181c5189704192a93.jpg" width="1156" height="727" class="img_ev3q">
+Targets can also be assigned by importing a JSON file using the Import from File option.</p>
+<p>The required JSON files are available in the Resources section of this document.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 18" src="/assets/images/ct18-3d8cff6faaad579e4101439a8562b11f.jpg" width="488" height="229" class="img_ev3q"></p>
+<p>On the bottom left of the Genie page, you can select the appropriate agent for optimization.
+(For this tutorial, <code>two_stage_closed_dc</code> is used.)</p>
+<p>Click Genie Optimize at the bottom-right of the page.</p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time.</p>
+<p>Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for DC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct1_dc_analysis-cc65af16cfef0e91d5b66c6f7690b085.zip" target="_blank">DC Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="transient-analysis">Transient Analysis<a href="#transient-analysis" class="hash-link" aria-label="Direct link to Transient Analysis" title="Direct link to Transient Analysis">​</a></h2>
+<p>After uploading the circuit, add a new testbench by clicking the Plus (+) icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 19" src="/assets/images/ct19-5e2dcc4722c992cb89dedf8a99f3f61e.jpg" width="1026" height="600" class="img_ev3q"></p>
+<p>Upload the required <code>.spice</code> file along with the waveform images for the analysis, then click Save Circuit.</p>
+<p>Once saved, click on the newly created testbench. The following tabs will be available:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained in the sections below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-1">Netlist<a href="#netlist-1" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required for different simulation results.</p>
+<p>Uploaded circuit images can be viewed by clicking the Image icon next to the Edit icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 20" src="/assets/images/ct20-9349fd59f179ec19c496d2c53a2c352a.jpg" width="1573" height="741" class="img_ev3q"></p>
+<p>The images uploaded for the transient analysis are shown below:</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 21" src="/assets/images/ct21-bc0a9ecc8d36ed685ed898c60295cb6b.jpg" width="1280" height="762" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 22" src="/assets/images/ct22-2ad9e4cefc40f64329cbad79994ae3b3.jpg" width="1280" height="762" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-1">Design Parameters<a href="#design-parameters-1" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 23" src="/assets/images/ct23-fc244fd2cab2c12bdbdc78a5bfcdd07c.jpg" width="1380" height="630" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their current values.</p>
+<p>For optimization, you can select the parameters that the AI agent is allowed to modify.</p>
+<p>You can also define the allowed range of each parameter by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-1">Measurements<a href="#measurements-1" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 24" src="/assets/images/ct24-ec6cf718eb20678a0f9bea4bff777721.jpg" width="1101" height="555" class="img_ev3q"></p>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<p>Under Transient Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement in the generated input box.</p>
+<p>For this tutorial, a vector measurement is used to evaluate values at multiple instances.</p>
+<p>The required voltage/time values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file (via the menu icon beside Transient Analysis)</li>
+</ul>
+<p>To enable vector measurement:</p>
+<ul>
+<li>Click the menu icon in the top-right corner of the measurement box</li>
+<li>Enable Vector Mode</li>
+<li>Provide:<!-- -->
+<ul>
+<li>The variable name (e.g., <code>[time]</code>)</li>
+<li>The instances at which measurements are taken, separated by commas</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-1">Simulation Setup<a href="#simulation-setup-1" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>Before running the simulation, Manage Dependencies must be completed.</p>
+<p>To add dependencies:</p>
+<ul>
+<li>Click the menu button below Publish Project (top-right corner)</li>
+<li>Select Manage Dependencies</li>
+<li>Click the Chain icon to connect the required models and libraries</li>
+</ul>
+<p>After linking dependencies:</p>
+<ul>
+<li>Click Simulate</li>
+<li>View the results in the Log file</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 25" src="/assets/images/ct25-a1e5a3a6dabbb0e90fe959fced863d69.jpg" width="830" height="774" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-optimization-1">Genie (Optimization)<a href="#genie-optimization-1" class="hash-link" aria-label="Direct link to Genie (Optimization)" title="Direct link to Genie (Optimization)">​</a></h3>
+<p>This page is where circuit optimization is performed, and targets are assigned for the AI agent to achieve.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 26" src="/assets/images/ct26-3b014605b780bfe05a8a05f98b6bde52.jpg" width="1691" height="677" class="img_ev3q"></p>
+<p>All measurement variables (both scalar and vector) defined earlier will be displayed on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>To configure optimization:</p>
+<ul>
+<li>Click Enter Expression</li>
+<li>Select the measurement variable</li>
+<li>Define the optimization goal:<!-- -->
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+</li>
+<li>Provide the target value/range (for scalar measurements)</li>
+</ul>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p>For vector measurements, targets can be assigned using Graph Mode, since optimization occurs across multiple instances.</p>
+<p>Click Open Graph to assign vector targets.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 27" src="/assets/images/ct27-39bdd72dcb80d1949ed696212536dc3c.jpg" width="885" height="568" class="img_ev3q"></p>
+<p>Select the X-axis label (e.g., <code>output</code>). The instances entered in the Measurements tab will be listed automatically.</p>
+<p>Targets (Y-values) can be set:</p>
+<ul>
+<li>Manually (for a small number of points), or</li>
+<li>By uploading a CSV file (for larger datasets)</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 28" src="/assets/images/ct28-33f0224bcf6d36168a307b40a59fac95.jpg" width="1204" height="700" class="img_ev3q"></p>
+<p>Targets can also be assigned by importing a JSON file using Import from File.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 29" src="/assets/images/ct29-d74384e68614f8a9e4a48a589cbb9e8b.jpg" width="481" height="292" class="img_ev3q"></p>
+<p>On the bottom left of the Genie page, you can select the appropriate agent for optimization. For this tutorial, the agent <code>two_stage_closed_transient</code> is used.</p>
+<p>Then click Genie Optimize at the bottom-right of the Genie page.</p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for Transient Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct1_transient_analysis-1d6ee02f0a76ff048bd1fb8131751e8e.zip" target="_blank">Transient Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ac-analysis">AC Analysis<a href="#ac-analysis" class="hash-link" aria-label="Direct link to AC Analysis" title="Direct link to AC Analysis">​</a></h2>
+<p>Add a new testbench by clicking the Plus (+) icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 30" src="/assets/images/ct30-27b0a41acd14bbdce70a98f91ad37c1b.jpg" width="1071" height="520" class="img_ev3q"></p>
+<p>Upload the required <code>.spice</code> file along with the waveform images, then click Save Circuit.</p>
+<p>After uploading, click on the testbench. The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained in the sections below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-2">Netlist<a href="#netlist-2" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required for different simulation results.</p>
+<p>Uploaded circuit images can be viewed by clicking the Image icon next to the Edit icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 31" src="/assets/images/ct31-dced4df4b483690273bc526259ca4f8c.jpg" width="1417" height="719" class="img_ev3q"></p>
+<p>The images uploaded for the AC analysis are shown below:</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 32" src="/assets/images/ct32-c5d930cdebce1e1b67be4da34e22dd6c.jpg" width="1390" height="675" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 33" src="/assets/images/ct33-2fc14da75e4578a623e5c40b009d7a02.jpg" width="1600" height="856" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-2">Design Parameters<a href="#design-parameters-2" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 34" src="/assets/images/ct34-fc244fd2cab2c12bdbdc78a5bfcdd07c.jpg" width="1380" height="630" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their current values.</p>
+<p>For optimization, select the parameters that the AI agent is allowed to modify.</p>
+<p>For each enabled parameter, specify its optimization range by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-2">Measurements<a href="#measurements-2" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 35" src="/assets/images/ct35-99f77cc322ff097b42c3eb086a3ee84e.jpg" width="1147" height="504" class="img_ev3q"></p>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<p>Under AC Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement in the generated input box.</p>
+<p>For this tutorial, a vector measurement is used to evaluate values at multiple frequency instances.</p>
+<p>The required values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file (via the menu icon beside AC Analysis)</li>
+</ul>
+<p>To enable vector measurement:</p>
+<ul>
+<li>Click the menu icon in the top-right corner of the measurement box</li>
+<li>Enable Vector Mode</li>
+<li>Provide:<!-- -->
+<ul>
+<li>The variable name (e.g., <code>[freq]</code>)</li>
+<li>The frequency instances separated by commas</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture-1">Data Capture<a href="#data-capture-1" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 36" src="/assets/images/ct36-0770bbb6fa7bdcd4af36dd425f04e7ce.jpg" width="1075" height="459" class="img_ev3q"></p>
+<p>To extract variables directly from the netlist, a Data Capture measurement is used.</p>
+<p>This method is suitable for measurements involving let statements.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 37" src="/assets/images/ct37-8bf511d9d92f3036864c9500d3bc1185.jpg" width="807" height="690" class="img_ev3q"></p>
+<p>In this tutorial, the variables <code>ubw</code> and <code>pm</code> are calculated using let statements. Therefore, Data Capture is used.</p>
+<p>To add a Data Capture measurement:</p>
+<ul>
+<li>Click the Plus (+) icon under Data Capture</li>
+<li>Enter the variable name exactly as defined in the netlist</li>
+</ul>
+<p>Vector measurements can also be used in Data Capture by:</p>
+<ul>
+<li>Changing the measurement type from Scalar to Vector</li>
+<li>Entering multiple variable names separated by commas</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-2">Simulation Setup<a href="#simulation-setup-2" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>Before running the simulation, Manage Dependencies must be completed.</p>
+<p>To include dependencies:</p>
+<ul>
+<li>Click the menu button below Publish Project (top-right corner)</li>
+<li>Select Manage Dependencies</li>
+<li>Click the Chain icon to connect the required models and libraries</li>
+</ul>
+<p>After linking dependencies:</p>
+<ul>
+<li>Click Simulate</li>
+<li>View the results in the Log file</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 38" src="/assets/images/ct38-375cc518683ea2eaec2d21be58047312.jpg" width="839" height="797" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-optimization-2">Genie (Optimization)<a href="#genie-optimization-2" class="hash-link" aria-label="Direct link to Genie (Optimization)" title="Direct link to Genie (Optimization)">​</a></h3>
+<p>This page is where circuit optimization is performed, and targets are assigned for the AI agent.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 39" src="/assets/images/ct39-26546f0cac889d6f3d1a854fe1f3ec6b.jpg" width="1715" height="690" class="img_ev3q"></p>
+<p>All measurement variables (both scalar and vector) defined earlier will be visible on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>To configure optimization:</p>
+<ul>
+<li>Click Enter Expression</li>
+<li>Select the measurement variable</li>
+<li>Define the optimization goal:<!-- -->
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+</li>
+<li>Provide the target value/range (for scalar measurements)</li>
+</ul>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 40" src="/assets/images/ct40-c559e3ba0d094aadfa7fe12ebb50b18b.jpg" width="1170" height="534" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 41" src="/assets/images/ct41-bf8f5917bcc65e40cac53f631c5ee885.jpg" width="482" height="276" class="img_ev3q"></p>
+<p>On the bottom left of the Genie page, you can select the appropriate agent for optimization. For this tutorial, the agent <code>two_stage_closed_ac</code> is used.</p>
+<p>Click Genie Optimize at the bottom-right of the Genie page.</p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for AC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct1_stability_analysis-6d6b49786bcb6001380ae6165aa9dfe4.zip" target="_blank">AC Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="global-resources">Global Resources<a href="#global-resources" class="hash-link" aria-label="Direct link to Global Resources" title="Direct link to Global Resources">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Download All Tutorial Resources</div><div class="admonitionContent_BuS1"><p>Click here to download the complete tutorial resource package:
+<a href="/assets/files/circuit_tutorial_1_resources-736ff71e6dba456f52bf2af73fae1c70.zip" target="_blank">Download Tutorial Resources (ZIP)</a></p></div></div></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/tutorials/circuit tutorials/common-source-with-res-load"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Common Source with Resistive Load</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/tutorials/circuit tutorials/v2i"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">V2I</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#creating-a-new-project" class="table-of-contents__link toc-highlight">Creating a New Project</a><ul><li><a href="#base-circuit-details" class="table-of-contents__link toc-highlight">Base Circuit Details</a></li><li><a href="#test-bench-details" class="table-of-contents__link toc-highlight">Test Bench Details</a></li><li><a href="#circuit-dependencies" class="table-of-contents__link toc-highlight">Circuit Dependencies</a></li></ul></li><li><a href="#dc-analysis" class="table-of-contents__link toc-highlight">DC Analysis</a><ul><li><a href="#netlist" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#environment-parameters" class="table-of-contents__link toc-highlight">Environment Parameters</a></li><li><a href="#measurements" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#simulation-setup" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-optimization" class="table-of-contents__link toc-highlight">Genie (Optimization)</a></li></ul></li><li><a href="#transient-analysis" class="table-of-contents__link toc-highlight">Transient Analysis</a><ul><li><a href="#netlist-1" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-1" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-1" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#simulation-setup-1" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-optimization-1" class="table-of-contents__link toc-highlight">Genie (Optimization)</a></li></ul></li><li><a href="#ac-analysis" class="table-of-contents__link toc-highlight">AC Analysis</a><ul><li><a href="#netlist-2" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-2" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-2" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#simulation-setup-2" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-optimization-2" class="table-of-contents__link toc-highlight">Genie (Optimization)</a></li></ul></li><li><a href="#global-resources" class="table-of-contents__link toc-highlight">Global Resources</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">User Manual</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Platform Tutorial</a></li><li class="footer__item"><a class="footer__link-item" href="/adk/getting-started">ADK Documentation</a></li><li class="footer__item"><a class="footer__link-item" href="/connectors/intro">Connectors</a></li><li class="footer__item"><a class="footer__link-item" href="/tools/setup-docker/windows">Tools</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Asterquanta, Inc.</div></div></div></footer></div>
+</body>
+</html>

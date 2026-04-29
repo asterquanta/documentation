@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorials/circuit tutorials/v2i" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">V2I | Genie User Manual</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.genie.com/TODO"><meta data-rh="true" name="twitter:image" content="https://docs.genie.com/TODO"><meta data-rh="true" property="og:url" content="https://docs.genie.com/docs/tutorials/circuit tutorials/v2i"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="V2I | Genie User Manual"><meta data-rh="true" name="description" content="Creating a New Project"><meta data-rh="true" property="og:description" content="Creating a New Project"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.genie.com/docs/tutorials/circuit tutorials/v2i"><link data-rh="true" rel="alternate" href="https://docs.genie.com/docs/tutorials/circuit tutorials/v2i" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.genie.com/docs/tutorials/circuit tutorials/v2i" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.be3bff90.css">
+<script src="/assets/js/runtime~main.4b91aa07.js" defer="defer"></script>
+<script src="/assets/js/main.357ec21d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/favicon.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/favicon.svg" alt="Asterquanta Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/favicon.svg" alt="Asterquanta Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Genie User Manual</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/overview">Platform Tutorial</a><a class="navbar__item navbar__link" href="/adk/getting-started">ADK Documentation</a><a class="navbar__item navbar__link" href="/connectors/intro">Connectors</a><a class="navbar__item navbar__link" href="/tools/setup-docker/windows">Tools</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/overview">Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Getting Started</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/login">Sign In &amp; Forgot Password</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/dashboard">Dashboard</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/projects">Projects</a><button aria-label="Expand sidebar category &#x27;Projects&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/account-management">Account Management</a><button aria-label="Expand sidebar category &#x27;Account Management&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/category/tutorials">Tutorials</a><button aria-label="Collapse sidebar category &#x27;Tutorials&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/docs/category/circuit-tutorials">Circuit Tutorials</a><button aria-label="Collapse sidebar category &#x27;Circuit Tutorials&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/how-to-clone-a-project">How to clone an existing project</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/common-source-with-res-load">Common Source with Resistive Load</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/two-stage-opamp">Two-Stage Op-Amp</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/tutorials/circuit tutorials/v2i">V2I</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/tutorials/circuit tutorials/diff-amp-res-load">Differential Op-Amp Resistive Load</a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/settings">Settings</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/notifications">Notifications</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/profile-logout">Profile and Logout</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/faqs">Frequently Asked Questions (FAQs)</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/tutorials"><span itemprop="name">Tutorials</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/circuit-tutorials"><span itemprop="name">Circuit Tutorials</span></a><meta itemprop="position" content="2"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">V2I</span><meta itemprop="position" content="3"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>V2I</h1></header>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="creating-a-new-project">Creating a New Project<a href="#creating-a-new-project" class="hash-link" aria-label="Direct link to Creating a New Project" title="Direct link to Creating a New Project">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 1" src="/assets/images/ct1-4c8ec97ff303105b37d979bef1ab882b.jpg" width="1380" height="171" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 2" src="/assets/images/ct2-b7c2d706f1714a6e4b4448c8e81bf911.jpg" width="1380" height="677" class="img_ev3q"></p>
+<p>Create a new project by clicking &quot;Add New Project&quot;. A single project can contain multiple related circuits.</p>
+<p>Upon clicking &quot;Add New Project&quot;, you will be prompted to enter:</p>
+<ul>
+<li><strong>Project Type</strong> – Select the appropriate classification (Analog, Digital, or Mixed-Signal)</li>
+<li><strong>Project Name</strong> – Enter the project name</li>
+<li><strong>Description</strong> – Provide a short description of the project</li>
+<li><strong>Project Tags</strong> – Used for organizing projects</li>
+<li><strong>Project Image</strong> – Upload an image of the base circuit</li>
+</ul>
+<p>After completing the details, click &quot;Save Project&quot;.</p>
+<p>You will then be redirected to the Upload Circuit page.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="base-circuit-details">Base Circuit Details<a href="#base-circuit-details" class="hash-link" aria-label="Direct link to Base Circuit Details" title="Direct link to Base Circuit Details">​</a></h3>
+<ul>
+<li><strong>Base Circuit Name</strong> – Enter the base circuit name</li>
+<li><strong>Tool</strong> – Select the schematic/simulation tool. For this tutorial, Ngspice is used</li>
+<li><strong>Description</strong> – Enter a description of the circuit</li>
+<li><strong>Circuit Schematic</strong> – Upload the .spice (netlist) file. In this tutorial, <code>dc_netlist.spice</code> is uploaded</li>
+<li><strong>Circuit Image</strong> – Upload schematic screenshots. You may include:<!-- -->
+<ul>
+<li>Circuit schematics</li>
+<li>Input waveforms</li>
+<li>Output waveforms</li>
+</ul>
+</li>
+</ul>
+<p>For this tutorial, the circuit considered is &quot;V2I_converter&quot;.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="circuit-dependencies">Circuit Dependencies<a href="#circuit-dependencies" class="hash-link" aria-label="Direct link to Circuit Dependencies" title="Direct link to Circuit Dependencies">​</a></h3>
+<p>Upload the required models and libraries. For this tutorial, the Global Foundries 180nm models and libraries are included.</p>
+<p>Complete the process by clicking &quot;Save Circuit&quot;.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for this step</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_pdk_files-d178e3867b5fe9623919e78991e4a3b6.zip" target="_blank">PDK Files</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dc-analysis">DC Analysis<a href="#dc-analysis" class="hash-link" aria-label="Direct link to DC Analysis" title="Direct link to DC Analysis">​</a></h2>
+<p>After uploading the circuit, click on the testbench from the left-hand panel under Circuits. (In this tutorial, V2I_dc_analysis is used.)</p>
+<p>The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Environment Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained below.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 3" src="/assets/images/ct3-f38949050a822ec1e0eb9565a93bf111.jpg" width="1380" height="592" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist">Netlist<a href="#netlist" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p>You can view the uploaded netlist file in the Netlist tab.</p>
+<p>You can edit the netlist by clicking the Edit button, if changes are required for different simulation results.</p>
+<p>Uploaded circuit images can be viewed by clicking the Image icon next to the Edit button.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 4" src="/assets/images/ct4-ae6131fa28562c9caa6fa53d7728f6e6.jpg" width="969" height="726" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 5" src="/assets/images/ct5-a486086fee2d567e411b19266ddb5db1.jpg" width="1224" height="684" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters">Design Parameters<a href="#design-parameters" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 6" src="/assets/images/ct6-56e49a9a75cc8b9929f95eb61635a0c8.jpg" width="1919" height="826" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their respective values.</p>
+<p>For optimization, you can define the allowed range for each parameter by modifying:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<p>Select the testbench (V2I_dc_analysis) and enable the parameters that should be optimized by the AI agent.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="environment-parameters">Environment Parameters<a href="#environment-parameters" class="hash-link" aria-label="Direct link to Environment Parameters" title="Direct link to Environment Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 7" src="/assets/images/ct7-b14d378517ac7a452983cedaf1dfa398.jpg" width="1619" height="636" class="img_ev3q"></p>
+<p>This tab is used to define simulation conditions such as:</p>
+<ul>
+<li>Process corner</li>
+<li>Temperature</li>
+</ul>
+<p>For this tutorial, the temperature is set to 27°C.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements">Measurements<a href="#measurements" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 8" src="/assets/images/ct8-9f5904545b95237da1e5e659ebc9db48.jpg" width="1682" height="712" class="img_ev3q"></p>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<p>Under DC Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement in the generated input box.</p>
+<p>For this tutorial, a vector measurement is used to evaluate values at multiple instances.</p>
+<p>The required voltage values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file via the menu icon beside DC Analysis</li>
+</ul>
+<p>To enable vector measurement:</p>
+<ol>
+<li>Click the menu icon in the top-right corner of the measurement box</li>
+<li>Enable Vector Mode</li>
+</ol>
+<p>Provide:</p>
+<ul>
+<li>The variable name (e.g., [voltage])</li>
+<li>The instances at which measurements are taken, separated by commas</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup">Simulation Setup<a href="#simulation-setup" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 9" src="/assets/images/ct9-ad95eea7bbcae34a077f1409bbe274d0.jpg" width="1638" height="772" class="img_ev3q"></p>
+<p>Before running the simulation, Manage Dependencies must be completed.</p>
+<p>To include dependencies:</p>
+<ol>
+<li>Click the menu button below Publish Project (top-right corner)</li>
+<li>Select Manage Dependencies</li>
+<li>Click the Chain icon to connect the required models and libraries</li>
+</ol>
+<p>After linking dependencies:</p>
+<ol>
+<li>Click Simulate</li>
+<li>View the results in the Log file</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 10" src="/assets/images/ct10-9b66c647ec77b408128cd89571986aa1.jpg" width="1680" height="339" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 11" src="/assets/images/ct11-2899ef8fb0fb92a06e601442b520b5e6.jpg" width="860" height="805" class="img_ev3q"></p>
+<p>The results displayed correspond to the default design parameter values specified in the Design Parameters tab.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie">Genie<a href="#genie" class="hash-link" aria-label="Direct link to Genie" title="Direct link to Genie">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 12" src="data:image/jpeg;base64,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lFP8s+q/99Cjyz6r/wB9CgBlFP8ALPqv/fQo8s+q/wDfQoAZRT/LPqv/AH0KPLPqv/fQoAZRT/LPqv8A30KBEx6bf++hQAyilIKnBGDSUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABT2O2NQO/JplPf7qfT+poAZRVjT7CfVL+2srWMy3NzKsMUYONzsQFH5kV7b4q/Zp0vwsl3psvxJ0R/F+niA32gyxtCU8zHywyuwEzgHOxQD9MigDwqiva9Q/ZonsPEvxL0g+II3PgrTBqLzfZCPtYMQk2Ab/k64zk/Suqb9j7TV8Z6f4SPxGtT4ivLf7YLIaVIfKg8ovvZ9+0cjG3OcHPtQB81UV9EeHf2T9P8T213qun+PBe+GoZksk1Oy0K5nea6P30WFfm8teMy5wc9KbJ+yR/wj9t4hu/F/jWy8M2GjanHp8l0bKS4WVZI1eOVApB53qCpHHJJwKAPnmivqjSf2VvDPhyx+Jln4u8SoL/AEK1hubS8t7aYpDBIMpcMi/f3Hcvl8kFCc4Ir5XoAefmi56qcfhTKeP9U31H9aZQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFPf7qfT+pplSAeYoA+8O3qKAJtL1GfR9TtL+2IW5tZkniJGQGVgw4+or3Dxt+0Z4Y8VpqmtRfDizi8caqsQutXu7s3EULR7R5kMRUbGIUcgjHqa8I8p/7jflR5T/3G/KgD6L8Q/taaRrVr4ymg+HkdhrvivSjpuoakmru4Y+XsV1jMWAAP4c5OB83FZP8Aw1H/AMXstviD/wAIz/qdLGm/2d9v6/uym/zPK9842/jXhXlP/cb8qPKf+435UAez/CP9oePwH4IuvCWs6ZqOoaS139ut5tI1V9OuYZMAMhdB8yNjkHpk9eMReN/2if8AhMfBXijw6PD72ces6rDqMc76nLctbrHGqCM+YCz5253bgOeFrx3yn/uN+VHlP/cb8qAPom9/aysNe8SeLbvV/BjT6T4j0m30u4sotUKyR+SG2uJBEOpbkY49TXzq5UuxQFVzwCckD60vlP8A3G/KgROf4G/KgAH+qb6j+tMp7fKm3qc5OKZQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/2Q==" width="481" height="144" class="img_ev3q"></p>
+<p>The Genie page is where circuit optimization is performed.</p>
+<p>Measurement variables (both scalar and vector) defined earlier are displayed on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>To configure optimization:</p>
+<ol>
+<li>Click Enter Expression</li>
+<li>Select the measurement variable</li>
+<li>Define the optimization goal:<!-- -->
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+</li>
+</ol>
+<p>Provide the target value or range for scalar measurements.</p>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p>For vector measurements, targets must be assigned using Graph Mode, since optimization occurs across multiple instances.</p>
+<p>Click Open Graph.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 13" src="/assets/images/ct13-589eb99d35ae207b3e48366eb8f1d9de.jpg" width="1232" height="767" class="img_ev3q"></p>
+<p>Select the X-axis label (current). The instances defined in the Measurements tab will be listed automatically.</p>
+<p>Set Y-values either:</p>
+<ul>
+<li>Manually (for a small number of points), or</li>
+<li>By uploading a CSV file (for larger datasets)</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 14" src="/assets/images/ct14-3351b6aa863a536dd19dd56ed09a0532.jpg" width="1213" height="772" class="img_ev3q"></p>
+<p>Targets can also be assigned by importing a JSON file using Import from File.</p>
+<p>The required JSON files are available in the Resources section of this document.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 15" src="/assets/images/ct15-da13ba166522a355f695a995236128a6.jpg" width="457" height="207" class="img_ev3q"></p>
+<p>On the bottom-left of the Genie page, select the appropriate agent for optimization. For this tutorial, the agent v2i_8p44_dc is used.</p>
+<p>Click Genie Optimize at the bottom-right of the page.</p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for DC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_dc_analysis-1de3a7fa99fdba2c47ecb967836ec0ff.zip" target="_blank">DC Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="transient-analysis">Transient Analysis<a href="#transient-analysis" class="hash-link" aria-label="Direct link to Transient Analysis" title="Direct link to Transient Analysis">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 16" src="/assets/images/ct16-dbaf8746f5a5e2a81500db984651d1ea.jpg" width="1031" height="628" class="img_ev3q"></p>
+<p>Add a new testbench by clicking the Plus (+) icon.</p>
+<p>Upload the required .spice file along with the waveform images, then click Save Circuit.</p>
+<p>After uploading, click on the testbench. The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-1">Netlist<a href="#netlist-1" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 17" src="/assets/images/ct17-b50ec13b4cc304255300c91db493edb0.jpg" width="1378" height="551" class="img_ev3q"></p>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required.</p>
+<p>Uploaded images can be viewed by clicking the Image icon next to the Edit icon.</p>
+<p>The images uploaded for the transient analysis are shown below:</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 18" src="/assets/images/ct18-ef622fdea8253b2cec3892a5af4b7baf.jpg" width="880" height="690" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 19" src="/assets/images/ct19-9fba7463c58a7962b30830da507db1f1.jpg" width="1200" height="674" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 20" src="/assets/images/ct20-39641c583b32cae00c9e7b47adf5f403.jpg" width="1195" height="671" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-1">Design Parameters<a href="#design-parameters-1" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 21" src="/assets/images/ct21-8dc6872269daaad6a6b672408de95ce2.jpg" width="1919" height="831" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their respective values.</p>
+<p>Select the parameters that the AI agent is allowed to modify.</p>
+<p>For each enabled parameter, specify its optimization range by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-1">Measurements<a href="#measurements-1" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 22" src="/assets/images/ct22-bb3abbc1c5281a36a9e745fca5b4b462.jpg" width="1919" height="826" class="img_ev3q"></p>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<p>Under Transient Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement in the generated input box.</p>
+<p>For this tutorial, a vector measurement is used.</p>
+<p>The required values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file via the menu icon beside Transient Analysis</li>
+</ul>
+<p>To enable vector measurement:</p>
+<ol>
+<li>Click the menu icon in the top-right corner</li>
+<li>Enable Vector Mode</li>
+</ol>
+<p>Provide:</p>
+<ul>
+<li>The variable name (e.g., [time])</li>
+<li>The instances separated by commas</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-1">Simulation Setup<a href="#simulation-setup-1" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 23" src="/assets/images/ct23-af450f52f1907d0e9cd17d4db582768f.jpg" width="855" height="792" class="img_ev3q"></p>
+<p>Before running the simulation, Manage Dependencies must be completed.</p>
+<ol>
+<li>Click the menu button below Publish Project.</li>
+<li>Select Manage Dependencies.</li>
+<li>Click the Chain icon to connect the required models and libraries.</li>
+</ol>
+<p>Then click Simulate and view the results in the Log file.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-1">Genie<a href="#genie-1" class="hash-link" aria-label="Direct link to Genie" title="Direct link to Genie">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 24" src="data:image/jpeg;base64,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oAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorT8NeGtU8Y65aaNoljNqeq3bFLe0t13SStgnCjucA0BtqzMorX0DwnrPim8u7TSdNuL+4tLeW7uI4UJMMMYzJI/8AdVR1J6V3N1+zD8WLLw5Jr8/gDXItGjtTevetakRrAF3mQn+7t5z6UbK/9f1oHXl6/wBf5r7zy+iu/wDB/wAAfiR8QPDc/iDw54J1vWtGh3ZvLOzd0cqcMI8D94QeoTJFTeDP2dviZ8Q9HOreGvBGs61poleA3NpalkEinDLn1HcU7a2FdbnnVFehJ+z58SpPG48HL4J1pvE/kC6bTBat5qQk4EjdlTPG4kD3qhffBnx1pnju38F3fhTVbbxVc/6jSZbZlnmGCQUB+8MK3IyODzUpp2t1HtfyOMortfH3wV8e/CyC3n8XeENY8PW1w2yK4v7N44nbk7Q5G3dgE7c5xzisS28F69eeE7vxRBpN3N4etLlbS41JIiYIpmGVRm6AkEdfUetF0OzMWit/RfAXiLxFol7rGmaNeX2lWU8NrcXkMRaKKWZtsSFum5m4A966vxb+zZ8UvAfh+61zxD4E1rR9Itdpnvbq1KRx7mCjJ7ZJA/Gm9NX/AF/VyU+Z2WrPNaK2ZfBuuw+EofFEmk3aeHZrs2MeptERA84XcYw/Tdt5x7H0rpfCXwE+I3jzwxceIvD3grWtY0SDduvbS0d0facME4zIR3CZx3o2v5BfbzOBorWv/CesaXoOm63eabcW2k6k8sdneSIRHO0RAkCnuVJAP1rovD3wQ8e+LNXtdL0fwnqmo6jdaamsQ21vAWeSzchVnA7oSQAfemlfb+uv5Dem/wDXT8zh6K7y6+A/xEsfGtl4QufBet23ia9RpLXTJrN0muFVSzNGCPnACsSRkcH0rR1T9mX4raJqmlabf+Adctb/AFV5IrG3ktSHuGRC7qg7kKCT7Cl0uHWx5lRWt4d8J6z4t8RW2gaNpl1q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c/D7xNr2km10DVdfgk09POBO9UmkUbScp054Fdnoutqmo+IPCfjH4saFrutaj4Om0uPUJ5I0trOVjgQyXg/1zDk5c7uvc0AfJtt4J8RXiWz2+gapOlzC9xA0dnIwliXG51wvzKMjJHAyKut8LfGau6HwjrodM7lOmzZXC7jn5eMKc/Tmvsnw14z8NeBk8AWI8beHZ7vRvCGr2ct3Z6nE0SXJa3KKGJHJKttyPm2kjNeSD436la/s36Vv8Y3U/iG68UFtTiTUi1/NZ+Uchvm37DtVecA8CgDwG48H69aaHFrU+iajDo0uBHqMlpItu+emJCNp/OrN58PvFOnWE99deGtYtrK3x51zNYSpHHkAjcxXAyCDz6ivuL4kfFPQLnwv4m1HT7/w7eeGtR0P7Lbx3PiaTLnZgQpp4RgkinuAD6nrjKvvjNpl98Y/EWmT+NbCbwbL4JMUcDalGbJ7vao2r820y8sMD5j+FAHyP47+D3ij4caNoeqa5p721nrEAmgba37skZEcmVGx8AnaeeD6VxVfRf7Q3iaXxp8HPhdfw+LLfV4rXT0ttR09tT8y5W8C8ySQlskgZBcjPzehr50oAfJ94fQfyplPk+8PoP5UygAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACnxffx6gj9KZRQAvSkp/mZ+8oY+p60bx/cX9f8AGgBlFP3j+4v6/wCNG8f3F/X/ABoAZRT94/uL+v8AjRvH9xf1/wAaAGUU/eP7i/r/AI0bx/cX9f8AGgDovAnxG8R/DPVZdR8Nao+mXUsRhlIjSRJEPVWRwysPqDWj4p+NXjjxlqlrqOp+I7s3drCbeB7PbaCKMkEqqwhFAJAzxzgegrjN4/uL+v8AjRvH9xf1/wAaAL+r+JdX8QCMapqt7qQizsF3cPLsz1xuJxWbT94/uL+v+NG8f3F/X/GgBlFP3j+4v6/40bx/cX9f8aAGUU/eP7i/r/jRvH9xf1/xoAZS9advH9xf1/xo8zH3VCn1HWgAl+/j0AH6UyiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP//Z" width="491" height="144" class="img_ev3q"></p>
+<p>The Genie page is used for optimization.</p>
+<p>Measurement variables defined earlier are displayed on the top-left.</p>
+<p>Click Enter Expression and select the measurement variable.</p>
+<p>Define the optimization goal:</p>
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+<p>Provide the target value or range for scalar measurements.</p>
+<p>For vector measurements, click Open Graph.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 25" src="/assets/images/ct25-db713d541644681da3bd7e4b37d952f5.jpg" width="882" height="568" class="img_ev3q"></p>
+<p>Select the X-axis label (output). The defined instances will be listed automatically.</p>
+<p>Set Y-values manually or upload a CSV file.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 26" src="/assets/images/ct26-c9eafadea4ef580b9720b368d18b39b7.jpg" width="1248" height="765" class="img_ev3q"></p>
+<p>Targets can also be assigned using Import from File (JSON format).</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 27" src="/assets/images/ct27-0ad02982ba3aaf12d065ff23b1637137.jpg" width="458" height="202" class="img_ev3q"></p>
+<p>Select the appropriate agent. For this tutorial, the agent V2I_tran is used.</p>
+<p>Click Genie Optimize.</p>
+<p>Open Chart to monitor progress.</p>
+<p>Once the target is achieved, download the optimized netlist using the Download icon.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for Transient Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_transient_analysis-1488885ca9d93dc935a44153c43a156b.zip" target="_blank">Transient Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ac-analysis">AC Analysis<a href="#ac-analysis" class="hash-link" aria-label="Direct link to AC Analysis" title="Direct link to AC Analysis">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 28" src="/assets/images/ct28-b462a8148053e6c3625924be3e1801b3.jpg" width="1103" height="614" class="img_ev3q"></p>
+<p>Add a new testbench by clicking the Plus (+) icon.</p>
+<p>Upload the required .spice file along with waveform images, then click Save Circuit.</p>
+<p>After uploading, click on the testbench. The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-2">Netlist<a href="#netlist-2" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 29" src="/assets/images/ct29-81a4d22fd120f6fcec6d34424c0d7013.jpg" width="1380" height="559" class="img_ev3q"></p>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist using the Pencil icon.</p>
+<p>Uploaded images can be viewed using the Image icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 30" src="/assets/images/ct30-fc8575245aa0b75740e11fa702c47777.jpg" width="871" height="684" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 31" src="/assets/images/ct31-3c7c1577a637de60da0a1c791b6e6ac2.jpg" width="1203" height="675" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-2">Design Parameters<a href="#design-parameters-2" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 32" src="/assets/images/ct32-871a3e177abe8459668d8f299cce3d0e.jpg" width="1919" height="769" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the netlist along with their values.</p>
+<p>Select the parameters that the AI agent is allowed to modify.</p>
+<p>Specify the optimization range by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-2">Measurements<a href="#measurements-2" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 33" src="/assets/images/ct33-a91cc3cc687a52b9dd203bf3532650a9.jpg" width="1919" height="715" class="img_ev3q"></p>
+<p>Measurement statements define the values evaluated during simulation.</p>
+<p>Under AC Analysis, click the Custom button and provide a variable name.</p>
+<p>Enter the measurement statement.</p>
+<p>For this tutorial, a vector measurement is used to evaluate values at multiple frequency instances.</p>
+<p>Values can be:</p>
+<ul>
+<li>Entered manually, or</li>
+<li>Uploaded using a CSV file</li>
+</ul>
+<p>To enable vector measurement:</p>
+<ol>
+<li>Click the menu icon</li>
+<li>Enable Vector Mode</li>
+</ol>
+<p>Provide:</p>
+<ul>
+<li>The variable name (e.g., [freq])</li>
+<li>The frequency instances separated by commas</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture">Data Capture<a href="#data-capture" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 34" src="/assets/images/ct34-c5d1db144a5e51af874efbae138b2e35.jpg" width="1378" height="556" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 35" src="/assets/images/ct35-1c0d2ef598864b62e9b10a01e1200f14.jpg" width="1685" height="667" class="img_ev3q"></p>
+<p>To extract variables directly from the netlist, use Data Capture.</p>
+<p>In this tutorial, the variables ubw, pm, and gm are calculated using let statements. Therefore, Data Capture is used.</p>
+<p>To add a Data Capture measurement:</p>
+<ol>
+<li>Click the Plus (+) icon under Data Capture</li>
+<li>Enter the variable name exactly as defined in the netlist</li>
+</ol>
+<p>Vector measurements can also be used by changing the measurement type from Scalar to Vector and entering multiple variable names separated by commas.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-2">Simulation Setup<a href="#simulation-setup-2" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 36" src="/assets/images/ct36-7b274f464b8e3c5df6952d65551b7419.jpg" width="877" height="812" class="img_ev3q"></p>
+<p>Before running the simulation, complete Manage Dependencies.</p>
+<ol>
+<li>Click the menu button below Publish Project.</li>
+<li>Select Manage Dependencies.</li>
+<li>Click the Chain icon to link required models and libraries.</li>
+</ol>
+<p>Click Simulate and view results in the Log file.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-2">Genie<a href="#genie-2" class="hash-link" aria-label="Direct link to Genie" title="Direct link to Genie">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 37" src="/assets/images/ct37-c4b34f6ffaaf6b7eb8c96835c7cb28dc.jpg" width="498" height="211" class="img_ev3q"></p>
+<p>The Genie page is used to assign optimization targets.</p>
+<p>Measurement variables are displayed on the top-left.</p>
+<p>Click Enter Expression and select the measurement variable.</p>
+<p>Define the optimization goal:</p>
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+<p>Provide the target value or range.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 38" src="/assets/images/ct38-c89d621faa850bfdb02e6016e794d155.jpg" width="1174" height="521" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 39" src="/assets/images/ct39-21ee3087d3bd5b96350ac1ea8294ad16.jpg" width="460" height="199" class="img_ev3q"></p>
+<p>Select the appropriate agent. For this tutorial, the agent v2i_8p44_ac is used.</p>
+<p>Click Genie Optimize.</p>
+<p>Open Chart to monitor iterations and target progress.</p>
+<p>Once the target is achieved, download the optimized netlist using the Download icon.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for AC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_ac_analysis-a9f64be108a00ee1ac618c52c916795d.zip" target="_blank">AC Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="noise-analysis">Noise Analysis<a href="#noise-analysis" class="hash-link" aria-label="Direct link to Noise Analysis" title="Direct link to Noise Analysis">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 40" src="/assets/images/ct40-1167d17f35aca675a31f96a1512da6ad.jpg" width="1610" height="773" class="img_ev3q"></p>
+<p>Add a new testbench by clicking the Plus (+) icon.</p>
+<p>Upload the required .spice file along with the waveform images for the noise analysis, then click Save Circuit.</p>
+<p>After uploading, click on the testbench. The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-3">Netlist<a href="#netlist-3" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 41" src="/assets/images/ct41-cb05dba44a229818debb6a6e9fb6fccf.jpg" width="1279" height="553" class="img_ev3q"></p>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required for different simulation results.</p>
+<p>Uploaded images can be viewed by clicking the Image icon next to the Edit icon.</p>
+<p>The images uploaded for the noise analysis are shown below:</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 42" src="/assets/images/ct42-ef622fdea8253b2cec3892a5af4b7baf.jpg" width="880" height="690" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 43" src="/assets/images/ct43-09133f95b65f616f0f7248b63f71967b.jpg" width="1197" height="673" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-3">Design Parameters<a href="#design-parameters-3" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 44" src="/assets/images/ct44-dd417dae5815ed7279d01ce6f7164d01.jpg" width="1919" height="834" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their respective values.</p>
+<p>Select the parameters that the AI agent is allowed to modify.</p>
+<p>For each enabled parameter, specify the optimization range by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-3">Measurements<a href="#measurements-3" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture-1">Data Capture<a href="#data-capture-1" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 45" src="/assets/images/ct45-23ef448676f622668afc56fc3e63c010.jpg" width="1336" height="577" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Circuit Tutorial 46" src="/assets/images/ct46-817cb4f93e9de17f9de8a8fe6e2d2a49.jpg" width="1264" height="545" class="img_ev3q"></p>
+<p>To extract variables directly from the netlist, use Data Capture.</p>
+<p>In this tutorial, the variables value_ten, value_hun, value_thou, value_tenthou, value_hunthou, value_onemeg, and value_tenmeg are calculated using let statements. Therefore, Data Capture is used to measure these variables.</p>
+<p>To add a Data Capture measurement:</p>
+<ol>
+<li>Click the Plus (+) icon under Data Capture.</li>
+<li>Enter the variable name exactly as defined in the netlist.</li>
+</ol>
+<p>Vector measurements can also be used in Data Capture by:</p>
+<ul>
+<li>Changing the measurement type from Scalar to Vector.</li>
+<li>Entering multiple variable names separated by commas.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-3">Simulation Setup<a href="#simulation-setup-3" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 47" src="/assets/images/ct47-d71e2235450ab212789f6a979abd23a6.jpg" width="856" height="791" class="img_ev3q"></p>
+<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>Before running the simulation, Manage Dependencies must be completed.</p>
+<p>To include dependencies:</p>
+<ol>
+<li>Click the menu button below Publish Project (top-right corner).</li>
+<li>Select Manage Dependencies.</li>
+<li>Click the Chain icon to connect the required models and libraries.</li>
+</ol>
+<p>After linking dependencies:</p>
+<ol>
+<li>Click Simulate.</li>
+<li>View the results in the Log file.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-3">Genie<a href="#genie-3" class="hash-link" aria-label="Direct link to Genie" title="Direct link to Genie">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 48" src="data:image/jpeg;base64,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" width="475" height="139" class="img_ev3q"></p>
+<p>The Genie page is where circuit optimization is performed.</p>
+<p>Measurement variables (both scalar and vector) defined earlier are displayed on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>To configure optimization:</p>
+<ol>
+<li>Click Enter Expression.</li>
+<li>Select the measurement variable.</li>
+<li>Define the optimization goal:<!-- -->
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+</li>
+</ol>
+<p>Provide the target value or range for scalar measurements.</p>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p>For vector measurements, targets must be assigned using Graph Mode, since optimization occurs across multiple instances.</p>
+<p>Click Open Graph.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 49" src="/assets/images/ct49-db713d541644681da3bd7e4b37d952f5.jpg" width="882" height="568" class="img_ev3q"></p>
+<p>Select the X-axis label (output). The defined instances will be listed automatically.</p>
+<p>Set Y-values either:</p>
+<ul>
+<li>Manually (for a small number of points), or</li>
+<li>By uploading a CSV file (for larger datasets).</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 50" src="/assets/images/ct50-0a37e31bcd5a30d728dd4e6c7caf70ad.jpg" width="1251" height="787" class="img_ev3q"></p>
+<p>Targets can also be assigned by importing a JSON file using Import from File.</p>
+<p>The required JSON files are available in the Resources section.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 51" src="/assets/images/ct51-28b862f5634148224c0a5c43400ef6d2.jpg" width="469" height="203" class="img_ev3q"></p>
+<p>On the bottom-left of the Genie page, select the appropriate agent. For this tutorial, the agent V2I_noise is used.</p>
+<p>Click Genie Optimize at the bottom-right of the page.</p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist by clicking the Download icon below the agent selection panel.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for AC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_noise_analysis-02789aa1cbb96ea886eb3dcd0c929247.zip" target="_blank">Noise Analysis</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="psrr-analysis">PSRR Analysis<a href="#psrr-analysis" class="hash-link" aria-label="Direct link to PSRR Analysis" title="Direct link to PSRR Analysis">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 52" src="/assets/images/ct52-2f71eb17cfec4dfa89e3b88d26229c62.jpg" width="1607" height="695" class="img_ev3q"></p>
+<p>Add a new testbench by clicking the Plus (+) icon.</p>
+<p>Upload the required .spice file along with the waveform images, then click Save Circuit.</p>
+<p>After uploading, click on the testbench. The following tabs will be visible:</p>
+<ul>
+<li>Netlist</li>
+<li>Design Parameters</li>
+<li>Measurements</li>
+<li>Simulation Setup</li>
+<li>Genie</li>
+<li>Analytics</li>
+</ul>
+<p>Each tab is explained below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="netlist-4">Netlist<a href="#netlist-4" class="hash-link" aria-label="Direct link to Netlist" title="Direct link to Netlist">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 53" src="/assets/images/ct53-45b0747374ee0de98a20e266686d7e9e.jpg" width="1291" height="558" class="img_ev3q"></p>
+<p>The Netlist tab displays the uploaded netlist file.</p>
+<p>You can edit the netlist by clicking the Pencil (Edit) icon, if changes are required.</p>
+<p>Uploaded images can be viewed by clicking the Image icon next to the Edit icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 54" src="/assets/images/ct54-fc8575245aa0b75740e11fa702c47777.jpg" width="871" height="684" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-parameters-4">Design Parameters<a href="#design-parameters-4" class="hash-link" aria-label="Direct link to Design Parameters" title="Direct link to Design Parameters">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 55" src="/assets/images/ct55-161595336b82a740360bd3f98a2ffe7d.jpg" width="1275" height="553" class="img_ev3q"></p>
+<p>This tab displays all parameters defined in the uploaded netlist along with their respective values.</p>
+<p>Select the parameters that the AI agent is allowed to modify.</p>
+<p>For each enabled parameter, specify the optimization range by adjusting:</p>
+<ul>
+<li>Minimum Value</li>
+<li>Maximum Value</li>
+</ul>
+<p>By default, these values are set to half and twice the typical parameter value.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="measurements-4">Measurements<a href="#measurements-4" class="hash-link" aria-label="Direct link to Measurements" title="Direct link to Measurements">​</a></h3>
+<p>Measurement statements define the values that will be evaluated during simulation.</p>
+<p>The measurement type depends on the requirement:</p>
+<ul>
+<li>Scalar</li>
+<li>Vector</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture-2">Data Capture<a href="#data-capture-2" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 56" src="/assets/images/ct56-a32dd81af11f9dc4747af4d1882267df.jpg" width="1187" height="513" class="img_ev3q"></p>
+<p>To extract variables directly from the netlist, use Data Capture.</p>
+<p>In this tutorial, the variable psrr is calculated using a let statement. Therefore, Data Capture is used.</p>
+<p>To add a Data Capture measurement:</p>
+<ol>
+<li>Click the Plus (+) icon under Data Capture.</li>
+<li>Enter the variable name exactly as defined in the netlist.</li>
+</ol>
+<p>Vector measurements can also be used by changing the measurement type from Scalar to Vector and entering multiple variable names separated by commas.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-4">Simulation Setup<a href="#simulation-setup-4" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 57" src="/assets/images/ct57-7d415afa1e251a60da332155f11e432c.jpg" width="853" height="799" class="img_ev3q"></p>
+<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>Before running the simulation, complete Manage Dependencies.</p>
+<ol>
+<li>Click the menu button below Publish Project.</li>
+<li>Select Manage Dependencies.</li>
+<li>Click the Chain icon to connect the required models and libraries.</li>
+</ol>
+<p>Click Simulate and view the results in the Log file.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="genie-4">Genie<a href="#genie-4" class="hash-link" aria-label="Direct link to Genie" title="Direct link to Genie">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 58" src="data:image/jpeg;base64,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bfuHLhpxnEpDEsC+eST1rGoo8g21R6NH+0j8W4o1RPil40RFAVVXxDdgADoAPMrkta8aeIfEmn2Vhq2u6nqljYtI9ra3t5JNFbtI26QxqxIUs3LEYyeTWNRQ9dwWmxu2vjzxNY6RY6VbeItWt9LsLr7daWUV9KsNvcf89o0DbUk5PzgA89a3vGPx4+I3xB0WLR/EvjjX9c0uPH+h32oSSRORjBdScORgYLZNcJRQ9dGC02O28C/G3x/8MrK4svCnjLWvD9nOS0ltYXskUTMeC2wHAbgfMBn3rJtfiF4qsdd1DWrbxNrFvrOoRvDeajFfyrcXMb43pJIG3OrYGQxIOBmufoofvbgtNjY0jxjr/h/StT0zS9c1LTdN1NVS/s7O7kihu1GcCVFIDgZOAwPU116/tJ/FxVCr8U/GoUDAA8Q3eAP+/lecUU277gbUvjbxFPpen6ZJr+qSabp07XVlZveSGG1mZtzSRpuwjk8llAJPNWJPiP4sm1nVdXk8Ua0+ratbtaahftqExnvIWAVoppN26RCFUFWJBCj0rnaKWw7u9+p3uk/H/wCKGg6Za6bpnxI8Xadp1rGsNvaWmu3UUUKKMKiIsgCqBwABgVh6h8RfFerWur2t94n1m9ttYnW51KG41CWRL2VcbZJgWxIwwMM2SMVz1FG+rEa1p4t1yw8O32gW2tahb6FfSJLd6XFdSLa3DqQVaSIHa5BAIJBxgUlv4r1u08O3WgQaxfw6DdTLcXGlx3TrazSrja7xA7WYYGCRkYrKooeu4HU+BPin4w+F93Nc+EvE+q+HJpgBN/Z128KygZxvUHDYycZBx2qh4u8a+IPH2syat4l1u/17U3G1rvUbl55NuSQoLE4UZOAOB2rFooeu4LTYKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACtzwLd6NYeNvD9z4jtn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5GKZ/ZVt/wA/Uv8A35H/AMXVKTiml1/zT/NITV9zoLP41+P7DxvP4xt/Gmuw+Kp12TawuoS/aZE4+Rn3ZZPlX5TxwOOKra58WfG/iabWZdW8X67qL6ykcepfadRmcXiRsWjSUFsOqMSVU5CnoBWR/ZVt/wA/Uv8A35H/AMXR/ZVt/wA/Uv8A35H/AMXUWVkuxV2nc2dA+KGu6Pqnhy5vZY/E9l4f3jT9G8Rqb/T4VfO5BbyEoFJ+YgADIB6iu38R/tSeI9Wjsn0Xw54Q8A6pZXIuYNZ8F6HFpN+pCspTz4sNsIY5XocDNeX/ANlW3/P1L/35H/xdH9lW3/P1L/35H/xdVdiWm3odTqXx++Jur6vbapefEPxTPqNrLJPbXLaxcb7eR0KO0ZD/ACFkJU7cZXjpxVPxL8ZvH3jGXSJdd8aa/q0mjsr6e95qU0jWjrja8ZLfK4wPmHPA54FYX9lW3/P1L/35H/xdH9lW3/P1L/35H/xdLsBuePPjF45+KMdpH4v8X614kitB+4i1O+knSM4xuCsSAxHVup7muPrU/sq2/wCfqX/vyP8A4unxWFrAwcs9wR0V1Cr+PJzSsBPMMeUD1EUYP12Co6c7mRyzHLE5JptMAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=" width="497" height="141" class="img_ev3q"></p>
+<p>The Genie page is used to assign optimization targets.</p>
+<p>Measurement variables are displayed on the top-left of the Genie page.</p>
+<p>You may rename expressions if required.</p>
+<p>Click Enter Expression and select the measurement variable.</p>
+<p>Define the optimization goal:</p>
+<ul>
+<li>Minimum</li>
+<li>Maximum</li>
+<li>Range</li>
+<li>Equal to a value</li>
+</ul>
+<p>Provide the target value or range for scalar measurements.</p>
+<p>Multiple expressions can be added using the Plus (+) icon.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 59" src="/assets/images/ct59-49f9d876d7aef2ba9db27fdd21ef7047.jpg" width="1159" height="233" class="img_ev3q"></p>
+<p>Select the appropriate agent. For this tutorial, the agent v2i_psrr is used.</p>
+<p>Click Genie Optimize.</p>
+<p><img decoding="async" loading="lazy" alt="Circuit Tutorial 60" src="/assets/images/ct60-d78c906560dcdcbd8b35d904e142dddd.jpg" width="462" height="206" class="img_ev3q"></p>
+<p>Open the Chart view to monitor:</p>
+<ul>
+<li>Current iteration measurement</li>
+<li>Best measurement achieved</li>
+<li>Target value</li>
+</ul>
+<p>Each optimization iteration is displayed in real time. Previous iterations can be viewed by enabling Show Trail.</p>
+<p>Once the target is achieved, download the optimized netlist using the Download icon.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>View all the resources required for AC Analysis</div><div class="admonitionContent_BuS1"><p><a href="/assets/files/ct3_psrr_analysis-7a0b1fdea081422b1cadd960f10c40d6.zip" target="_blank">PSRR Analysis</a></p></div></div>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Download All Tutorial Resources</div><div class="admonitionContent_BuS1"><p>Click here to download the complete tutorial resource package:
+<a href="/assets/files/circuit_tutorial_3_resources-2033a166c8139bd89fb31fa16a6247d9.zip" target="_blank">Download Tutorial Resources (ZIP)</a></p></div></div></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/tutorials/circuit tutorials/two-stage-opamp"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Two-Stage Op-Amp</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/tutorials/circuit tutorials/diff-amp-res-load"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Differential Op-Amp Resistive Load</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#creating-a-new-project" class="table-of-contents__link toc-highlight">Creating a New Project</a><ul><li><a href="#base-circuit-details" class="table-of-contents__link toc-highlight">Base Circuit Details</a></li><li><a href="#circuit-dependencies" class="table-of-contents__link toc-highlight">Circuit Dependencies</a></li></ul></li><li><a href="#dc-analysis" class="table-of-contents__link toc-highlight">DC Analysis</a><ul><li><a href="#netlist" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#environment-parameters" class="table-of-contents__link toc-highlight">Environment Parameters</a></li><li><a href="#measurements" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#simulation-setup" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie" class="table-of-contents__link toc-highlight">Genie</a></li></ul></li><li><a href="#transient-analysis" class="table-of-contents__link toc-highlight">Transient Analysis</a><ul><li><a href="#netlist-1" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-1" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-1" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#simulation-setup-1" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-1" class="table-of-contents__link toc-highlight">Genie</a></li></ul></li><li><a href="#ac-analysis" class="table-of-contents__link toc-highlight">AC Analysis</a><ul><li><a href="#netlist-2" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-2" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-2" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#data-capture" class="table-of-contents__link toc-highlight">Data Capture</a></li><li><a href="#simulation-setup-2" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-2" class="table-of-contents__link toc-highlight">Genie</a></li></ul></li><li><a href="#noise-analysis" class="table-of-contents__link toc-highlight">Noise Analysis</a><ul><li><a href="#netlist-3" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-3" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-3" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#data-capture-1" class="table-of-contents__link toc-highlight">Data Capture</a></li><li><a href="#simulation-setup-3" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-3" class="table-of-contents__link toc-highlight">Genie</a></li></ul></li><li><a href="#psrr-analysis" class="table-of-contents__link toc-highlight">PSRR Analysis</a><ul><li><a href="#netlist-4" class="table-of-contents__link toc-highlight">Netlist</a></li><li><a href="#design-parameters-4" class="table-of-contents__link toc-highlight">Design Parameters</a></li><li><a href="#measurements-4" class="table-of-contents__link toc-highlight">Measurements</a></li><li><a href="#data-capture-2" class="table-of-contents__link toc-highlight">Data Capture</a></li><li><a href="#simulation-setup-4" class="table-of-contents__link toc-highlight">Simulation Setup</a></li><li><a href="#genie-4" class="table-of-contents__link toc-highlight">Genie</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">User Manual</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Platform Tutorial</a></li><li class="footer__item"><a class="footer__link-item" href="/adk/getting-started">ADK Documentation</a></li><li class="footer__item"><a class="footer__link-item" href="/connectors/intro">Connectors</a></li><li class="footer__item"><a class="footer__link-item" href="/tools/setup-docker/windows">Tools</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Asterquanta, Inc.</div></div></div></footer></div>
+</body>
+</html>
