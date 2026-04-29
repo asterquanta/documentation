@@ -8,6 +8,8 @@ sidebar_position: 2
 # Managing Circuits and Testbenches
 
 ## Overview
+A **testbench** circuit is a simulated or physical environment used to verify the functionality of a design under test (DUT).
+
 The **Circuits panel** in the **Manage Circuit** page allows users to organize and manage circuit configurations along with their associated **testbenches** within a project.  
 This section provides an intuitive hierarchical view of all circuits and their corresponding testbenches under the current project.
 
