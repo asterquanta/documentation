@@ -135,7 +135,7 @@ const config: Config = {
             },
             {
               label: 'Tools',
-              to: '/tools/intro',
+              to: '/tools/setup-docker/windows',
             },
           ],
         },
@@ -147,9 +147,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  future: {
-    experimental_router: 'hash',
-  },
 };
 
 export default config;

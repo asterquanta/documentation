@@ -488,7 +488,7 @@ Open Chart to monitor iterations and target progress.
 Once the target is achieved, download the optimized netlist using the Download icon.
 
 :::info View all the resources required for AC Analysis
-[AC Analysis](/resources/ct3_stability_analysis.zip)
+[AC Analysis](/resources/ct3_ac_analysis.zip)
 :::
 
 ## Noise Analysis

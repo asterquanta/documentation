@@ -34,6 +34,6 @@ interpreted by the agent, and therefere, the environment during optimization. Th
 observations from the system are not relevant to optimization without being evaluated first.
 
 ## Obtaining environment data
-A default implementation to construct environment data is provided in BaseAgent's
-[`make_env`](../API/base-agent.md#make_env). This environment can be used with the default
+A default implementation to construct environment data is provided in
+[`BaseAgent`](../API/base-agent.md). This environment can be used with the default
 environments and may also be used in custom environments if desired.
