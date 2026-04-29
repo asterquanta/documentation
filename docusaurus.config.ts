@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://docs.genie.com',
-  baseUrl: '/',
+  baseUrl: '/documentation/',
 
   organizationName: 'asterquanta',
   projectName: 'documentation',
