@@ -8,6 +8,8 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "export": "node scripts/export-documentation.mjs",
+    "deploy:export": "docusaurus deploy && node scripts/export-documentation.mjs",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
