@@ -2,6 +2,7 @@
 title: Domain and Optimization Classes
 description: Data classes for domain items, optimization steps, nodes, and complete optimization runs
 sidebar_position: 10
+draft: true 
 ---
 
 # DomainItem

@@ -43,18 +43,6 @@ Once a model is created and registered:
 
 This allows users to focus on design intent and results, rather than setup complexity.
 
-## Model Configuration (Transfer Learning)
-
-Within the Genie section of the platform, users can fine-tune how a selected model is applied to their project using Transfer Learning.
-
-This includes:
-
-- **Model Details**: View the model's name and description
-- **Design Parameter Specification**: Map your project's controllable parameters to the model's expected inputs
-- **Target Specifications**: Define desired outputs, accuracy goals, and how results should be interpreted
-
-Once configured, the model can be transferred into the project environment and used directly for optimization.
-
 ## What's Next?
 
 After selecting and configuring a model:

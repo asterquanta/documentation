@@ -37,6 +37,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -47,6 +48,7 @@ const config: Config = {
         sidebarPath: './sidebars.ts',
       },
     ],
+
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -56,6 +58,7 @@ const config: Config = {
         sidebarPath: require.resolve('./sidebarsConnectors.ts'),
       },
     ],
+
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -66,6 +69,7 @@ const config: Config = {
       },
     ],
   ],
+
   themes: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
@@ -79,14 +83,18 @@ const config: Config = {
       },
     ],
   ],
+
   themeConfig: {
     image: 'TODO',
+
     navbar: {
       title: 'Genie User Manual',
+
       logo: {
         alt: 'Asterquanta Logo',
         src: 'img/favicon.svg',
       },
+
       items: [
         {
           type: 'docSidebar',
@@ -94,11 +102,13 @@ const config: Config = {
           position: 'left',
           label: 'Platform Tutorial',
         },
+
         {
           position: 'left',
           label: 'ADK Documentation',
           to: '/adk/getting-started',
         },
+
         {
           type: 'docSidebar',
           sidebarId: 'connectorsSidebar',
@@ -106,6 +116,7 @@ const config: Config = {
           position: 'left',
           docsPluginId: 'connectors',
         },
+
         {
           type: 'docSidebar',
           sidebarId: 'toolsSidebar',
@@ -115,24 +126,30 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
       style: 'dark',
+
       links: [
         {
           title: 'User Manual',
+
           items: [
             {
               label: 'Platform Tutorial',
               to: '/docs/intro',
             },
+
             {
               label: 'ADK Documentation',
               to: '/adk/getting-started',
             },
+
             {
               label: 'Connectors',
               to: '/connectors/intro',
             },
+
             {
               label: 'Tools',
               to: '/tools/intro',
@@ -140,16 +157,15 @@ const config: Config = {
           ],
         },
       ],
+
       copyright: `Copyright © ${new Date().getFullYear()} Asterquanta, Inc.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  future: {
-    experimental_router: 'hash',
-  },
 };
 
 export default config;

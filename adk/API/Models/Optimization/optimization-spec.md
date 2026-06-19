@@ -2,6 +2,7 @@
 title: OptimizationSpec
 description: Data class for defining the overall optimization process configuration and structure
 sidebar_position: 3
+draft: true
 ---
 
 # OptimizationSpec

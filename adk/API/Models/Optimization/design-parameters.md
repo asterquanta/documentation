@@ -2,6 +2,7 @@
 title: DesignParamSpec
 description: Data classes for defining design parameter specifications, bounds, and configurations
 sidebar_position: 1
+draft: true
 ---
 
 # DesignParamSpec

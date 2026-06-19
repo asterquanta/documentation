@@ -2,6 +2,7 @@
 title: TargetSpec
 description: Data classes for defining target specifications in optimization processes
 sidebar_position: 4
+draft: true
 ---
 
 # TargetSpec

@@ -16,7 +16,7 @@ In the ADK's eyes, an agent is any directory with the following contents:
 of the agent and is entirely controlled by the developer. Although putting all the source code in
 this directory is not enforced by the ADK, it is highly recommended.
 
-+ `models/`: A directory containing the **models** associated with the agent. **Required only if models are used.**
++ `models/`: A directory containing the **models** associated with the agent.
 
 + `.env`: A file containing the API key to the AsterQuanta platform, among other configuration. **Mandatorily required.**
 
