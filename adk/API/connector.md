@@ -4,8 +4,15 @@ title: "Connector"
 ---
 
 
-# class Connector
-The main connector class that manages the WebSocket connection between the agent and the AsterQuanta platform. Handles heartbeat messages, incoming requests, and task lifecycle management.
+# Connector
+
+```py
+class Connector
+```
+
+Entry point for connecting your agent process to the AsterQuanta platform. The Connector maintains
+the WebSocket connection, handles incoming optimization requests, and dispatches work to your
+executor implementation.
 
 
 ## Import
@@ -14,26 +21,75 @@ from adk.connector import Connector
 ```
 
 
-## Members
+## Typical usage (RL agent)
+```py
+from adk.connector import Connector
+from adk.executors.rl import RLExecutor
+from my_agent import MyAgent
 
-- ### `request_handler: RequestHandler`
-    + **Description**: Handler responsible for processing incoming requests from the platform and routing them to appropriate agent or executor methods.
+app = Connector(
+    RLExecutor,
+    rl_agent_env_class=MyAgent,
+    model_handler=MyAgent,
+    throw_errors=True,
+)
+app.start()
+```
 
+## Typical usage (custom executor)
+```py
+from adk.connector import Connector
+from adk.model_handler import ModelHandler
+from my_executor import MyOptimizerExecutor
+from my_models import MyModelHandler
+
+app = Connector(
+    MyOptimizerExecutor,
+    model_handler=MyModelHandler,
+)
+app.start()
+```
+
+
+## Constructor
+
+```py
+Connector(
+    executor_class=RLExecutor,
+    *,
+    model_handler=None,
+    throw_errors=False,
+    **executor_kwargs,
+)
+```
+
+| Parameter | Description |
+|-----------|-------------|
+| `executor_class` | Executor type. Defaults to `RLExecutor`. Pass a `BaseExecutor` subclass for custom logic. |
+| `model_handler` | Class implementing `ModelHandler` static methods. Required when the platform invokes model transfer, export, or import routes. Often the same class as your RL agent. |
+| `throw_errors` | If `True`, WebSocket connection errors propagate instead of being logged and retried. Separate from `RLExecutor`'s `throw_errors` kwarg, which controls optimization-time error handling. |
+| `**executor_kwargs` | Forwarded to the executor constructor. For `RLExecutor`, common kwargs are `rl_agent_env_class`, `config`, and `throw_errors`. |
 
 ## Methods
 
-- ### __init__
-    + **Description**: Initialize the Connector with the agent class and optional executor class. Sets up WebSocket connection, request handling, and authentication headers.
-    + **Takes**:
-        + `agent_class: type[BaseAgent]`: The agent class to be instantiated for optimization tasks.
-        + `executor_class: type[BaseExecutor]` (optional, default=`DefaultExecutor`): The executor class to be used for running optimization workflows.
-        + `throw_errors: bool` (optional, default=`False`): Whether to propagate errors up or handle them internally with logging.
-    + **Returns: Nothing**
+### start
 
-&nbsp;
+```py
+def start(self) -> None
+```
 
-- ### start
-    + **Description**: Start the connector and establish connection with the platform. Runs the startup routine and begins the async event loop.
-    + **Takes: Nothing**
-    + **Returns: Nothing**
-    + **Note**: This is a blocking call that runs the asyncio event loop.
+Blocking call. Runs startup checks, starts model sync for local `models/` directories, connects to
+the platform, and processes requests until interrupted (Ctrl+C).
+
+:::note
+Ensure `.env` contains a valid `SECRET` from `genie setup` before calling `start()`.
+:::
+
+## What happens on start
+
+1. Startup routine validates project configuration.
+2. Model sync watches `models/` and keeps the platform in sync with local model files.
+3. WebSocket connects using `SECRET` and ADK version headers.
+4. Incoming optimization requests instantiate your executor with the job's optimization payload.
+
+See [`RLExecutor`](rl-executor.md) and [`BaseExecutor`](base-executor.md) for implementing the optimization logic itself.

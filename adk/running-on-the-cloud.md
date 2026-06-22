@@ -1,41 +1,35 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Running on the Cloud
 After following the [quick start](getting-started#quick-start), you should now have an agent up on the platform,
-you can see this if you click on the agent selection dialogue in the **Genie** tab of any project:
+you can see this if you click on the model selection dialogue in the **Genie** tab of any project and search for your model:
 
-![Your model in the selection dialogue](../static/img/selecting-myagent-model.png "Model visible in the selection dialogue")
+![Your model in the selection dialogue](../static/img/selecting-mymodel.png "Model visible in the selection dialogue")
 
 Select your model in the selection dialogue and define some valid expressions e.g.:
-![Selected model](../static/img/selected-myagent-model.png "Selected MyAgent-model model")
 ![Valid expressions](../static/img/valid-expressions.png "Valid expressions")
 
 And **start the optimization** with:
 
 ![Genie Optimize button](../static/img/genie-optimize-button.png "The Genie Optimize button")
 
-If you come back to the console where you started the agent, you will see something like the following:
+If you come back to the console where you started the agent, you will see episode and step logs from
+[`RLExecutor`](API/rl-executor.md), for example:
 ```sh
-yyyy-mm-dd hh:mm:ss,ms - INFO:     [...]
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Total reward in run: x
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Steps taken: 1, Average steps: 0
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Episode: 1, Score: x, Average score: x
+yyyy-mm-dd hh:mm:ss,ms - INFO:     Episode: 1
+yyyy-mm-dd hh:mm:ss,ms - INFO:     	Ended by: Truncation
+yyyy-mm-dd hh:mm:ss,ms - INFO:     	Steps taken: 1
+yyyy-mm-dd hh:mm:ss,ms - INFO:     	Total reward: -12.5
+yyyy-mm-dd hh:mm:ss,ms - INFO:     	Total steps taken: 1
 
-yyyy-mm-dd hh:mm:ss,ms - INFO:     	All targets have not been satisfied, truncating...
-yyyy-mm-dd hh:mm:ss,ms - INFO:     [...]
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Total reward in run: y
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Steps taken: 1, Average steps: 0
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Episode: 2, Score: y, Average score: y
-
-yyyy-mm-dd hh:mm:ss,ms - INFO:     	All targets have not been satisfied, truncating...
-yyyy-mm-dd hh:mm:ss,ms - INFO:     [...]
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Total reward in run: z
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Steps taken: 1, Average steps: 0
-yyyy-mm-dd hh:mm:ss,ms - INFO:     Episode: 3, Score: z, Average score: z
+yyyy-mm-dd hh:mm:ss,ms - INFO:     Episode: 2
+yyyy-mm-dd hh:mm:ss,ms - INFO:     	Ended by: Truncation
+...
 ```
 
-Congratulations! you have successfully started on optimization. You can stop it at any time by hitting the
-`Stop Optimization` button that appeared in-place of the `Genie Optimize` button. Next let's look at the basics
-of how to develop and modify agents with the ADK.
+Congratulations! You have successfully started an optimization. You can stop it at any time by hitting the
+`Stop Optimization` button that appeared in place of the `Genie Optimize` button.
+
+Next, see [What To Do Next](what-to-do-next.md) for a high-level map of customizing agents, executors, and RL environments.

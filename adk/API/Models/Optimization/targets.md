@@ -1,16 +1,28 @@
 ---
-title: TargetSpec
-description: Data classes for defining target specifications in optimization processes
+title: Runtime TargetSpec
+description: Target shapes on OptimizationContext at run time (read-only)
 sidebar_position: 4
 ---
 
-# TargetSpec
+# Runtime TargetSpec
 
-A base data class that defines the common structure for all target specifications in an optimization process. It provides the target's name and associated objective function used for evaluation.
+```py
+class TargetSpec(BaseModel)  # adk.models.optimization.targets
+```
+
+:::note
+Not the same as the **model** [`TargetSpec`](../target-specifications.md) in
+`target_specifications.json`. Runtime specs appear in [`OptimizationContext.targets`](../optimization-context.md)
+after the ADK parses the platform payload. You read these during optimization; you do not author them
+on disk.
+:::
+
+Base type for target entries in the optimization context. Subclasses add value and observation
+bounds for scalar, vector, and matrix shapes.
 
 ## Definition
 
-```python
+```py
 class TargetSpec(BaseModel):
     name: str = Field(min_length=1)
     fn: Fn
@@ -18,11 +30,19 @@ class TargetSpec(BaseModel):
 
 ## Members
 
-### `name: str = Field(min_length=1)`
+### name
+
+```py
+name: str = Field(min_length=1)
+```
 
 The unique identifier or name of the target. Must contain at least one character.
 
-### `fn: Fn`
+### fn
+
+```py
+fn: Fn
+```
 
 The objective function associated with the target. Defines how the optimization process measures and evaluates success or deviation from desired outcomes.
 
@@ -30,11 +50,15 @@ The objective function associated with the target. Defines how the optimization 
 
 # ValueBounds
 
+```py
+class ValueBounds(BaseModel)
+```
+
 Defines the lower and upper numeric limits for a single scalar value used in a target specification.
 
 ## Definition
 
-```python
+```py
 class ValueBounds(BaseModel):
     min: float
     max: float
@@ -42,11 +66,19 @@ class ValueBounds(BaseModel):
 
 ## Members
 
-### `min: float`
+### min
+
+```py
+min: float
+```
 
 Minimum allowable value for the target or observed data.
 
-### `max: float`
+### max
+
+```py
+max: float
+```
 
 Maximum allowable value for the target or observed data.
 
@@ -54,11 +86,15 @@ Maximum allowable value for the target or observed data.
 
 # ScalarTargetSpec
 
+```py
+class ScalarTargetSpec(TargetSpec)
+```
+
 Extends `TargetSpec` to represent a scalar target specification, including bounds for both target and observation values.
 
 ## Definition
 
-```python
+```py
 class ScalarTargetSpec(TargetSpec):
     target_values: ValueBounds
     observation_bounds: ValueBounds
@@ -66,11 +102,19 @@ class ScalarTargetSpec(TargetSpec):
 
 ## Members
 
-### `target_values: ValueBounds`
+### target_values
+
+```py
+target_values: ValueBounds
+```
 
 The desired target value range that the optimization aims to achieve.
 
-### `observation_bounds: ValueBounds`
+### observation_bounds
+
+```py
+observation_bounds: ValueBounds
+```
 
 The permissible range of observed values during optimization for validation and constraint checking.
 
@@ -78,11 +122,15 @@ The permissible range of observed values during optimization for validation and 
 
 # VectorTargetSpec
 
+```py
+class VectorTargetSpec(TargetSpec)
+```
+
 Extends `TargetSpec` to define vector-based targets, supporting multiple elements each with their own bounds.
 
 ## Definition
 
-```python
+```py
 class VectorTargetSpec(TargetSpec):
     target_values: list[ValueBounds]
     observation_bounds: list[ValueBounds]
@@ -90,11 +138,19 @@ class VectorTargetSpec(TargetSpec):
 
 ## Members
 
-### `target_values: list[ValueBounds]`
+### target_values
+
+```py
+target_values: list[ValueBounds]
+```
 
 List of value bounds representing the desired range for each element in the target vector.
 
-### `observation_bounds: list[ValueBounds]`
+### observation_bounds
+
+```py
+observation_bounds: list[ValueBounds]
+```
 
 List of value bounds defining acceptable observed ranges for each vector element during optimization.
 
@@ -102,11 +158,15 @@ List of value bounds defining acceptable observed ranges for each vector element
 
 # MatrixTargetSpec
 
+```py
+class MatrixTargetSpec(TargetSpec)
+```
+
 Extends `TargetSpec` to define matrix-based targets for multidimensional optimization objectives.
 
 ## Definition
 
-```python
+```py
 class MatrixTargetSpec(TargetSpec):
     target_values: list[list[ValueBounds]]
     observation_bounds: list[list[ValueBounds]]
@@ -114,10 +174,18 @@ class MatrixTargetSpec(TargetSpec):
 
 ## Members
 
-### `target_values: list[list[ValueBounds]]`
+### target_values
+
+```py
+target_values: list[list[ValueBounds]]
+```
 
 Nested list of `ValueBounds` defining the target value range for each cell in the matrix target.
 
-### `observation_bounds: list[list[ValueBounds]]`
+### observation_bounds
+
+```py
+observation_bounds: list[list[ValueBounds]]
+```
 
 Nested list of `ValueBounds` defining the acceptable observed range for each matrix element during optimization.
