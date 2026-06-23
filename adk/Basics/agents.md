@@ -19,9 +19,14 @@ this directory is not enforced by the ADK, it is highly recommended.
 + **Models directory**: A directory containing the **models** associated with the agent. `<agent_dir>/models/` by default. Can be
 changed with the GENIE_MODEL_ROOT environment variable.
 
-+ `.env`: A file containing the API key to the AsterQuanta platform, among other configuration.
++ `.env`: A file containing the API key to the AsterQuanta platform and local connection settings.
+  See [Environment Settings](environment-settings.md) for variables such as `INSTANCE_ID` when
+  running multiple agent processes.
 
-+ `settings.json`: Agent metadata (name, description, hyper-parameters, visibility). Created by `genie setup`. Push changes with `genie update`. The ADK never modifies this file at startup — edit it directly and run `genie update` to sync with the platform.
++ `settings.json`: Agent metadata (name, description, hyper-parameters, visibility) and optional
+  [resource usage logging](agent-settings.md#resource-usage-logging). Created by `genie setup`. Push
+  metadata changes with `genie update`. The ADK does not overwrite your settings at startup — edit
+  the file directly and run `genie update` to sync with the platform.
 
 + `.agent_data/`: Internal ADK data. A user should never edit anything inside this directory under normal circumstances.
 
@@ -55,6 +60,11 @@ To change verbosity:
 + Call `configure_logging(level="DEBUG")` from `adk.logging_config` in `src/main.py` before `app.start()`.
 + Optionally add a `logging.conf` file in the agent root for advanced file-based configuration.
 
+### Resource usage logs
+
+To record CPU and memory usage while the agent is connected, enable
+[`resource_logging_options`](agent-settings.md#resource-usage-logging) in `settings.json`. Logs are
+written as JSON lines to the path you configure (default `logs/resources.log`).
 
 ## Implementing an agent
 

@@ -111,14 +111,21 @@ Create a new **agent** with the following:
 ### Update agent settings
 An agent's settings live in `settings.json` at the project root. You may edit
 this file to change the agent's `name`, `description`, `hyper_parameters`, or `is_public` visibility.
-You can push these changes to the AsterQuanta platform without restarting the agent by running:
+You can also enable optional [resource usage logging](Basics/agent-settings.md#resource-usage-logging)
+(`resource_logging_options`) to record CPU and memory samples to a local JSONL file while the agent
+is connected.
+You can push metadata changes to the AsterQuanta platform without restarting the agent by running:
 ```sh
 genie update
 ```
 For more info, refer to the [Agent Settings](Basics/agent-settings.md) page.
 
 ### Update agent environment settings
-An agent's environment settings also live in .env at the project root. You may edit this file to change them, however, this is generally not recommended. These changes are for the local ADK runtime only and only take effect upon subsequent agent starts / `genie` runs. For more info, refer to the [Environment Settings](Basics/environment-settings.md) page.
+An agent's environment settings live in `.env` at the project root. You may edit this file to change
+connection settings and optional runtime identifiers such as [`INSTANCE_ID`](Basics/environment-settings.md#instance-id-multi-instance-deployments)
+when running multiple copies of the same agent. Editing `.env` is generally only needed for
+deployment or local development; changes apply on the next agent start. For more info, refer to the
+[Environment Settings](Basics/environment-settings.md) page.
 
 
 ### Create a new model

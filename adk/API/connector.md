@@ -87,9 +87,15 @@ Ensure `.env` contains a valid `SECRET` from `genie setup` before calling `start
 
 ## What happens on start
 
-1. Startup routine validates project configuration.
-2. Model sync watches `models/` and keeps the platform in sync with local model files.
-3. WebSocket connects using `SECRET` and ADK version headers.
-4. Incoming optimization requests instantiate your executor with the job's optimization payload.
+1. Startup routine validates project configuration (including registration and agent name).
+2. Resource usage logging is initialized if enabled in `settings.json`.
+3. Model sync watches `models/` and keeps the platform in sync with local model files.
+4. WebSocket connects using `SECRET`, ADK version, and `instance-id` headers when an instance id is known.
+5. If no instance id is configured, the platform may assign one on connect and persist it to `.env`.
+6. Incoming optimization requests instantiate your executor with the job's optimization payload.
+
+See [Agent Settings](../Basics/agent-settings.md) and
+[Environment Settings](../Basics/environment-settings.md) for `resource_logging_options` and
+`INSTANCE_ID`.
 
 See [`RLExecutor`](rl-executor.md) and [`BaseExecutor`](base-executor.md) for implementing the optimization logic itself.
