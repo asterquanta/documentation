@@ -6,11 +6,24 @@ sidebar_position: 5
 
 # AgentData
 
-A data class representing the agent's optimization-related state.
+```py
+class AgentData(BaseModel)
+```
+
+RL-specific data class built by [`RLExecutor`](../rl-executor.md) and passed alongside
+[`EnvData`](environment-data.md) to [`RLAgentEnv`](../rl-agent-env.md) constructors. The core ADK does
+not construct `AgentData`; custom executors use [`OptimizationContext`](../optimization-context.md)
+instead.
+
+## Import
+
+```py
+from adk.executors.rl import AgentData
+```
 
 ## Definition
 
-```python
+```py
 class AgentData(BaseModel):
     optimization_data: OptimizationData
 
@@ -21,6 +34,13 @@ class AgentData(BaseModel):
 
 ## Members
 
-### `optimization_data: OptimizationData`
+### optimization_data
 
-Contains all optimization-related information for the agent. This includes the optimization state, parameters, intermediate results, and any data structures required for running or managing the optimization loop.
+```py
+optimization_data: OptimizationData
+```
+
+Contains the inference flag and loaded [`GenieModel`](genie-model.md) for this run. `RLExecutor`
+populates this from the same optimization context as `EnvData`.
+
+See also [RL Run Data](../../Basics/rl-run-data.md).

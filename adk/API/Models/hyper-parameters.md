@@ -3,43 +3,35 @@ sidebar_position: 1
 title: "Hyper Parameters"
 ---
 
-
 # Hyper Parameters
-Hyperparameters are configurable values set before training a model that govern the learning
-process and affect its performance. Also useful as a reference to continue training or for
-fine-tuning after initial training run(s). In the context of loading,
-[Genie Models](adk\API\Models\genie-model.md) from `JSON` files, `hyperparameters` are represented
-as key-value pairs within a dictionary.
 
+Each model directory contains a `hyper_parameters.json` file: a JSON object of training and
+inference settings that are **specific to that model** (circuit, system, or task). The ADK loads
+this file into [`GenieModel.hyperparameters`](genie-model.md#hyperparameters) at run time.
 
-## Definition
+## On disk
+
+```json
+{
+  "learning_rate": 0.001,
+  "batch_size": 64
+}
+```
+
+There are no enforced keys — structure and interpretation are entirely up to your agent
+implementation. Read them from `agent_data.optimization_data.genie_model.hyperparameters` (RL path)
+or `ctx.optimization_data.genie_model.hyperparameters` (custom executor path).
+
+## Python type
+
 ```py
 hyperparameters: dict[str, Any]
 ```
 
+Part of [`GenieModel`](genie-model.md). Values are also included in platform **transfer** payloads
+when creating a child model; see [Model handling](../../Basics/model-handling.md).
 
-## Example
-An example of how to setup the values.
-:::note
-Note: There are no restrictions on how this object can be structured, and it is the developer's
-responsibility to interpret and handle the structure accordingly. However, this object SHOULD contain
-configuration parameters that control the learning process, such as learning rates, batch sizes,
-discount factors, and other training-specific settings that remain constant during a training run
-but may be adjusted between runs for optimization or experimentation.
-:::
-```json title="models/<Model Name>/hyper_parameters.json"
-{
-	"actor_lr": 0.00005,
-	"critic_lr": 0.0003,
+## Related
 
-	"action_noise": 0.1,
-	"target_interpolation": 0.995,
-	"reward_discount": 0.99,
-	"max_replay_size": 1000000,
-	"batch_size": 256,
-
-	"actor_delay": 2,
-	"target_actor_noise": 0.001,
-	"target_noise_clip": 0.001
-}
-```
+- [Models](../../Basics/models.md) — creating models with `genie model add`
+- [GenieModel](genie-model.md) — full model structure loaded from disk

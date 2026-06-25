@@ -39,3 +39,15 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Deploy
+
+`yarn deploy` builds the site and publishes it.
+
+### Export (ZIP)
+
+`yarn export` runs `scripts/export-documentation.mjs` and writes `exports/documentation-md-absolute.zip`: a snapshot of the project with Markdown asset links rewritten to full URLs that match your current `build/` output. Run `yarn build` or `yarn deploy` first so `build/` exists.
+
+### Deploy + Export
+
+`yarn deploy:export` runs deploy, then export, so the ZIP lines up with what you just published.

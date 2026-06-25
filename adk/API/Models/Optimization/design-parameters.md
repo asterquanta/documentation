@@ -1,17 +1,27 @@
 ---
 title: DesignParamSpec
-description: Data classes for defining design parameter specifications, bounds, and configurations
+description: Design parameter shapes on OptimizationContext at run time (read-only)
 sidebar_position: 1
 draft: true
 ---
 
 # DesignParamSpec
 
-A data class that defines the complete specification of a design parameter, including its default value and allowable bounds. It supports both continuous and discrete parameter types for flexible optimization setup.
+```py
+class DesignParamSpec(BaseModel)  # adk.models.optimization.design_params
+```
+
+:::note
+These types describe parameters on [`OptimizationContext`](../optimization-context.md) after the ADK
+parses the platform payload. You read `ctx.optimized_parameters` and similar fields at run time; you
+do not construct `DesignParamSpec` in agent code.
+:::
+
+Specification for a single design parameter: default value and continuous or discrete bounds.
 
 ## Definition
 
-```python
+```py
 class DesignParamSpec(BaseModel):
     bounds: DesignParamBounds
     default: SpecifiedDesignParam
@@ -19,11 +29,19 @@ class DesignParamSpec(BaseModel):
 
 ## Members
 
-### `bounds: DesignParamBounds`
+### bounds
+
+```py
+bounds: DesignParamBounds
+```
 
 Defines the valid range or set of values the parameter can take. Can be either continuous (`ContinuousDesignParamBounds`) or discrete (`DiscreteDesignParamBounds`).
 
-### `default: SpecifiedDesignParam`
+### default
+
+```py
+default: SpecifiedDesignParam
+```
 
 Specifies the default configuration of the parameter, including its name, location, and initial value.
 
@@ -31,11 +49,15 @@ Specifies the default configuration of the parameter, including its name, locati
 
 # SpecifiedDesignParam
 
+```py
+class SpecifiedDesignParam(BaseModel)
+```
+
 Defines a single design parameter with a name, internal location, and assigned value. Used to represent the default or user-specified state of a design parameter.
 
 ## Definition
 
-```python
+```py
 class SpecifiedDesignParam(BaseModel):
     name: str = Field(min_length=1)
     location: str
@@ -44,15 +66,28 @@ class SpecifiedDesignParam(BaseModel):
 
 ## Members
 
-### `name: str = Field(min_length=1)`
+### name
+
+```py
+name: str = Field(min_length=1)
+```
 
 The identifier for the design parameter. Must be at least one character long.
 
-### `location: str`
+### location
 
-Internal mapping location for the parameter. Used for inverse mapping or backend referencing within the optimization framework.
+```py
+location: str
+```
 
-### `value: float | str`
+**Internal.** Mapping key used by the ADK for inverse mapping to simulator locations. Present on
+parsed platform payloads; not something agent authors set in project files.
+
+### value
+
+```py
+value: float | str
+```
 
 The current or default value assigned to the parameter. Can be numeric or string-based, depending on parameter type.
 
@@ -60,28 +95,32 @@ The current or default value assigned to the parameter. Can be numeric or string
 
 # DesignParamBounds
 
-An abstract base class representing a generic boundary definition for design parameters. It serves as a parent class for specific bound types (continuous or discrete).
+```py
+class DesignParamBounds(BaseModel)
+```
+
+Marker base type for parameter bounds. Subclass with [`ContinuousDesignParamBounds`](#continuousdesignparambounds) or [`DiscreteDesignParamBounds`](#discretedesignparambounds).
 
 ## Definition
 
-```python
-class DesignParamBounds(BaseModel): 
+```py
+class DesignParamBounds(BaseModel):
     pass
 ```
-
-## Members
-
-(No direct members — this class provides a shared interface for bound subclasses.)
 
 ---
 
 # ContinuousDesignParamBounds
 
+```py
+class ContinuousDesignParamBounds(DesignParamBounds)
+```
+
 Defines the lower and upper numeric limits for a continuous design parameter.
 
 ## Definition
 
-```python
+```py
 class ContinuousDesignParamBounds(DesignParamBounds):
     min: float
     max: float
@@ -89,11 +128,19 @@ class ContinuousDesignParamBounds(DesignParamBounds):
 
 ## Members
 
-### `min: float`
+### min
+
+```py
+min: float
+```
 
 Minimum allowable numeric value for the parameter.
 
-### `max: float`
+### max
+
+```py
+max: float
+```
 
 Maximum allowable numeric value for the parameter.
 
@@ -101,17 +148,25 @@ Maximum allowable numeric value for the parameter.
 
 # DiscreteDesignParamBounds
 
+```py
+class DiscreteDesignParamBounds(DesignParamBounds)
+```
+
 Defines a finite set of discrete permissible values for a design parameter.
 
 ## Definition
 
-```python
+```py
 class DiscreteDesignParamBounds(DesignParamBounds):
     possibilities: list[float | str]
 ```
 
 ## Members
 
-### `possibilities: list[float | str]`
+### possibilities
+
+```py
+possibilities: list[float | str]
+```
 
 A list of valid discrete values the parameter can take. Each element can be a float or string, depending on the parameter's nature.

@@ -1,16 +1,30 @@
 ---
 title: EnvData
-description: Data class encapsulating environment configuration and agent-environment interaction parameters
+description: Data passed to RL agents and environments for each optimization run
 sidebar_position: 6
 ---
 
 # EnvData
 
-A data class encapsulating environment configuration, control spaces, default control values, observation spaces, target spaces, and other parameters necessary for agent–environment interaction.
+```py
+class EnvData(BaseModel)
+```
+
+RL-specific data class built by [`RLExecutor`](../rl-executor.md) and passed to
+[`RLAgentEnv`](../rl-agent-env.md) constructors. The core ADK does not construct `EnvData`; custom
+executors use [`OptimizationContext`](../optimization-context.md) instead. Built-in and custom
+environments on the RL path read from `env_data` to configure spaces and to call back into the
+simulator.
+
+## Import
+
+```py
+from adk.executors.rl import EnvData
+```
 
 ## Definition
 
-```python
+```py
 class EnvData(BaseModel):
     static_world_controls_space: gym.spaces.Dict
     optimized_world_controls_space: gym.spaces.Dict
@@ -23,65 +37,44 @@ class EnvData(BaseModel):
     world_observations_space: gym.spaces.Dict
     default_world_observations: dict[str, ObservationValue]
 
+    internal_structure_graph: nx.Graph | None
+    default_world_features: dict[str, dict[str, float]] | None
+
     targets_space: gym.spaces.Dict
 
     step_world: StepWorldCB
 
     optimization_data: OptimizationData
-
-    extra: dict[str, Any]
-
-    model_config = ConfigDict(
-        arbitrary_types_allowed=True
-    )
 ```
 
 ## Members
 
-### `static_world_controls_space: gym.spaces.Dict`
+### World control spaces
+`static_world_controls_space`, `optimized_world_controls_space`, and `randomized_world_controls_space` are Gymnasium `Dict` spaces describing controllable parameters that are fixed, optimized, or randomly sampled.
 
-Defines the space of static world controls — parameters that remain fixed during execution unless explicitly changed.
+### Default controls
+`default_static_world_controls`, `default_optimized_world_controls`, and `default_randomized_world_controls` hold starting values for each group.
 
-### `optimized_world_controls_space: gym.spaces.Dict`
+### Observations and targets
+`world_observations_space` and `default_world_observations` describe evaluated measurements from the simulator. `targets_space` describes target value ranges for the optimization.
 
-Defines the space of optimized world controls — parameters that the optimization loop is allowed to modify in order to improve performance or meet targets.
+### Graph and features
+`internal_structure_graph` is present when the model uses graph instrumentation. `default_world_features` holds optional internal feature values at default parameters.
 
-### `randomized_world_controls_space: gym.spaces.Dict`
+### step_world
 
-Defines the space of randomized world controls — parameters that are sampled randomly for variability or stochasticity during environment runs.
+```py
+step_world: StepWorldCB
+```
 
-### `default_static_world_controls: dict[str, DesignParamValue]`
+Callback that applies design parameters to the simulator and returns raw observations, evaluated observations, and optional features. Used by [`OptimizationEnv`](../Environments/optimization-env.md) implementations.
 
-Default values for static world controls used when no explicit static control values are provided.
+### optimization_data
 
-### `default_optimized_world_controls: dict[str, DesignParamValue]`
+```py
+optimization_data: OptimizationData
+```
 
-Default values for optimized world controls before any optimization process modifies them.
+Contains the inference flag and loaded [`GenieModel`](genie-model.md) for this run.
 
-### `default_randomized_world_controls: dict[str, DesignParamValue]`
-
-Default values for randomized world controls, used as baseline values before random sampling is applied.
-
-### `world_observations_space: gym.spaces.Dict`
-
-Defines the dictionary-based observation space specifying which world variables can be observed and their valid ranges or types.
-
-### `default_world_observations: dict[str, ObservationValue]`
-
-A dictionary containing default observation values, used as an initial or fallback representation of the world's observable state.
-
-### `targets_space: gym.spaces.Dict`
-
-Defines the space of target variables or metrics that the environment or optimization process aims to evaluate.
-
-### `step_world: StepWorldCB`
-
-A callback function responsible for advancing the environment by one step, updating world state and observations.
-
-### `optimization_data: OptimizationData`
-
-Contains optimization-related information such as current optimization state, parameters, intermediate results, and metadata used by the optimization loop.
-
-### `extra: dict[str, Any]`
-
-A dictionary for storing additional model-specific or environment-specific metadata, extensions, or configuration parameters.
+See also [RL Run Data](../../Basics/rl-run-data.md).

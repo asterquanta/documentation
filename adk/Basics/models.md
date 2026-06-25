@@ -4,35 +4,55 @@ title: Models
 ---
 
 # Models
+## Explanation
+A model is the ADK's approach to the **D**on't **R**epeat **Y**ourself principle. Models solve the
+problem of having to develop / copy-paste the same agent across different directories for each
+system being optimized. Instead, the agent can be implemented once and the system-specific details
+can be part of the model.
 
-## What is a Model?
+This separates the concerns between developing a generic algorithm / method to optimize systems
+(for an agent), and tuning specific details to optimize a specific system (for a model).
 
-A model represents a reusable optimization setup that can be applied to different systems or projects without starting from scratch each time.
+## Creating a model
+In the ADK's eyes, a model is a directory within an agent's models directory with the following
+contents:
++ `models/`: A directory containing agent specific model files (NN checkpoints, stats, etc.),
+completely controlled by the developer.
 
-Instead of redefining the same optimization logic repeatedly, a model allows you to:
++ `hyper_parameters.json`: A file containing the hyper-parameters for the agent's training / the
+hyper-parameters the agent was trained with. See [Hyper Parameters](../API/Models/hyper-parameters.md)
+for more info.
 
-- Reuse proven optimization intelligence
-- Apply it to different systems by changing only system-specific settings
-- Maintain consistency across projects
++ `metadata.json`: A file containing the model metadata. See [Metadata](../API/Models/metadata.md)
+for more info.
 
-In simple terms:
++ `target_specifications.json`: A file containing the target specifications that can be defined
+for the model. See [Model TargetSpec](../API/Models/target-specifications.md) for more info.
 
-- The agent defines how optimization works
-- The model defines what is being optimized and under what conditions
++ `world_control_specifications.json`: A file containing the world controls (**controllable parameters**
+of the system) that the model can optimize for. See [World Control Specifications](../API/Models/world-control-specifications.md)
+for more info.
 
-This separation makes it easier to adapt optimization workflows to new systems while keeping the core logic unchanged.
+Run `genie model add` in an agent directory and follow the instructions in order to conveniently
+create a model for that agent.
 
-## Creating a Model
+:::note
+The `adk` package has to be installed before it and its related tools such as `genie` can be used.
+It is highly recommended that one uses a python venv for installing the ADK.
+:::
 
-A model groups together all the information needed to apply optimization to a specific type of system. This includes:
+## What next?
+Once an agent with the above structure has been successfully created either manually or through
+`genie model add`, start the agent. While the ADK is running, the model sync service registers,
+updates, and removes models on the platform when local files under the models directory change.
 
-- Configuration settings
-- Parameter ranges
-- Target performance goals
-- System controls that can be adjusted during optimization
+If a model is registered on the platform and the agent is running, a compatiable model will be capable of being selected for
+an optimization on the platform.
 
-Models can be created easily using the Genie workflow, which guides you step by step through the process and ensures everything is set up correctly.
+The `model` sub-command for `genie` provides a convenient interface for adding, listing,
+deleting, and restoring agent models. Run `genie model -h` for more info.
 
+<<<<<<< HEAD
 ## Using a Model
 
 Once a model is created and registered:
@@ -52,3 +72,6 @@ After selecting and configuring a model:
 - Reuse the same model across multiple projects for faster workflows
 
 This approach ensures flexibility, consistency, and scalability for users working on repeated or evolving design problems.
+=======
+For transfer, export, and import between models, see [Model handling](model-handling.md). For how models fit into optimization runs, see [What To Do Next](../what-to-do-next.md).
+>>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
