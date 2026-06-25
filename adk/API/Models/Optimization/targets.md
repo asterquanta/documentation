@@ -2,7 +2,6 @@
 title: Runtime TargetSpec
 description: Target shapes on OptimizationContext at run time (read-only)
 sidebar_position: 4
-draft: true
 ---
 
 # Runtime TargetSpec

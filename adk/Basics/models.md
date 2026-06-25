@@ -52,26 +52,4 @@ an optimization on the platform.
 The `model` sub-command for `genie` provides a convenient interface for adding, listing,
 deleting, and restoring agent models. Run `genie model -h` for more info.
 
-<<<<<<< HEAD
-## Using a Model
-
-Once a model is created and registered:
-
-- It becomes available in the platform's model selection dialog
-- You can choose it while setting up or running an optimization task
-- The platform automatically applies the model's predefined rules and settings
-
-This allows users to focus on design intent and results, rather than setup complexity.
-
-## What's Next?
-
-After selecting and configuring a model:
-
-- Run optimization tasks using the chosen model
-- Compare results across different models
-- Reuse the same model across multiple projects for faster workflows
-
-This approach ensures flexibility, consistency, and scalability for users working on repeated or evolving design problems.
-=======
 For transfer, export, and import between models, see [Model handling](model-handling.md). For how models fit into optimization runs, see [What To Do Next](../what-to-do-next.md).
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86

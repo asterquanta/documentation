@@ -3,11 +3,6 @@ sidebar_position: 4
 title: "Connector"
 ---
 
-<<<<<<< HEAD
-# class Connector
-
-The main connector class that manages the WebSocket connection between the agent and the AsterQuanta platform. Handles heartbeat messages, incoming requests, and task lifecycle management.
-=======
 
 # Connector
 
@@ -18,30 +13,13 @@ class Connector
 Entry point for connecting your agent process to the AsterQuanta platform. The Connector maintains
 the WebSocket connection, handles incoming optimization requests, and dispatches work to your
 executor implementation.
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
+
 
 ## Import
-
-```python
+```py
 from adk.connector import Connector
 ```
 
-<<<<<<< HEAD
-## Members
-
-- ### `request_handler: RequestHandler`
-  - **Description**: Handler responsible for processing incoming requests from the platform and routing them to appropriate agent or executor methods.
-
-## Methods
-
-- ### \_\_init\_\_
-  - **Description**: Initialize the `Connector` with the agent class and optional executor class. Sets up the WebSocket connection, request handling, and authentication headers.
-  - **Takes**:
-    - `agent_class: type[BaseAgent]`: The agent class to be instantiated for optimization tasks.
-    - `executor_class: type[BaseExecutor]` (optional, default=`DefaultExecutor`): The executor class to be used for running optimization workflows.
-    - `throw_errors: bool` (optional, default=`False`): Whether to propagate errors up or handle them internally with logging.
-  - **Returns: Nothing**
-=======
 
 ## Typical usage (RL agent)
 ```py
@@ -95,19 +73,11 @@ Connector(
 ## Methods
 
 ### start
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 ```py
 def start(self) -> None
 ```
 
-<<<<<<< HEAD
-- ### start
-  - **Description**: Start the connector, run the startup routine, and establish a WebSocket connection with the platform. Once connected, continuously listens for incoming requests and sends heartbeat messages. Automatically attempts to reconnect if the connection is closed unexpectedly.
-  - **Takes: Nothing**
-  - **Returns: Nothing**
-  - **Note**: This is a blocking call that runs the asyncio event loop.
-=======
 Blocking call. Runs startup checks, starts model sync for local `models/` directories, connects to
 the platform, and processes requests until interrupted (Ctrl+C).
 
@@ -129,4 +99,3 @@ See [Agent Settings](../Basics/agent-settings.md) and
 `INSTANCE_ID`.
 
 See [`RLExecutor`](rl-executor.md) and [`BaseExecutor`](base-executor.md) for implementing the optimization logic itself.
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86

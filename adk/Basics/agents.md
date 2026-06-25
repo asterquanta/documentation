@@ -16,12 +16,8 @@ In the ADK's eyes, an agent is any directory with the following contents:
 of the agent and is entirely controlled by the developer. Although putting all the source code in
 this directory is not enforced by the ADK, it is highly recommended.
 
-<<<<<<< HEAD
-+ `models/`: A directory containing the **models** associated with the agent.
-=======
 + **Models directory**: A directory containing the **models** associated with the agent. `<agent_dir>/models/` by default. Can be
 changed with the GENIE_MODEL_ROOT environment variable.
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 + `.env`: A file containing the API key to the AsterQuanta platform and local connection settings.
   See [Environment Settings](environment-settings.md) for variables such as `INSTANCE_ID` when

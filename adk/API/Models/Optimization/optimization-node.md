@@ -2,7 +2,6 @@
 title: OptimizationNodeSpec
 description: Per-node optimization graph spec (read-only; built by the ADK)
 sidebar_position: 2
-draft: true
 ---
 
 # OptimizationNodeSpec

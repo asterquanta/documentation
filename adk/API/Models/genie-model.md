@@ -3,23 +3,19 @@ sidebar_position: 9
 title: "Genie Model"
 ---
 
-<<<<<<< HEAD
-# class GenieModel
-=======
 
 # GenieModel
 
 ```py
 class GenieModel(BaseModel)
 ```
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 A high-level data class that structures all necessary information required by an agent for
 optimizing a particular system.
 
-## Definition
 
-```python
+## Definition
+```py
 class GenieModel(BaseModel):
     hyperparameters: dict[str, Any]
     model_metadata: ModelMetadata
@@ -28,47 +24,21 @@ class GenieModel(BaseModel):
 ```
 
 ## Members
-<<<<<<< HEAD
-
-- ### `hyperparameters: dict[str, Any]`
-  - **Description**: A key-value pair of all user defined hyperparameters that are local to a
-    particular model. For more information check [Hyper Parameters](adk\API\Models\hyper-parameters.md).
-=======
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 ### hyperparameters
 
-<<<<<<< HEAD
-- ### `model_metadata: ModelMetadata`
-  - **Description**: Stores user defined information that is used on the platform and at agent
-    initialization. For more information check [Metadata](adk\API\Models\metadata.md).
-=======
 ```py
 hyperparameters: dict[str, Any]
 ```
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 A key-value pair of all user defined hyperparameters that are local to a particular model. For more information check [Hyper Parameters](hyper-parameters.md) (`hyper_parameters.json` on disk).
 
-<<<<<<< HEAD
-- ### `target_specifications: list[TargetSpec]`
-  - **Description**: Specifications that clearly define what kind of targets an agent was trained
-    for/is capable of achieving. Also defines the observation space that is expected by the agent.
-    For more information check [Target Specifications](adk\API\Models\target-specifications.md).
-=======
 ### model_metadata
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86
 
 ```py
 model_metadata: ModelMetadata
 ```
 
-<<<<<<< HEAD
-- ### `world_control_specifications: list[WorldControlSpec]`
-  - **Description**: Specifications that define the action space for an agent. The `order` members
-    of each element in the list must be unique across the list for ordering purposes.
-    For more information check [World Controls](adk\API\Models\world-controls.md).
-=======
 Stores user defined information that is used on the platform and at agent initialization. For more information check [Metadata](metadata.md).
 
 ### target_specifications
@@ -86,4 +56,3 @@ world_control_specifications: list[WorldControlSpec]
 ```
 
 Specifications that define the action space for an agent. The `order` members of each element in the list must be unique across the list for ordering purposes. For more information check [World Control Specifications](world-control-specifications.md).
->>>>>>> da19c77006e30ef836f8c06ee740aef394646b86

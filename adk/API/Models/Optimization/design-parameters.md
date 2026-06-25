@@ -2,7 +2,6 @@
 title: DesignParamSpec
 description: Design parameter shapes on OptimizationContext at run time (read-only)
 sidebar_position: 1
-draft: true
 ---
 
 # DesignParamSpec

@@ -2,7 +2,6 @@
 title: OptimizationSpec
 description: Platform wire-format for optimization jobs (read-only; built by the ADK)
 sidebar_position: 3
-draft: true
 ---
 
 # OptimizationSpec
