@@ -10,7 +10,7 @@ Let's get started with the **ADK in less than 10 minutes**.
 
 
 ## What you'll need
-- An [AsterQuanta](https://www.asterquanta.com/) account.
+- An [AsterQuanta](https://academy-genie.asterquanta.com/home/dashboard) account.
 - [Python](https://www.python.org/) version 3.13 **only** (will be less restrictive in future versions).
 - A **Linux**, **macOS**, or **Windows** development machine.
 
