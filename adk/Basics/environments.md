@@ -61,7 +61,7 @@ The ADK registers these Gymnasium environment IDs (note the `AI4EE` prefix):
 | `"AI4EE-Raw-Simulation-Env"` | `RawSimulationEnv` | Advanced; minimal reward wrapper |
 
 IDs without dedicated API pages are **advanced** built-ins maintained for specific agent projects.
-Inspect [`adk/__init__.py`](../../../adk/adk/__init__.py) registrations and the matching module under
+Inspect `adk/__init__.py` registrations and the matching module under
 `adk/executors/rl/envs/` before adopting them.
 
 ## Custom environments

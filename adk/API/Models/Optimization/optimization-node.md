@@ -13,7 +13,7 @@ class OptimizationNodeSpec(BaseModel)  # adk.models.optimization.optimization_no
 :::caution Internal / read-only
 Part of the platform payload parsed into [`OptimizationSpec`](optimization-spec.md). Not constructed
 by agent code. Today the executor uses the first optimization node's graph only when building
-[`OptimizationContext`](../optimization-context.md).
+[`OptimizationContext`](../../optimization-context.md).
 :::
 
 Per-node specification within an optimization graph: parameters, targets, and optional NetworkX

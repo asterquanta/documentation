@@ -11,7 +11,7 @@ class DesignParamSpec(BaseModel)  # adk.models.optimization.design_params
 ```
 
 :::note
-These types describe parameters on [`OptimizationContext`](../optimization-context.md) after the ADK
+These types describe parameters on [`OptimizationContext`](../../optimization-context.md) after the ADK
 parses the platform payload. You read `ctx.optimized_parameters` and similar fields at run time; you
 do not construct `DesignParamSpec` in agent code.
 :::
@@ -109,7 +109,7 @@ class DesignParamBounds(BaseModel):
 
 ---
 
-# ContinuousDesignParamBounds
+## ContinuousDesignParamBounds {#continuousdesignparambounds}
 
 ```py
 class ContinuousDesignParamBounds(DesignParamBounds)
@@ -145,7 +145,7 @@ Maximum allowable numeric value for the parameter.
 
 ---
 
-# DiscreteDesignParamBounds
+## DiscreteDesignParamBounds {#discretedesignparambounds}
 
 ```py
 class DiscreteDesignParamBounds(DesignParamBounds)

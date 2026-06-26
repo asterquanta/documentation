@@ -12,7 +12,7 @@ class OptimizationSpec(BaseModel)  # adk.models.optimization.optimization_spec
 
 :::caution Internal / read-only
 The ADK builds this from the platform payload when an optimization starts. Agent authors should use
-[`OptimizationContext`](../optimization-context.md) (or `EnvData` / `AgentData` on the RL path), not
+[`OptimizationContext`](../../optimization-context.md) (or `EnvData` / `AgentData` on the RL path), not
 construct or parse `OptimizationSpec` directly. `step_system` is implemented by the domain layer,
 not by user code.
 :::
@@ -94,7 +94,7 @@ Dictionary of parameters that are randomly varied to introduce diversity or stoc
 targets: dict[str, TargetSpec]
 ```
 
-Dictionary defining the optimization targets. Each entry is a [runtime `TargetSpec`](Optimization/targets.md).
+Dictionary defining the optimization targets. Each entry is a [runtime `TargetSpec`](targets.md).
 
 ### step_system
 

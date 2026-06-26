@@ -12,7 +12,7 @@ class TargetSpec(BaseModel)  # adk.models.optimization.targets
 
 :::note
 Not the same as the **model** [`TargetSpec`](../target-specifications.md) in
-`target_specifications.json`. Runtime specs appear in [`OptimizationContext.targets`](../optimization-context.md)
+`target_specifications.json`. Runtime specs appear in [`OptimizationContext.targets`](../../optimization-context.md)
 after the ADK parses the platform payload. You read these during optimization; you do not author them
 on disk.
 :::
