@@ -9,6 +9,10 @@ title: Model handling
 
 The ADK delegates those operations to a [`ModelHandler`](../API/model-handler.md) class you provide. When the platform requests a transfer, export, or import, the connected agent process routes the call to your static methods through the model sync service.
 
+:::caution
+Do not directly modify a model directory on the filesystem while an optimization is running for that model. ADK-managed model operations coordinate through per-model locks, but external filesystem changes are the user's responsibility. Editing or replacing spec files or checkpoint files under `<models-directory>/<model-name>/` during training or inference may invalidate or corrupt the running model.
+:::
+
 ## When to implement ModelHandler
 
 Implement [`ModelHandler`](../API/model-handler.md) if users should be able to:

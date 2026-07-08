@@ -43,6 +43,10 @@ this sequence:
      - In **inference**, if `terminated`, finish with "all targets satisfied"
    - Respect [`RLExecutorConfig`](../API/rl-executor.md) limits (`maximum_training_steps`, `maximum_inference_steps`)
 
+:::caution
+Do not directly modify a model directory on the filesystem while an optimization is running for that model. ADK-managed model operations coordinate through per-model locks, but external filesystem changes are the user's responsibility. Editing or replacing spec files or checkpoint files under `<models-directory>/<model-name>/` during training or inference may invalidate or corrupt the running model.
+:::
+
 ```mermaid
 flowchart TD
     A[Platform: Start Optimization] --> B[RLExecutor.run]
