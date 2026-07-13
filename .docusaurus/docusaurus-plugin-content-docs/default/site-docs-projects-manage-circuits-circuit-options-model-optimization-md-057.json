@@ -1,0 +1,23 @@
+{
+  "id": "Projects/manage-circuits/circuit-options/model-optimization",
+  "title": "Model Optimization",
+  "description": "This page allows users to configure, run, and monitor optimization models for electronic design tasks such as PSRR, Noise, Load Regulation, and Line Regulation. Below are the detailed descriptions of each section and field:",
+  "source": "@site/docs/Projects/manage-circuits/circuit-options/model-optimization.md",
+  "sourceDirName": "Projects/manage-circuits/circuit-options",
+  "slug": "/Projects/manage-circuits/circuit-options/model-optimization",
+  "permalink": "/documentation/docs/Projects/manage-circuits/circuit-options/model-optimization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Delete Circuit",
+    "permalink": "/documentation/docs/Projects/manage-circuits/circuit-options/delete-circuit"
+  },
+  "next": {
+    "title": "Global Optimization",
+    "permalink": "/documentation/docs/Projects/global-optimization"
+  }
+}

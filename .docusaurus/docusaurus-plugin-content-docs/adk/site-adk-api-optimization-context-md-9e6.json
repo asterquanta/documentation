@@ -1,0 +1,27 @@
+{
+  "id": "API/optimization-context",
+  "title": "OptimizationContext",
+  "description": "Domain-agnostic description of an optimization job, returned by",
+  "source": "@site/adk/API/optimization-context.md",
+  "sourceDirName": "API",
+  "slug": "/API/optimization-context",
+  "permalink": "/documentation/adk/API/optimization-context",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "OptimizationContext"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BaseExecutor",
+    "permalink": "/documentation/adk/API/base-executor"
+  },
+  "next": {
+    "title": "RLExecutor",
+    "permalink": "/documentation/adk/API/rl-executor"
+  }
+}

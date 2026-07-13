@@ -1,0 +1,26 @@
+{
+  "id": "Projects/manage-circuits/netlist",
+  "title": "Netlist",
+  "description": "A Netlist is a machine-readable representation of an electronic circuit. It contains information about the components used in the circuit, their connections, parameters, and instructions for simulation.",
+  "source": "@site/docs/Projects/manage-circuits/netlist.md",
+  "sourceDirName": "Projects/manage-circuits",
+  "slug": "/Projects/manage-circuits/netlist",
+  "permalink": "/documentation/docs/Projects/manage-circuits/netlist",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Testbenches",
+    "permalink": "/documentation/docs/Projects/manage-circuits/testbenches"
+  },
+  "next": {
+    "title": "Design Parameters",
+    "permalink": "/documentation/docs/Projects/manage-circuits/design-parameters"
+  }
+}

@@ -1,0 +1,659 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/documentation/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/documentation/docs",
+          "mainDocId": "overview",
+          "docs": [
+            {
+              "id": "account management/type of accounts",
+              "path": "/documentation/docs/account management/type of accounts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "account management/user-management",
+              "path": "/documentation/docs/account management/user-management",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dashboard",
+              "path": "/documentation/docs/dashboard",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "faqs",
+              "path": "/documentation/docs/faqs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/documentation/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "login",
+              "path": "/documentation/docs/login",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "notifications",
+              "path": "/documentation/docs/notifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "overview",
+              "path": "/documentation/docs/overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "profile-logout",
+              "path": "/documentation/docs/profile-logout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/authorize-projects",
+              "path": "/documentation/docs/Projects/authorize-projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/creating-a-project",
+              "path": "/documentation/docs/Projects/creating-a-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/dependencies",
+              "path": "/documentation/docs/Projects/dependencies",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/global-optimization",
+              "path": "/documentation/docs/Projects/global-optimization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/add-circuit",
+              "path": "/documentation/docs/Projects/manage-circuits/add-circuit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/analytics",
+              "path": "/documentation/docs/Projects/manage-circuits/analytics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/circuit-options/circuit-properties",
+              "path": "/documentation/docs/Projects/manage-circuits/circuit-options/circuit-properties",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/circuit-options/copy-circuit",
+              "path": "/documentation/docs/Projects/manage-circuits/circuit-options/copy-circuit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/circuit-options/delete-circuit",
+              "path": "/documentation/docs/Projects/manage-circuits/circuit-options/delete-circuit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/circuit-options/manage-dependencies",
+              "path": "/documentation/docs/Projects/manage-circuits/circuit-options/manage-dependencies",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/circuit-options/model-optimization",
+              "path": "/documentation/docs/Projects/manage-circuits/circuit-options/model-optimization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/design-parameters",
+              "path": "/documentation/docs/Projects/manage-circuits/design-parameters",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/env-parameters",
+              "path": "/documentation/docs/Projects/manage-circuits/env-parameters",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/genie",
+              "path": "/documentation/docs/Projects/manage-circuits/genie",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/measurements",
+              "path": "/documentation/docs/Projects/manage-circuits/measurements",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/netlist",
+              "path": "/documentation/docs/Projects/manage-circuits/netlist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/simulation-setup",
+              "path": "/documentation/docs/Projects/manage-circuits/simulation-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-circuits/testbenches",
+              "path": "/documentation/docs/Projects/manage-circuits/testbenches",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-projects/add-project",
+              "path": "/documentation/docs/Projects/manage-projects/add-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-projects/project-collaborate",
+              "path": "/documentation/docs/Projects/manage-projects/project-collaborate",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-projects/project-settings",
+              "path": "/documentation/docs/Projects/manage-projects/project-settings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/manage-projects/publish-project",
+              "path": "/documentation/docs/Projects/manage-projects/publish-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/my-projects",
+              "path": "/documentation/docs/Projects/my-projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/public-projects",
+              "path": "/documentation/docs/Projects/public-projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/search-projects",
+              "path": "/documentation/docs/Projects/search-projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Projects/transfer-learning",
+              "path": "/documentation/docs/Projects/transfer-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "settings",
+              "path": "/documentation/docs/settings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/circuit tutorials/common-source-with-res-load",
+              "path": "/documentation/docs/tutorials/circuit tutorials/common-source-with-res-load",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/circuit tutorials/diff-amp-res-load",
+              "path": "/documentation/docs/tutorials/circuit tutorials/diff-amp-res-load",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/circuit tutorials/how-to-clone-a-project",
+              "path": "/documentation/docs/tutorials/circuit tutorials/how-to-clone-a-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/circuit tutorials/two-stage-opamp",
+              "path": "/documentation/docs/tutorials/circuit tutorials/two-stage-opamp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/circuit tutorials/v2i",
+              "path": "/documentation/docs/tutorials/circuit tutorials/v2i",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/projects",
+              "path": "/documentation/docs/category/projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/manage-project",
+              "path": "/documentation/docs/category/manage-project",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/manage-circuit",
+              "path": "/documentation/docs/category/manage-circuit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/circuit-options",
+              "path": "/documentation/docs/category/circuit-options",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/account-management",
+              "path": "/documentation/docs/category/account-management",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tutorials",
+              "path": "/documentation/docs/category/tutorials",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/circuit-tutorials",
+              "path": "/documentation/docs/category/circuit-tutorials",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/documentation/docs/overview",
+                "label": "overview"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "adk": {
+      "path": "/documentation/adk",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/documentation/adk",
+          "mainDocId": "getting-started",
+          "docs": [
+            {
+              "id": "API/agent-interface",
+              "path": "/documentation/adk/API/agent-interface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/base-executor",
+              "path": "/documentation/adk/API/base-executor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/connector",
+              "path": "/documentation/adk/API/connector",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Environments/additive-action-env",
+              "path": "/documentation/adk/API/Environments/additive-action-env",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Environments/clipped-additive-action-env",
+              "path": "/documentation/adk/API/Environments/clipped-additive-action-env",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Environments/direct-action-env",
+              "path": "/documentation/adk/API/Environments/direct-action-env",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Environments/optimization-env",
+              "path": "/documentation/adk/API/Environments/optimization-env",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/model-handler",
+              "path": "/documentation/adk/API/model-handler",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/agent-data",
+              "path": "/documentation/adk/API/Models/agent-data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/environment-data",
+              "path": "/documentation/adk/API/Models/environment-data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/genie-model",
+              "path": "/documentation/adk/API/Models/genie-model",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/hyper-parameters",
+              "path": "/documentation/adk/API/Models/hyper-parameters",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/metadata",
+              "path": "/documentation/adk/API/Models/metadata",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/Optimization/design-parameters",
+              "path": "/documentation/adk/API/Models/Optimization/design-parameters",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/Optimization/optimization-node",
+              "path": "/documentation/adk/API/Models/Optimization/optimization-node",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/Optimization/optimization-spec",
+              "path": "/documentation/adk/API/Models/Optimization/optimization-spec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/Optimization/targets",
+              "path": "/documentation/adk/API/Models/Optimization/targets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/target-specifications",
+              "path": "/documentation/adk/API/Models/target-specifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/Models/world-control-specifications",
+              "path": "/documentation/adk/API/Models/world-control-specifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/optimization-context",
+              "path": "/documentation/adk/API/optimization-context",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/rl-agent-env",
+              "path": "/documentation/adk/API/rl-agent-env",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/rl-executor",
+              "path": "/documentation/adk/API/rl-executor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/agent-settings",
+              "path": "/documentation/adk/Basics/agent-settings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/agents",
+              "path": "/documentation/adk/Basics/agents",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/environment-settings",
+              "path": "/documentation/adk/Basics/environment-settings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/environments",
+              "path": "/documentation/adk/Basics/environments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/introduction",
+              "path": "/documentation/adk/Basics/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/model-handling",
+              "path": "/documentation/adk/Basics/model-handling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/models",
+              "path": "/documentation/adk/Basics/models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/optimization-loop",
+              "path": "/documentation/adk/Basics/optimization-loop",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/rl-agents",
+              "path": "/documentation/adk/Basics/rl-agents",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/rl-run-data",
+              "path": "/documentation/adk/Basics/rl-run-data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Basics/specifications",
+              "path": "/documentation/adk/Basics/specifications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started",
+              "path": "/documentation/adk/getting-started",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "RL Executor/rl-executor",
+              "path": "/documentation/adk/RL Executor/rl-executor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "running-on-the-cloud",
+              "path": "/documentation/adk/running-on-the-cloud",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "what-to-do-next",
+              "path": "/documentation/adk/what-to-do-next",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/basics",
+              "path": "/documentation/adk/category/basics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/api",
+              "path": "/documentation/adk/category/api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/environments",
+              "path": "/documentation/adk/category/environments",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/models",
+              "path": "/documentation/adk/category/models",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/documentation/adk/getting-started",
+                "label": "getting-started"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "connectors": {
+      "path": "/documentation/connectors",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/documentation/connectors",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "cdk/baseconnector",
+              "path": "/documentation/connectors/cdk/baseconnector",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/basedomain",
+              "path": "/documentation/connectors/cdk/basedomain",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/basestartup",
+              "path": "/documentation/connectors/cdk/basestartup",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/cdksettings",
+              "path": "/documentation/connectors/cdk/cdksettings",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/middleware",
+              "path": "/documentation/connectors/cdk/middleware",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/register",
+              "path": "/documentation/connectors/cdk/register",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "cdk/router",
+              "path": "/documentation/connectors/cdk/router",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/documentation/connectors/intro",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/simconnector",
+              "path": "/documentation/connectors/simpackage/simconnector",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/simcontroller",
+              "path": "/documentation/connectors/simpackage/simcontroller",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/siminterface",
+              "path": "/documentation/connectors/simpackage/siminterface",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/simulatordomain",
+              "path": "/documentation/connectors/simpackage/simulatordomain",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/slim-models",
+              "path": "/documentation/connectors/simpackage/slim-models",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/netlist-reader",
+              "path": "/documentation/connectors/simpackage/spice/netlist-reader",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/netlistscope",
+              "path": "/documentation/connectors/simpackage/spice/netlistscope",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/referrables",
+              "path": "/documentation/connectors/simpackage/spice/referrables",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/spice_ast",
+              "path": "/documentation/connectors/simpackage/spice/spice_ast",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/spiceparser",
+              "path": "/documentation/connectors/simpackage/spice/spiceparser",
+              "sidebar": "connectorsSidebar"
+            },
+            {
+              "id": "simpackage/spice/spicevariants",
+              "path": "/documentation/connectors/simpackage/spice/spicevariants",
+              "sidebar": "connectorsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "connectorsSidebar": {
+              "link": {
+                "path": "/documentation/connectors/intro",
+                "label": "Introduction"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "tools": {
+      "path": "/documentation/tools",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/documentation/tools",
+          "mainDocId": "setup-docker/windows",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/documentation/tools/intro"
+            },
+            {
+              "id": "setup-docker/linux",
+              "path": "/documentation/tools/setup-docker/linux",
+              "sidebar": "toolsSidebar"
+            },
+            {
+              "id": "setup-docker/mac",
+              "path": "/documentation/tools/setup-docker/mac",
+              "sidebar": "toolsSidebar"
+            },
+            {
+              "id": "setup-docker/windows",
+              "path": "/documentation/tools/setup-docker/windows",
+              "sidebar": "toolsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "toolsSidebar": {
+              "link": {
+                "path": "/documentation/tools/setup-docker/windows",
+                "label": "setup-docker/windows"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "Projects/public-projects",
+  "title": "Public Projects",
+  "description": "The Public Projects page showcases a collection of projects that have been created, authorized, and published by other users. These projects have gone through an approval process and are made available for public viewing and collaboration.",
+  "source": "@site/docs/Projects/public-projects.md",
+  "sourceDirName": "Projects",
+  "slug": "/Projects/public-projects",
+  "permalink": "/documentation/docs/Projects/public-projects",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "My Projects",
+    "permalink": "/documentation/docs/Projects/my-projects"
+  },
+  "next": {
+    "title": "Authorize Projects",
+    "permalink": "/documentation/docs/Projects/authorize-projects"
+  }
+}

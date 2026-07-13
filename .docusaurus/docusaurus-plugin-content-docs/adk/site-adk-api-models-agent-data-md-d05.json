@@ -1,0 +1,28 @@
+{
+  "id": "API/Models/agent-data",
+  "title": "AgentData",
+  "description": "Data class representing the agent's optimization-related state",
+  "source": "@site/adk/API/Models/agent-data.md",
+  "sourceDirName": "API/Models",
+  "slug": "/API/Models/agent-data",
+  "permalink": "/documentation/adk/API/Models/agent-data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "AgentData",
+    "description": "Data class representing the agent's optimization-related state",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "World Controls",
+    "permalink": "/documentation/adk/API/Models/world-control-specifications"
+  },
+  "next": {
+    "title": "EnvData",
+    "permalink": "/documentation/adk/API/Models/environment-data"
+  }
+}

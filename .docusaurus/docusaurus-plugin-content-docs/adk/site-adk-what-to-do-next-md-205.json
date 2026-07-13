@@ -1,0 +1,26 @@
+{
+  "id": "what-to-do-next",
+  "title": "What To Do Next",
+  "description": "Now that you have an agent connected to the platform, this page is a high-level map for customizing what your agent does and how each optimization run is executed.",
+  "source": "@site/adk/what-to-do-next.md",
+  "sourceDirName": ".",
+  "slug": "/what-to-do-next",
+  "permalink": "/documentation/adk/what-to-do-next",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Running on the Cloud",
+    "permalink": "/documentation/adk/running-on-the-cloud"
+  },
+  "next": {
+    "title": "Basics",
+    "permalink": "/documentation/adk/category/basics"
+  }
+}

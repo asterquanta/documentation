@@ -1,0 +1,19 @@
+{
+  "id": "simpackage/spice/spicevariants",
+  "title": "SPICEVariants",
+  "description": "An enumeration that defines the supported SPICE simulators. This enum provides a clean way to standardize and reference simulator backends within the system.",
+  "source": "@site/connectors/simpackage/spice/spicevariants.md",
+  "sourceDirName": "simpackage/spice",
+  "slug": "/simpackage/spice/spicevariants",
+  "permalink": "/documentation/connectors/simpackage/spice/spicevariants",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Spice Parser",
+    "permalink": "/documentation/connectors/simpackage/spice/spiceparser"
+  }
+}

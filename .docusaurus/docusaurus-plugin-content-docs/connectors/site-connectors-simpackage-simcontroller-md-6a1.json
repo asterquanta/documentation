@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/simcontroller",
+  "title": "Router Handlers",
+  "description": "The Controller module defines routing logic for the simulator service. It connects API requests to appropriate handler functions that interact with a SimInterface strategy. Each route parses structured input using Pydantic models, delegates logic to the simulator backend, and returns standardized outputs such as simulation results, extracted data, and modified netlists.",
+  "source": "@site/connectors/simpackage/simcontroller.md",
+  "sourceDirName": "simpackage",
+  "slug": "/simpackage/simcontroller",
+  "permalink": "/documentation/connectors/simpackage/simcontroller",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "SimConnector",
+    "permalink": "/documentation/connectors/simpackage/simconnector"
+  },
+  "next": {
+    "title": "Connector Models",
+    "permalink": "/documentation/connectors/simpackage/slim-models"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "Basics/agent-settings",
+  "title": "Agent Settings",
+  "description": "Agent metadata and optional runtime options live in settings.json at the project root. The file is",
+  "source": "@site/adk/Basics/agent-settings.md",
+  "sourceDirName": "Basics",
+  "slug": "/Basics/agent-settings",
+  "permalink": "/documentation/adk/Basics/agent-settings",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15,
+    "title": "Agent Settings"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Optimization loop",
+    "permalink": "/documentation/adk/Basics/optimization-loop"
+  },
+  "next": {
+    "title": "Environment Settings",
+    "permalink": "/documentation/adk/Basics/environment-settings"
+  }
+}

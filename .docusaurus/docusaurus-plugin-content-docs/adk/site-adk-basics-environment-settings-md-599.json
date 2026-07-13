@@ -1,0 +1,27 @@
+{
+  "id": "Basics/environment-settings",
+  "title": "Environment Settings",
+  "description": "Local runtime configuration for the ADK lives in .env at the project root. This file is created by",
+  "source": "@site/adk/Basics/environment-settings.md",
+  "sourceDirName": "Basics",
+  "slug": "/Basics/environment-settings",
+  "permalink": "/documentation/adk/Basics/environment-settings",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "sidebar_position": 16,
+    "title": "Environment Settings"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Agent Settings",
+    "permalink": "/documentation/adk/Basics/agent-settings"
+  },
+  "next": {
+    "title": "API",
+    "permalink": "/documentation/adk/category/api"
+  }
+}

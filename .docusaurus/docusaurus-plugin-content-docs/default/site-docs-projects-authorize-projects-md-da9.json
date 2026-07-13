@@ -1,0 +1,26 @@
+{
+  "id": "Projects/authorize-projects",
+  "title": "Authorize Projects",
+  "description": "The Authorize Projects page displays the projects that you have published and are ready to authorize for public availability. After publishing a project, you must authorize it here to make it fully accessible to others.",
+  "source": "@site/docs/Projects/authorize-projects.md",
+  "sourceDirName": "Projects",
+  "slug": "/Projects/authorize-projects",
+  "permalink": "/documentation/docs/Projects/authorize-projects",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Public Projects",
+    "permalink": "/documentation/docs/Projects/public-projects"
+  },
+  "next": {
+    "title": "Search Projects",
+    "permalink": "/documentation/docs/Projects/search-projects"
+  }
+}

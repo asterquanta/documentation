@@ -1,0 +1,27 @@
+{
+  "id": "Projects/transfer-learning",
+  "title": "Transfer Learning",
+  "description": "Transfer Learning allows you to transfer knowledge from one agent (source model) to another (target model). This provides the new agent with a strong starting point, reducing the time and effort required to train or optimize it from scratch.",
+  "source": "@site/docs/Projects/transfer-learning.md",
+  "sourceDirName": "Projects",
+  "slug": "/Projects/transfer-learning",
+  "permalink": "/documentation/docs/Projects/transfer-learning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Transfer Learning",
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Dependencies",
+    "permalink": "/documentation/docs/Projects/dependencies"
+  },
+  "next": {
+    "title": "Account Management",
+    "permalink": "/documentation/docs/category/account-management"
+  }
+}

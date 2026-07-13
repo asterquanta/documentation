@@ -1,0 +1,17 @@
+{
+  "id": "setup-docker/intro",
+  "title": "Tools Introduction",
+  "description": "Welcome to the Tools documentation.",
+  "source": "@site/tools/setup-docker/intro.md",
+  "sourceDirName": "setup-docker",
+  "slug": "/setup-docker/intro",
+  "permalink": "/tools/setup-docker/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Tools Introduction"
+  }
+}

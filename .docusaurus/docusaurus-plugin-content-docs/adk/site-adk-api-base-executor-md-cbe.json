@@ -1,0 +1,27 @@
+{
+  "id": "API/base-executor",
+  "title": "BaseExecutor",
+  "description": "Abstract base for optimization executors. Subclass this when your optimization method is not the",
+  "source": "@site/adk/API/base-executor.md",
+  "sourceDirName": "API",
+  "slug": "/API/base-executor",
+  "permalink": "/documentation/adk/API/base-executor",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "BaseExecutor"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Connector",
+    "permalink": "/documentation/adk/API/connector"
+  },
+  "next": {
+    "title": "OptimizationContext",
+    "permalink": "/documentation/adk/API/optimization-context"
+  }
+}

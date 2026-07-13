@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/spice/referrables",
+  "title": "Referrables",
+  "description": "Holds reference information for parameters during parsing, allowing resolution of values across instance and definition scopes.",
+  "source": "@site/connectors/simpackage/spice/referrables.md",
+  "sourceDirName": "simpackage/spice",
+  "slug": "/simpackage/spice/referrables",
+  "permalink": "/documentation/connectors/simpackage/spice/referrables",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Netlist Scope",
+    "permalink": "/documentation/connectors/simpackage/spice/netlistscope"
+  },
+  "next": {
+    "title": "Spice AST",
+    "permalink": "/documentation/connectors/simpackage/spice/spice_ast"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "Projects/manage-projects/project-collaborate",
+  "title": "Project Collaboration",
+  "description": "The Project Collaboration page allows you to manage collaborators on your project. This feature enables team members to work together, share resources, and track the progress of the project. You can add or remove collaborators, assign roles, and communicate with them effectively.",
+  "source": "@site/docs/Projects/manage-projects/project-collaborate.md",
+  "sourceDirName": "Projects/manage-projects",
+  "slug": "/Projects/manage-projects/project-collaborate",
+  "permalink": "/documentation/docs/Projects/manage-projects/project-collaborate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Publish Project",
+    "permalink": "/documentation/docs/Projects/manage-projects/publish-project"
+  },
+  "next": {
+    "title": "Manage Circuit",
+    "permalink": "/documentation/docs/category/manage-circuit"
+  }
+}

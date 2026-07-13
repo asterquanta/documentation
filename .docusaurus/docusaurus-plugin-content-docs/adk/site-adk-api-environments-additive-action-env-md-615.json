@@ -1,0 +1,27 @@
+{
+  "id": "API/Environments/additive-action-env",
+  "title": "AdditiveActionEnv",
+  "description": "Additive-action environment: each step adds the action to current world controls without clipping",
+  "source": "@site/adk/API/Environments/additive-action-env.md",
+  "sourceDirName": "API/Environments",
+  "slug": "/API/Environments/additive-action-env",
+  "permalink": "/documentation/adk/API/Environments/additive-action-env",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "AdditiveActionEnv"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DirectActionEnv",
+    "permalink": "/documentation/adk/API/Environments/direct-action-env"
+  },
+  "next": {
+    "title": "ClippedAdditiveActionEnv",
+    "permalink": "/documentation/adk/API/Environments/clipped-additive-action-env"
+  }
+}

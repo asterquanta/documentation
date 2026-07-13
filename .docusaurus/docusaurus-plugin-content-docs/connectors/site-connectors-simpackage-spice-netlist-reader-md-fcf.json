@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/spice/netlist-reader",
+  "title": "SpiceNetlistProcessor",
+  "description": "Provides multiple helper functions to work with spice netlists.",
+  "source": "@site/connectors/simpackage/spice/netlist-reader.md",
+  "sourceDirName": "simpackage/spice",
+  "slug": "/simpackage/spice/netlist-reader",
+  "permalink": "/documentation/connectors/simpackage/spice/netlist-reader",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Simulator",
+    "permalink": "/documentation/connectors/simpackage/simulatordomain"
+  },
+  "next": {
+    "title": "Netlist Scope",
+    "permalink": "/documentation/connectors/simpackage/spice/netlistscope"
+  }
+}

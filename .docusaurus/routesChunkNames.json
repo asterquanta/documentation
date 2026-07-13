@@ -1,0 +1,522 @@
+{
+  "/documentation/markdown-page-1c7": {
+    "__comp": "1f391b9e",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "content": "393be207"
+  },
+  "/documentation/search-bab": {
+    "__comp": "1a4e3797",
+    "__context": {
+      "plugin": "138e0e15"
+    }
+  },
+  "/documentation/adk-0e9": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "b95ca095"
+    }
+  },
+  "/documentation/adk-d27": {
+    "__comp": "a7bd4aaa",
+    "__props": "5796813a"
+  },
+  "/documentation/adk-4df": {
+    "__comp": "a94703ab"
+  },
+  "/documentation/adk/API/agent-interface-b46": {
+    "__comp": "17896441",
+    "content": "158b283f"
+  },
+  "/documentation/adk/API/base-executor-71d": {
+    "__comp": "17896441",
+    "content": "cbef1121"
+  },
+  "/documentation/adk/API/connector-8fc": {
+    "__comp": "17896441",
+    "content": "f430fbf1"
+  },
+  "/documentation/adk/API/Environments/additive-action-env-56d": {
+    "__comp": "17896441",
+    "content": "6150acb4"
+  },
+  "/documentation/adk/API/Environments/clipped-additive-action-env-0df": {
+    "__comp": "17896441",
+    "content": "530f5897"
+  },
+  "/documentation/adk/API/Environments/direct-action-env-6a3": {
+    "__comp": "17896441",
+    "content": "428a00c2"
+  },
+  "/documentation/adk/API/Environments/optimization-env-a49": {
+    "__comp": "17896441",
+    "content": "a6a5cecd"
+  },
+  "/documentation/adk/API/model-handler-d4b": {
+    "__comp": "17896441",
+    "content": "46965186"
+  },
+  "/documentation/adk/API/Models/agent-data-357": {
+    "__comp": "17896441",
+    "content": "d053baf2"
+  },
+  "/documentation/adk/API/Models/environment-data-ed9": {
+    "__comp": "17896441",
+    "content": "99b4cf0e"
+  },
+  "/documentation/adk/API/Models/genie-model-73d": {
+    "__comp": "17896441",
+    "content": "c2c7ce5a"
+  },
+  "/documentation/adk/API/Models/hyper-parameters-8f4": {
+    "__comp": "17896441",
+    "content": "e2fac68b"
+  },
+  "/documentation/adk/API/Models/metadata-94c": {
+    "__comp": "17896441",
+    "content": "dfbbf176"
+  },
+  "/documentation/adk/API/Models/Optimization/design-parameters-ba5": {
+    "__comp": "17896441",
+    "content": "d3434601"
+  },
+  "/documentation/adk/API/Models/Optimization/optimization-node-e95": {
+    "__comp": "17896441",
+    "content": "d97726ee"
+  },
+  "/documentation/adk/API/Models/Optimization/optimization-spec-415": {
+    "__comp": "17896441",
+    "content": "40303394"
+  },
+  "/documentation/adk/API/Models/Optimization/targets-3f6": {
+    "__comp": "17896441",
+    "content": "b2a1fef8"
+  },
+  "/documentation/adk/API/Models/target-specifications-8da": {
+    "__comp": "17896441",
+    "content": "5d97e894"
+  },
+  "/documentation/adk/API/Models/world-control-specifications-acc": {
+    "__comp": "17896441",
+    "content": "058c32e2"
+  },
+  "/documentation/adk/API/optimization-context-68e": {
+    "__comp": "17896441",
+    "content": "9e6f3216"
+  },
+  "/documentation/adk/API/rl-agent-env-21c": {
+    "__comp": "17896441",
+    "content": "b6839a52"
+  },
+  "/documentation/adk/API/rl-executor-dc4": {
+    "__comp": "17896441",
+    "content": "2068870a"
+  },
+  "/documentation/adk/Basics/agent-settings-650": {
+    "__comp": "17896441",
+    "content": "aebab888"
+  },
+  "/documentation/adk/Basics/agents-0b7": {
+    "__comp": "17896441",
+    "content": "f6a12939"
+  },
+  "/documentation/adk/Basics/environment-settings-c09": {
+    "__comp": "17896441",
+    "content": "599e7e89"
+  },
+  "/documentation/adk/Basics/environments-9a5": {
+    "__comp": "17896441",
+    "content": "b23b55c7"
+  },
+  "/documentation/adk/Basics/introduction-89a": {
+    "__comp": "17896441",
+    "content": "99332e57"
+  },
+  "/documentation/adk/Basics/model-handling-dd3": {
+    "__comp": "17896441",
+    "content": "dde542d4"
+  },
+  "/documentation/adk/Basics/models-26c": {
+    "__comp": "17896441",
+    "content": "52dc5dbe"
+  },
+  "/documentation/adk/Basics/optimization-loop-959": {
+    "__comp": "17896441",
+    "content": "4ca8a3c7"
+  },
+  "/documentation/adk/Basics/rl-agents-a8c": {
+    "__comp": "17896441",
+    "content": "77865e17"
+  },
+  "/documentation/adk/Basics/rl-run-data-12c": {
+    "__comp": "17896441",
+    "content": "1f4fd92e"
+  },
+  "/documentation/adk/Basics/specifications-509": {
+    "__comp": "17896441",
+    "content": "c21a842e"
+  },
+  "/documentation/adk/category/api-b21": {
+    "__comp": "14eb3368",
+    "__props": "13a6acf8"
+  },
+  "/documentation/adk/category/basics-e19": {
+    "__comp": "14eb3368",
+    "__props": "1f39b148"
+  },
+  "/documentation/adk/category/environments-d04": {
+    "__comp": "14eb3368",
+    "__props": "1312ff26"
+  },
+  "/documentation/adk/category/models-476": {
+    "__comp": "14eb3368",
+    "__props": "92425343"
+  },
+  "/documentation/adk/getting-started-f7f": {
+    "__comp": "17896441",
+    "content": "b14f016e"
+  },
+  "/documentation/adk/RL Executor/rl-executor-26b": {
+    "__comp": "17896441",
+    "content": "848604cf"
+  },
+  "/documentation/adk/running-on-the-cloud-68d": {
+    "__comp": "17896441",
+    "content": "dacb9a53"
+  },
+  "/documentation/adk/what-to-do-next-a6c": {
+    "__comp": "17896441",
+    "content": "2056aab6"
+  },
+  "/documentation/connectors-0bb": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "78a2a01d"
+    }
+  },
+  "/documentation/connectors-aad": {
+    "__comp": "a7bd4aaa",
+    "__props": "8409e9a8"
+  },
+  "/documentation/connectors-da2": {
+    "__comp": "a94703ab"
+  },
+  "/documentation/connectors/cdk/baseconnector-2e6": {
+    "__comp": "17896441",
+    "content": "30e13cbc"
+  },
+  "/documentation/connectors/cdk/basedomain-6c7": {
+    "__comp": "17896441",
+    "content": "04da96f1"
+  },
+  "/documentation/connectors/cdk/basestartup-15b": {
+    "__comp": "17896441",
+    "content": "24fedd1a"
+  },
+  "/documentation/connectors/cdk/cdksettings-198": {
+    "__comp": "17896441",
+    "content": "2870de21"
+  },
+  "/documentation/connectors/cdk/middleware-d21": {
+    "__comp": "17896441",
+    "content": "3b857bbc"
+  },
+  "/documentation/connectors/cdk/register-dfe": {
+    "__comp": "17896441",
+    "content": "be55953b"
+  },
+  "/documentation/connectors/cdk/router-5dd": {
+    "__comp": "17896441",
+    "content": "47a0c318"
+  },
+  "/documentation/connectors/intro-2b9": {
+    "__comp": "17896441",
+    "content": "b65352ae"
+  },
+  "/documentation/connectors/simpackage/simconnector-7e4": {
+    "__comp": "17896441",
+    "content": "c427108d"
+  },
+  "/documentation/connectors/simpackage/simcontroller-e5c": {
+    "__comp": "17896441",
+    "content": "6a1de0ed"
+  },
+  "/documentation/connectors/simpackage/siminterface-bf7": {
+    "__comp": "17896441",
+    "content": "bdb7493b"
+  },
+  "/documentation/connectors/simpackage/simulatordomain-00f": {
+    "__comp": "17896441",
+    "content": "13e6a41f"
+  },
+  "/documentation/connectors/simpackage/slim-models-9d9": {
+    "__comp": "17896441",
+    "content": "c9e9c03a"
+  },
+  "/documentation/connectors/simpackage/spice/netlist-reader-189": {
+    "__comp": "17896441",
+    "content": "fcf27549"
+  },
+  "/documentation/connectors/simpackage/spice/netlistscope-807": {
+    "__comp": "17896441",
+    "content": "bd46caa8"
+  },
+  "/documentation/connectors/simpackage/spice/referrables-f6b": {
+    "__comp": "17896441",
+    "content": "12e75d7f"
+  },
+  "/documentation/connectors/simpackage/spice/spice_ast-b51": {
+    "__comp": "17896441",
+    "content": "53fd5776"
+  },
+  "/documentation/connectors/simpackage/spice/spiceparser-211": {
+    "__comp": "17896441",
+    "content": "bb40e27f"
+  },
+  "/documentation/connectors/simpackage/spice/spicevariants-fe8": {
+    "__comp": "17896441",
+    "content": "689faca5"
+  },
+  "/documentation/docs-289": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "aba21aa0"
+    }
+  },
+  "/documentation/docs-846": {
+    "__comp": "a7bd4aaa",
+    "__props": "f0e682a0"
+  },
+  "/documentation/docs-492": {
+    "__comp": "a94703ab"
+  },
+  "/documentation/docs/account management/type of accounts-12e": {
+    "__comp": "17896441",
+    "content": "f805f849"
+  },
+  "/documentation/docs/account management/user-management-9b5": {
+    "__comp": "17896441",
+    "content": "0f6cd188"
+  },
+  "/documentation/docs/category/account-management-480": {
+    "__comp": "14eb3368",
+    "__props": "66b9db6c"
+  },
+  "/documentation/docs/category/circuit-options-7bd": {
+    "__comp": "14eb3368",
+    "__props": "7745533a"
+  },
+  "/documentation/docs/category/circuit-tutorials-eba": {
+    "__comp": "14eb3368",
+    "__props": "be12d14f"
+  },
+  "/documentation/docs/category/manage-circuit-813": {
+    "__comp": "14eb3368",
+    "__props": "2a4b55b6"
+  },
+  "/documentation/docs/category/manage-project-7b6": {
+    "__comp": "14eb3368",
+    "__props": "a8fa228b"
+  },
+  "/documentation/docs/category/projects-fa2": {
+    "__comp": "14eb3368",
+    "__props": "8175dafb"
+  },
+  "/documentation/docs/category/tutorials-20b": {
+    "__comp": "14eb3368",
+    "__props": "dbee5a46"
+  },
+  "/documentation/docs/dashboard-56e": {
+    "__comp": "17896441",
+    "content": "7f3d0e17"
+  },
+  "/documentation/docs/faqs-ba6": {
+    "__comp": "17896441",
+    "content": "1ffdd7de"
+  },
+  "/documentation/docs/intro-5f7": {
+    "__comp": "17896441",
+    "content": "0e384e19"
+  },
+  "/documentation/docs/login-0eb": {
+    "__comp": "17896441",
+    "content": "e2a7f71b"
+  },
+  "/documentation/docs/notifications-65c": {
+    "__comp": "17896441",
+    "content": "21a49e2b"
+  },
+  "/documentation/docs/overview-279": {
+    "__comp": "17896441",
+    "content": "1db64337"
+  },
+  "/documentation/docs/profile-logout-d80": {
+    "__comp": "17896441",
+    "content": "15a17acb"
+  },
+  "/documentation/docs/Projects/authorize-projects-973": {
+    "__comp": "17896441",
+    "content": "da9b56c6"
+  },
+  "/documentation/docs/Projects/creating-a-project-437": {
+    "__comp": "17896441",
+    "content": "11524061"
+  },
+  "/documentation/docs/Projects/dependencies-ac0": {
+    "__comp": "17896441",
+    "content": "afc79c10"
+  },
+  "/documentation/docs/Projects/global-optimization-d8a": {
+    "__comp": "17896441",
+    "content": "ef9669ac"
+  },
+  "/documentation/docs/Projects/manage-circuits/add-circuit-0b0": {
+    "__comp": "17896441",
+    "content": "5bb6526f"
+  },
+  "/documentation/docs/Projects/manage-circuits/analytics-5c7": {
+    "__comp": "17896441",
+    "content": "2ba7872a"
+  },
+  "/documentation/docs/Projects/manage-circuits/circuit-options/circuit-properties-2c4": {
+    "__comp": "17896441",
+    "content": "887b82de"
+  },
+  "/documentation/docs/Projects/manage-circuits/circuit-options/copy-circuit-330": {
+    "__comp": "17896441",
+    "content": "7168de36"
+  },
+  "/documentation/docs/Projects/manage-circuits/circuit-options/delete-circuit-06f": {
+    "__comp": "17896441",
+    "content": "ccc86bcf"
+  },
+  "/documentation/docs/Projects/manage-circuits/circuit-options/manage-dependencies-158": {
+    "__comp": "17896441",
+    "content": "4d1d560b"
+  },
+  "/documentation/docs/Projects/manage-circuits/circuit-options/model-optimization-b3d": {
+    "__comp": "17896441",
+    "content": "0574567d"
+  },
+  "/documentation/docs/Projects/manage-circuits/design-parameters-24b": {
+    "__comp": "17896441",
+    "content": "faab44f0"
+  },
+  "/documentation/docs/Projects/manage-circuits/env-parameters-6b6": {
+    "__comp": "17896441",
+    "content": "b15c7c5f"
+  },
+  "/documentation/docs/Projects/manage-circuits/genie-6e8": {
+    "__comp": "17896441",
+    "content": "97ddff64"
+  },
+  "/documentation/docs/Projects/manage-circuits/measurements-ef4": {
+    "__comp": "17896441",
+    "content": "e946c354"
+  },
+  "/documentation/docs/Projects/manage-circuits/netlist-22c": {
+    "__comp": "17896441",
+    "content": "18daa4c9"
+  },
+  "/documentation/docs/Projects/manage-circuits/simulation-setup-d97": {
+    "__comp": "17896441",
+    "content": "6fb9531a"
+  },
+  "/documentation/docs/Projects/manage-circuits/testbenches-f10": {
+    "__comp": "17896441",
+    "content": "94b1dbbb"
+  },
+  "/documentation/docs/Projects/manage-projects/add-project-0fb": {
+    "__comp": "17896441",
+    "content": "4c29b1db"
+  },
+  "/documentation/docs/Projects/manage-projects/project-collaborate-91b": {
+    "__comp": "17896441",
+    "content": "a5498b6a"
+  },
+  "/documentation/docs/Projects/manage-projects/project-settings-454": {
+    "__comp": "17896441",
+    "content": "eff9d88f"
+  },
+  "/documentation/docs/Projects/manage-projects/publish-project-509": {
+    "__comp": "17896441",
+    "content": "ad3daaea"
+  },
+  "/documentation/docs/Projects/my-projects-61d": {
+    "__comp": "17896441",
+    "content": "27222e9f"
+  },
+  "/documentation/docs/Projects/public-projects-3ec": {
+    "__comp": "17896441",
+    "content": "eb48e767"
+  },
+  "/documentation/docs/Projects/search-projects-594": {
+    "__comp": "17896441",
+    "content": "5f5b4ec9"
+  },
+  "/documentation/docs/Projects/transfer-learning-f91": {
+    "__comp": "17896441",
+    "content": "afa3c5b9"
+  },
+  "/documentation/docs/settings-4b8": {
+    "__comp": "17896441",
+    "content": "dec09136"
+  },
+  "/documentation/docs/tutorials/circuit tutorials/common-source-with-res-load-5e2": {
+    "__comp": "17896441",
+    "content": "74b27e5d"
+  },
+  "/documentation/docs/tutorials/circuit tutorials/diff-amp-res-load-62a": {
+    "__comp": "17896441",
+    "content": "39d14cb7"
+  },
+  "/documentation/docs/tutorials/circuit tutorials/how-to-clone-a-project-c0f": {
+    "__comp": "17896441",
+    "content": "c003a6c7"
+  },
+  "/documentation/docs/tutorials/circuit tutorials/two-stage-opamp-24e": {
+    "__comp": "17896441",
+    "content": "234ce8b9"
+  },
+  "/documentation/docs/tutorials/circuit tutorials/v2i-e5d": {
+    "__comp": "17896441",
+    "content": "2b53ab32"
+  },
+  "/documentation/tools-637": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "9ec73e07"
+    }
+  },
+  "/documentation/tools-8d0": {
+    "__comp": "a7bd4aaa",
+    "__props": "a5742672"
+  },
+  "/documentation/tools-d49": {
+    "__comp": "a94703ab"
+  },
+  "/documentation/tools/intro-f45": {
+    "__comp": "17896441",
+    "content": "e4d6dc92"
+  },
+  "/documentation/tools/setup-docker/linux-645": {
+    "__comp": "17896441",
+    "content": "0dd8a79c"
+  },
+  "/documentation/tools/setup-docker/mac-8bc": {
+    "__comp": "17896441",
+    "content": "ed287b18"
+  },
+  "/documentation/tools/setup-docker/windows-3d1": {
+    "__comp": "17896441",
+    "content": "f5c6e053"
+  },
+  "/documentation/-4a1": {
+    "__comp": "1df93b7f",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "config": "5e9f5e1a"
+  }
+}

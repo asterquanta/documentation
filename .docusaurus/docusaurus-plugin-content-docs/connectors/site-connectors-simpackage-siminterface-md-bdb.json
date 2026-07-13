@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/siminterface",
+  "title": "SimInterface",
+  "description": "The SimInterface class is an abstract base class that defines the interface contract for a simulator connector in the system. It extends ConnectorSpec and enforces implementation of core simulation capabilities such as netlist creation, parameter extraction, simulation execution, and component/model handling.",
+  "source": "@site/connectors/simpackage/siminterface.md",
+  "sourceDirName": "simpackage",
+  "slug": "/simpackage/siminterface",
+  "permalink": "/documentation/connectors/simpackage/siminterface",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Connector Models",
+    "permalink": "/documentation/connectors/simpackage/slim-models"
+  },
+  "next": {
+    "title": "Simulator",
+    "permalink": "/documentation/connectors/simpackage/simulatordomain"
+  }
+}

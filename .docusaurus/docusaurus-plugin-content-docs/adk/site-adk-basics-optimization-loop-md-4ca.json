@@ -1,0 +1,26 @@
+{
+  "id": "Basics/optimization-loop",
+  "title": "Optimization loop",
+  "description": "Every optimization run eventually loops until stopped, a limit is reached, or (in inference) targets",
+  "source": "@site/adk/Basics/optimization-loop.md",
+  "sourceDirName": "Basics",
+  "slug": "/Basics/optimization-loop",
+  "permalink": "/documentation/adk/Basics/optimization-loop",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "RL Run Data",
+    "permalink": "/documentation/adk/Basics/rl-run-data"
+  },
+  "next": {
+    "title": "Agent Settings",
+    "permalink": "/documentation/adk/Basics/agent-settings"
+  }
+}

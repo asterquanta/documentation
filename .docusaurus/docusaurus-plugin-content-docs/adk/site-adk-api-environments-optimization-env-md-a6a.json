@@ -1,0 +1,27 @@
+{
+  "id": "API/Environments/optimization-env",
+  "title": "OptimizationEnv",
+  "description": "Abstract class to define an environment for interacting with optimizable systems. Highly recommended",
+  "source": "@site/adk/API/Environments/optimization-env.md",
+  "sourceDirName": "API/Environments",
+  "slug": "/API/Environments/optimization-env",
+  "permalink": "/documentation/adk/API/Environments/optimization-env",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "OptimizationEnv"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Environments",
+    "permalink": "/documentation/adk/category/environments"
+  },
+  "next": {
+    "title": "DirectActionEnv",
+    "permalink": "/documentation/adk/API/Environments/direct-action-env"
+  }
+}

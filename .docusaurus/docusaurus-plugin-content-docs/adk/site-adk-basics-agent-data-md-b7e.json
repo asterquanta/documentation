@@ -1,0 +1,26 @@
+{
+  "id": "Basics/agent-data",
+  "title": "Agent Data",
+  "description": "Explanation",
+  "source": "@site/adk/Basics/agent-data.md",
+  "sourceDirName": "Basics",
+  "slug": "/Basics/agent-data",
+  "permalink": "/adk/Basics/agent-data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Environment Data",
+    "permalink": "/adk/Basics/environment-data"
+  },
+  "next": {
+    "title": "ADK Tutorial",
+    "permalink": "/adk/adk-tutorial"
+  }
+}

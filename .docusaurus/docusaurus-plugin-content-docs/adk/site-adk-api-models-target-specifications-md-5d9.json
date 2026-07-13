@@ -1,0 +1,27 @@
+{
+  "id": "API/Models/target-specifications",
+  "title": "Model TargetSpec",
+  "description": "Pydantic model for one entry in target_specifications.json and",
+  "source": "@site/adk/API/Models/target-specifications.md",
+  "sourceDirName": "API/Models",
+  "slug": "/API/Models/target-specifications",
+  "permalink": "/documentation/adk/API/Models/target-specifications",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Model TargetSpec"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Metadata",
+    "permalink": "/documentation/adk/API/Models/metadata"
+  },
+  "next": {
+    "title": "World Controls",
+    "permalink": "/documentation/adk/API/Models/world-control-specifications"
+  }
+}

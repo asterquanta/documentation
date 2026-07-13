@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/spice/spiceparser",
+  "title": "Spice Parser",
+  "description": "Parses SPICE netlists into structured AST representations.",
+  "source": "@site/connectors/simpackage/spice/spiceparser.md",
+  "sourceDirName": "simpackage/spice",
+  "slug": "/simpackage/spice/spiceparser",
+  "permalink": "/documentation/connectors/simpackage/spice/spiceparser",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Spice AST",
+    "permalink": "/documentation/connectors/simpackage/spice/spice_ast"
+  },
+  "next": {
+    "title": "SPICEVariants",
+    "permalink": "/documentation/connectors/simpackage/spice/spicevariants"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "Projects/manage-circuits/simulation-setup",
+  "title": "Run Simulation",
+  "description": "The Run Simulation section displays important metadata and tools related to the execution of your circuit simulation. It allows you to track timing, review logs, and access the generated netlist.",
+  "source": "@site/docs/Projects/manage-circuits/simulation-setup.md",
+  "sourceDirName": "Projects/manage-circuits",
+  "slug": "/Projects/manage-circuits/simulation-setup",
+  "permalink": "/documentation/docs/Projects/manage-circuits/simulation-setup",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Measurements",
+    "permalink": "/documentation/docs/Projects/manage-circuits/measurements"
+  },
+  "next": {
+    "title": "Genie",
+    "permalink": "/documentation/docs/Projects/manage-circuits/genie"
+  }
+}

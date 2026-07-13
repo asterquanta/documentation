@@ -1,0 +1,27 @@
+{
+  "id": "API/model-handler",
+  "title": "ModelHandler",
+  "description": "Optional mixin for agents (or separate handler classes) that support model transfer, export,",
+  "source": "@site/adk/API/model-handler.md",
+  "sourceDirName": "API",
+  "slug": "/API/model-handler",
+  "permalink": "/documentation/adk/API/model-handler",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "ModelHandler"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ClippedAdditiveActionEnv",
+    "permalink": "/documentation/adk/API/Environments/clipped-additive-action-env"
+  },
+  "next": {
+    "title": "Models",
+    "permalink": "/documentation/adk/category/models"
+  }
+}

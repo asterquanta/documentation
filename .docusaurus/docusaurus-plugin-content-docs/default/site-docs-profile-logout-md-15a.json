@@ -1,0 +1,28 @@
+{
+  "id": "profile-logout",
+  "title": "Profile and Logout",
+  "description": "User Profile and Logout",
+  "source": "@site/docs/profile-logout.md",
+  "sourceDirName": ".",
+  "slug": "/profile-logout",
+  "permalink": "/documentation/docs/profile-logout",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "profile-logout",
+    "title": "Profile and Logout",
+    "sidebar_position": 11
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Notifications",
+    "permalink": "/documentation/docs/notifications"
+  },
+  "next": {
+    "title": "Frequently Asked Questions (FAQs)",
+    "permalink": "/documentation/docs/faqs"
+  }
+}

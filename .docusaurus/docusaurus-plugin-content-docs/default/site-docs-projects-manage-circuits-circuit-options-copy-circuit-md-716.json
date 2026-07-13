@@ -1,0 +1,26 @@
+{
+  "id": "Projects/manage-circuits/circuit-options/copy-circuit",
+  "title": "Copy Circuit",
+  "description": "The Copy Circuit option allows you to duplicate an existing circuit. This feature is helpful when you want to create a new circuit based on a previous one while maintaining the original settings and properties.",
+  "source": "@site/docs/Projects/manage-circuits/circuit-options/copy-circuit.md",
+  "sourceDirName": "Projects/manage-circuits/circuit-options",
+  "slug": "/Projects/manage-circuits/circuit-options/copy-circuit",
+  "permalink": "/documentation/docs/Projects/manage-circuits/circuit-options/copy-circuit",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Circuit Properties",
+    "permalink": "/documentation/docs/Projects/manage-circuits/circuit-options/circuit-properties"
+  },
+  "next": {
+    "title": "Delete Circuit",
+    "permalink": "/documentation/docs/Projects/manage-circuits/circuit-options/delete-circuit"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/simulatordomain",
+  "title": "Simulator",
+  "description": "The Simulator class is a domain-specific handler responsible for routing simulation requests, managing synchronization of required data, handling errors gracefully, and capturing performance metrics. It integrates with a WebSocket pool and thread pool to manage concurrent simulation sessions.",
+  "source": "@site/connectors/simpackage/simulatordomain.md",
+  "sourceDirName": "simpackage",
+  "slug": "/simpackage/simulatordomain",
+  "permalink": "/documentation/connectors/simpackage/simulatordomain",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "SimInterface",
+    "permalink": "/documentation/connectors/simpackage/siminterface"
+  },
+  "next": {
+    "title": "SpiceNetlistProcessor",
+    "permalink": "/documentation/connectors/simpackage/spice/netlist-reader"
+  }
+}

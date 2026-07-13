@@ -1,0 +1,23 @@
+{
+  "id": "cdk/router",
+  "title": "Router",
+  "description": "The Router class manages endpoint registration and request dispatching for CDK-based connectors. It supports route-based handling for methods (GET, SET, DELETE), typed argument validation via introspection, and middleware chaining.",
+  "source": "@site/connectors/cdk/router.md",
+  "sourceDirName": "cdk",
+  "slug": "/cdk/router",
+  "permalink": "/documentation/connectors/cdk/router",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Registration",
+    "permalink": "/documentation/connectors/cdk/register"
+  },
+  "next": {
+    "title": "Middleware",
+    "permalink": "/documentation/connectors/cdk/middleware"
+  }
+}

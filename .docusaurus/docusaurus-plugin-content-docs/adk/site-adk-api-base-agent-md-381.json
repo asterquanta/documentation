@@ -1,0 +1,27 @@
+{
+  "id": "API/base-agent",
+  "title": "BaseAgent",
+  "description": "Abstract class to define interacting with a combined AgentInterface and Gymnasium Env at the same time. This class extends AgentInterface and gymnasium.Env.",
+  "source": "@site/adk/API/base-agent.md",
+  "sourceDirName": "API",
+  "slug": "/API/base-agent",
+  "permalink": "/adk/API/base-agent",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "BaseAgent"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AgentInterface",
+    "permalink": "/adk/API/agent-interface"
+  },
+  "next": {
+    "title": "Environments",
+    "permalink": "/adk/category/environments"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/simconnector",
+  "title": "SimConnector",
+  "description": "SimConnector is a concrete implementation of the BaseConnector class that connects a simulation strategy to a WebSocket-based backend. It receives, processes, and manages simulation tasks asynchronously, while supporting configurable test options and extensible callback hooks.",
+  "source": "@site/connectors/simpackage/simconnector.md",
+  "sourceDirName": "simpackage",
+  "slug": "/simpackage/simconnector",
+  "permalink": "/documentation/connectors/simpackage/simconnector",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Middleware",
+    "permalink": "/documentation/connectors/cdk/middleware"
+  },
+  "next": {
+    "title": "Router Handlers",
+    "permalink": "/documentation/connectors/simpackage/simcontroller"
+  }
+}

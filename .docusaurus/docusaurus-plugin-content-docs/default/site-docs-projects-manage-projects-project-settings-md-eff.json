@@ -1,0 +1,26 @@
+{
+  "id": "Projects/manage-projects/project-settings",
+  "title": "Project Settings",
+  "description": "The Project Settings page allows you to manage various configurations and preferences related to your project. From here, you can control important settings that affect how the project is handled and displayed.",
+  "source": "@site/docs/Projects/manage-projects/project-settings.md",
+  "sourceDirName": "Projects/manage-projects",
+  "slug": "/Projects/manage-projects/project-settings",
+  "permalink": "/documentation/docs/Projects/manage-projects/project-settings",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Add New Project",
+    "permalink": "/documentation/docs/Projects/manage-projects/add-project"
+  },
+  "next": {
+    "title": "Publish Project",
+    "permalink": "/documentation/docs/Projects/manage-projects/publish-project"
+  }
+}

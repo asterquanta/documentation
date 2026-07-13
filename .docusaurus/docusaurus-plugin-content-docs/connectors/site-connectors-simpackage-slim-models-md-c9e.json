@@ -1,0 +1,23 @@
+{
+  "id": "simpackage/slim-models",
+  "title": "Connector Models",
+  "description": "The Connector Models module defines Pydantic models used for managing connector-related functionality such as uploads, netlist modifications, dependency management, simulation setup, and data capture. These models enforce structure and validation for data exchanged between the frontend, backend, and simulation engine.",
+  "source": "@site/connectors/simpackage/slim-models.md",
+  "sourceDirName": "simpackage",
+  "slug": "/simpackage/slim-models",
+  "permalink": "/documentation/connectors/simpackage/slim-models",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Router Handlers",
+    "permalink": "/documentation/connectors/simpackage/simcontroller"
+  },
+  "next": {
+    "title": "SimInterface",
+    "permalink": "/documentation/connectors/simpackage/siminterface"
+  }
+}

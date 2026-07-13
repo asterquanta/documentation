@@ -1,0 +1,27 @@
+{
+  "id": "API/Models/genie-model",
+  "title": "Genie Model",
+  "description": "A high-level data class that structures all necessary information required by an agent for",
+  "source": "@site/adk/API/Models/genie-model.md",
+  "sourceDirName": "API/Models",
+  "slug": "/API/Models/genie-model",
+  "permalink": "/documentation/adk/API/Models/genie-model",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9,
+    "title": "Genie Model"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "EnvData",
+    "permalink": "/documentation/adk/API/Models/environment-data"
+  },
+  "next": {
+    "title": "DesignParamSpec",
+    "permalink": "/documentation/adk/API/Models/Optimization/design-parameters"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cdk/middleware",
+  "title": "Middleware",
+  "description": "This module defines abstract Middleware class used to wrap request handlers, including logic to load environment-specific settings and construct the base URL for communication with the Orchestrator.",
+  "source": "@site/connectors/cdk/middleware.md",
+  "sourceDirName": "cdk",
+  "slug": "/cdk/middleware",
+  "permalink": "/documentation/connectors/cdk/middleware",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Router",
+    "permalink": "/documentation/connectors/cdk/router"
+  },
+  "next": {
+    "title": "SimConnector",
+    "permalink": "/documentation/connectors/simpackage/simconnector"
+  }
+}

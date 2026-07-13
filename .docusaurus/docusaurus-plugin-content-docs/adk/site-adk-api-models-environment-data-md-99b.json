@@ -1,0 +1,28 @@
+{
+  "id": "API/Models/environment-data",
+  "title": "EnvData",
+  "description": "Data passed to RL agents and environments for each optimization run",
+  "source": "@site/adk/API/Models/environment-data.md",
+  "sourceDirName": "API/Models",
+  "slug": "/API/Models/environment-data",
+  "permalink": "/documentation/adk/API/Models/environment-data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "EnvData",
+    "description": "Data passed to RL agents and environments for each optimization run",
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AgentData",
+    "permalink": "/documentation/adk/API/Models/agent-data"
+  },
+  "next": {
+    "title": "Genie Model",
+    "permalink": "/documentation/adk/API/Models/genie-model"
+  }
+}

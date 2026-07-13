@@ -1,0 +1,23 @@
+{
+  "id": "cdk/baseconnector",
+  "title": "BaseConnector",
+  "description": "The BaseConnector class is an abstract base class for building WebSocket-based connectors. It defines the lifecycle, connection handling, callback management, task orchestration, and communication protocols between the client and the backend system.",
+  "source": "@site/connectors/cdk/baseconnector.md",
+  "sourceDirName": "cdk",
+  "slug": "/cdk/baseconnector",
+  "permalink": "/documentation/connectors/cdk/baseconnector",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "connectorsSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/documentation/connectors/intro"
+  },
+  "next": {
+    "title": "BaseDomain",
+    "permalink": "/documentation/connectors/cdk/basedomain"
+  }
+}
