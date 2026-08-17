@@ -75,10 +75,6 @@ You can view the graph chart for that particular step:
 
 ![Step graph chart](/img/OP/op12.jpg)
 
-It will also have different sweep values:
-
-![Different sweep values](/img/OP/op13.jpg)
-
 ## Updating Operating Points
 
 Similarly, if you change the values and update the Operating Points accordingly:
