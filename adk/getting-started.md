@@ -91,7 +91,6 @@ Create a new **agent** with the following:
 
     Replace `<BASE_URL>` with either:
     - Production: https://genie.asterquanta.com
-    - Staging / Development: https://photon.asterquanta.com
     - Learning / Academy: https://academy-genie.asterquanta.com
 
     Genie should now have created the following directory structure:
