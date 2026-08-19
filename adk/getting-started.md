@@ -8,7 +8,6 @@ import TabItem from '@theme/TabItem';
 # Getting Started
 Let's get started with the **ADK in less than 10 minutes**.
 
-
 ## What you'll need
 - An [AsterQuanta](https://academy-genie.asterquanta.com/home/dashboard) account.
 - [Python](https://www.python.org/) version 3.13 and pip 26.2.1 **only** (will be less restrictive in future versions).
@@ -82,6 +81,13 @@ Make a new **development environment** with the following:
 
 
 ### Create a new agent
+
+:::caution Roles and Permissions Required
+If you are part of an organisation, before registering an agent, ensure that you have the required **Agent Developer** role to deploy agents. Not all Genie users are assigned this role by default. If you do not have the necessary permissions, you will not be able to register an agent.
+
+**Organization Users:** Please verify your assigned role and required permissions with your administrator before proceeding with the ADK setup.
+:::
+
 Create a new **agent** with the following:
 
 1. In your agent directory, run the following, and follow the instructions:
@@ -89,7 +95,7 @@ Create a new **agent** with the following:
     genie setup -a <BASE_URL>
     ```
 
-    Replace `<BASE_URL>` with either:
+    Replace `<BASE_URL>` with the correct URL that your account is on:
     - Production: https://genie.asterquanta.com
     - Learning / Academy: https://academy-genie.asterquanta.com
 
