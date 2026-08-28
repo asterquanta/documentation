@@ -48,9 +48,7 @@ Delete all parameters that belong to the source model, keeping only those releva
 - Only a single instance of shared parameters will be present.
 :::
 
-:::caution
-After completing changes in the **Design Parameters** section, proceed directly to the next step. Do not return to this page later, as doing so may result in duplication of parameters.
-:::
+
 
 ## Step 7: Go to Target Specifications
 
