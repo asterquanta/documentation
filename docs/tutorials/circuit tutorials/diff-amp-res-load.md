@@ -49,7 +49,7 @@ The following tabs will be visible:
 - Netlist
 - Design Parameters
 - Environment Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -126,11 +126,11 @@ To enable vector measurement:
 ![Data Capture 2](/img/CT4/ct11.jpg)
 ![Simulation Setup 1](/img/CT4/ct12.jpg)
 
-To extract variables defined in the netlist (such as `pm`), **Data Capture** is used. In this tutorial, variables are calculated using `let` statements, so Data Capture is required.
+To extract variables defined in the netlist (such as `pm`), **[Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md)** is used. In this tutorial, variables are calculated using `let` statements, so [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) is required.
 
-To add a Data Capture measurement:
+To add a [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) measurement:
 
-1. Click the **Plus (+)** icon under **Data Capture**
+1. Click the **Plus (+)** icon under **[Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md)**
 2. Enter the variable name exactly as defined in the netlist
 
 Vector measurements can also be used by:
@@ -219,7 +219,7 @@ After uploading, click on the testbench. The following tabs will be visible:
 
 - Netlist
 - Design Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -360,9 +360,9 @@ For this tutorial, a vector measurement is used. Provide:
 ![AC Data Capture 2](/img/CT4/ct36.jpg)
 ![AC Simulation Setup](/img/CT4/ct37.jpg)
 
-To extract variables defined in the netlist (such as `ubw` and `pm`), **Data Capture** is used.
+To extract variables defined in the netlist (such as `ubw` and `pm`), **[Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md)** is used.
 
-1. Click the **Plus (+)** icon under **Data Capture**
+1. Click the **Plus (+)** icon under **[Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md)**
 2. Enter the variable name
 
 Vector measurements can also be used if required.

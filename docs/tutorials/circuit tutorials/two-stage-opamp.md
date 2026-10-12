@@ -63,7 +63,7 @@ The following tabs will be visible:
 - Netlist
 - Design Parameters
 - Environment Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -146,15 +146,15 @@ Provide:
 
 ![Circuit Tutorial 11](/img/CT1/ct11.jpg)
 
-To extract variables defined within the netlist (such as offset), a Data Capture measurement is used.
+To extract variables defined within the netlist (such as offset), a [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) measurement is used.
 
 This method is suitable for measurements involving let statements.
 
-Click the Plus (+) icon under Data Capture.
+Click the Plus (+) icon under [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md).
 
 Enter the variable name exactly as defined in the netlist (e.g., `offset`).
 
-Vector measurements can also be used in Data Capture by:
+Vector measurements can also be used in [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) by:
 
 - Changing the measurement type from Scalar to Vector
 - Entering multiple variable names separated by commas
@@ -254,7 +254,7 @@ Once saved, click on the newly created testbench. The following tabs will be ava
 
 - Netlist
 - Design Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -323,7 +323,7 @@ To enable vector measurement:
 
 ### Simulation Setup
 
-This tab displays the results of the measurement statements added under the Measurements tab.
+This tab displays the results of the measurement statements added under the [Measurements](docs/Projects/manage-circuits/measurements/measurements.md) tab.
 
 Before running the simulation, Manage Dependencies must be completed.
 
@@ -369,7 +369,7 @@ Click Open Graph to assign vector targets.
 
 ![Circuit Tutorial 27](/img/CT1/ct27.jpg)
 
-Select the X-axis label (e.g., `output`). The instances entered in the Measurements tab will be listed automatically.
+Select the X-axis label (e.g., `output`). The instances entered in the [Measurements](docs/Projects/manage-circuits/measurements/measurements.md) tab will be listed automatically.
 
 Targets (Y-values) can be set:
 
@@ -411,7 +411,7 @@ After uploading, click on the testbench. The following tabs will be visible:
 
 - Netlist
 - Design Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -482,27 +482,27 @@ To enable vector measurement:
 
 ![Circuit Tutorial 36](/img/CT1/ct36.jpg)
 
-To extract variables directly from the netlist, a Data Capture measurement is used.
+To extract variables directly from the netlist, a [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) measurement is used.
 
 This method is suitable for measurements involving let statements.
 
 ![Circuit Tutorial 37](/img/CT1/ct37.jpg)
 
-In this tutorial, the variables `ubw` and `pm` are calculated using let statements. Therefore, Data Capture is used.
+In this tutorial, the variables `ubw` and `pm` are calculated using let statements. Therefore, [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) is used.
 
-To add a Data Capture measurement:
+To add a [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) measurement:
 
-- Click the Plus (+) icon under Data Capture
+- Click the Plus (+) icon under [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md)
 - Enter the variable name exactly as defined in the netlist
 
-Vector measurements can also be used in Data Capture by:
+Vector measurements can also be used in [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) by:
 
 - Changing the measurement type from Scalar to Vector
 - Entering multiple variable names separated by commas
 
 ### Simulation Setup
 
-This tab displays the results of the measurement statements added under the Measurements tab.
+This tab displays the results of the measurement statements added under the [Measurements](docs/Projects/manage-circuits/measurements/measurements.md) tab.
 
 Before running the simulation, Manage Dependencies must be completed.
 

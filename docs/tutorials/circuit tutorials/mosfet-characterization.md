@@ -54,7 +54,7 @@ Once the import completes, both testbenches — pmos_char and nmos_char — appe
 
 ## PMOS_char
 
-The pmos_char testbench characterizes a single 3.3V PMOS device (pfet_03v3) from the GF180MCU PDK. Click on the pmos_char testbench from the left-hand panel under Circuits to access it. The following tabs are available: Netlist, Design Parameters, Environment Parameters, Measurements, Run Simulation, Genie, and Analytics.
+The pmos_char testbench characterizes a single 3.3V PMOS device (pfet_03v3) from the GF180MCU PDK. Click on the pmos_char testbench from the left-hand panel under Circuits to access it. The following tabs are available: Netlist, Design Parameters, Environment Parameters, [Measurements](docs/Projects/manage-circuits/measurements/measurements.md), Run Simulation, Genie, and Analytics.
 
 :::note
 This tutorial does not use the Genie (Optimization) tab, since the goal here is to observe and verify device characteristics rather than optimize a circuit toward a target specification.
@@ -99,7 +99,7 @@ This tab is used to specify simulation conditions such as process corner and tem
 
 ![Circuit Tutorial 10](/img/CT5/ct10.jpg)
 
-The Measurements tab is organized by analysis type (AC Analysis, DC Analysis, and Transient Analysis), each offering built-in measurement templates as well as a Custom option. For this testbench, the DC Analysis prefix field reflects the sweep statement directly from the netlist:
+The [Measurements](docs/Projects/manage-circuits/measurements/measurements.md) tab is organized by analysis type (AC Analysis, DC Analysis, and Transient Analysis), each offering built-in measurement templates as well as a Custom option. For this testbench, the DC Analysis prefix field reflects the sweep statement directly from the netlist:
 
 ```
 .dc vd 0 3.3 0.01
@@ -120,7 +120,7 @@ Each measurement extracts the drain current at a fixed Vd value, giving a handfu
 
 ![Circuit Tutorial 13](/img/CT5/ct13.jpg)
 
-Scrolling down, the Data Capture section (for defining additional let-statement variables) and Operating Points section (for defining additional sweep variables or component-level expressions) are both left empty for this testbench, since the nested DC sweep in the netlist already provides the full Id–Vds characteristic.
+Scrolling down, the [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) section (for defining additional let-statement variables) and [Operating Points](docs/Projects/manage-circuits/measurements/operating-points.md) section (for defining additional sweep variables or component-level expressions) are both left empty for this testbench, since the nested DC sweep in the netlist already provides the full Id–Vds characteristic.
 
 ![Circuit Tutorial 14](/img/CT5/ct14.jpg)
 
@@ -138,7 +138,7 @@ Once the simulation completes, a confirmation banner appears, and the run is lis
 
 Explanation here
 
-Similar to PMOS_char above, but characterizing a single 3.3V NMOS device (nfet_03v3) instead. Click on the nmos_char testbench from the left-hand panel under Circuits to access it. The same set of tabs is available: Netlist, Design Parameters, Environment Parameters, Measurements, Run Simulation, Genie, and Analytics — and, as with PMOS_char, the Genie tab is not used in this tutorial.
+Similar to PMOS_char above, but characterizing a single 3.3V NMOS device (nfet_03v3) instead. Click on the nmos_char testbench from the left-hand panel under Circuits to access it. The same set of tabs is available: Netlist, Design Parameters, Environment Parameters, [Measurements](docs/Projects/manage-circuits/measurements/measurements.md), Run Simulation, Genie, and Analytics — and, as with PMOS_char, the Genie tab is not used in this tutorial.
 
 ### Netlist
 
@@ -198,7 +198,7 @@ The identical set of custom scalar measurements is defined:
 
 ![Circuit Tutorial 24](/img/CT5/ct24.jpg)
 
-As with pmos_char, the Data Capture and Operating Points sections are left empty, since the nested sweep already produces the full characteristic curve.
+As with pmos_char, the [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) and [Operating Points](docs/Projects/manage-circuits/measurements/operating-points.md) sections are left empty, since the nested sweep already produces the full characteristic curve.
 
 ![Circuit Tutorial 25](/img/CT5/ct25.jpg)
 

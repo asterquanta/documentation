@@ -39,7 +39,7 @@ After uploading the circuit, click on the DC testbench from the left-hand panel 
 - Netlist
 - Design Parameters
 - Environment Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -153,7 +153,7 @@ For vector measurements:
 
 Select the X-axis label (e.g., v_out).
 
-The instances defined earlier in the Measurements tab will be listed automatically.
+The instances defined earlier in the [Measurements](docs/Projects/manage-circuits/measurements/measurements.md) tab will be listed automatically.
 
 Set Y-values either:
 
@@ -194,7 +194,7 @@ After uploading, click on the transient testbench. The following tabs will be av
 
 - Netlist
 - Design Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -296,7 +296,7 @@ After uploading, click on the AC testbench. The following tabs will be visible:
 
 - Netlist
 - Design Parameters
-- Measurements
+- [Measurements](docs/Projects/manage-circuits/measurements/measurements.md)
 - Simulation Setup
 - Genie
 - Analytics
@@ -339,11 +339,11 @@ Provide the variable name (e.g., [freq]) and frequency points separated by comma
 
 ![Circuit Tutorial 37](/img/CT2/ct37.jpg)
 
-Data Capture is used to extract variables directly from the netlist, especially those defined using let statements.
+[Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) is used to extract variables directly from the netlist, especially those defined using let statements.
 
-In this tutorial, freq_three_db and three_db_gain are captured using Data Capture.
+In this tutorial, freq_three_db and three_db_gain are captured using [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md).
 
-Click the Plus (+) icon under Data Capture and enter the variable name exactly as defined in the netlist.
+Click the Plus (+) icon under [Data Capture](docs/Projects/manage-circuits/measurements/data-capture.md) and enter the variable name exactly as defined in the netlist.
 
 Vector mode can also be used by selecting multiple variables separated by commas.
 
