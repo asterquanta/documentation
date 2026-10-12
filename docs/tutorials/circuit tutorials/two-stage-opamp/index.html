@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Two-Stage Op-Amp | Genie User Manual</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.genie.com/documentation/TODO"><meta data-rh="true" name="twitter:image" content="https://docs.genie.com/documentation/TODO"><meta data-rh="true" property="og:url" content="https://docs.genie.com/documentation/docs/tutorials/circuit tutorials/two-stage-opamp"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Two-Stage Op-Amp | Genie User Manual"><meta data-rh="true" name="description" content="Creating a New Project"><meta data-rh="true" property="og:description" content="Creating a New Project"><link data-rh="true" rel="icon" href="/documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.genie.com/documentation/docs/tutorials/circuit tutorials/two-stage-opamp"><link data-rh="true" rel="alternate" href="https://docs.genie.com/documentation/docs/tutorials/circuit tutorials/two-stage-opamp" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.genie.com/documentation/docs/tutorials/circuit tutorials/two-stage-opamp" hreflang="x-default"><link rel="stylesheet" href="/documentation/assets/css/styles.65d99f98.css">
-<script src="/documentation/assets/js/runtime~main.15cd936e.js" defer="defer"></script>
+<script src="/documentation/assets/js/runtime~main.1bd63851.js" defer="defer"></script>
 <script src="/documentation/assets/js/main.6bcc2ee8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -58,7 +58,7 @@
 <li>Netlist</li>
 <li>Design Parameters</li>
 <li>Environment Parameters</li>
-<li>Measurements</li>
+<li><a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a></li>
 <li>Simulation Setup</li>
 <li>Genie</li>
 <li>Analytics</li>
@@ -115,11 +115,11 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture">Data Capture<a href="#data-capture" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h4>
 <p><img decoding="async" loading="lazy" alt="Circuit Tutorial 10" src="/documentation/assets/images/ct10-1da2f21cc7bc426cb17a16690718c07d.jpg" width="1154" height="233" class="img_ev3q"></p>
 <p><img decoding="async" loading="lazy" alt="Circuit Tutorial 11" src="/documentation/assets/images/ct11-5c0dd41d87e37cff51f5ed31dcc31324.jpg" width="876" height="691" class="img_ev3q"></p>
-<p>To extract variables defined within the netlist (such as offset), a Data Capture measurement is used.</p>
+<p>To extract variables defined within the netlist (such as offset), a <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> measurement is used.</p>
 <p>This method is suitable for measurements involving let statements.</p>
-<p>Click the Plus (+) icon under Data Capture.</p>
+<p>Click the Plus (+) icon under <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a>.</p>
 <p>Enter the variable name exactly as defined in the netlist (e.g., <code>offset</code>).</p>
-<p>Vector measurements can also be used in Data Capture by:</p>
+<p>Vector measurements can also be used in <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> by:</p>
 <ul>
 <li>Changing the measurement type from Scalar to Vector</li>
 <li>Entering multiple variable names separated by commas</li>
@@ -184,7 +184,7 @@ Targets can also be assigned by importing a JSON file using the Import from File
 <ul>
 <li>Netlist</li>
 <li>Design Parameters</li>
-<li>Measurements</li>
+<li><a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a></li>
 <li>Simulation Setup</li>
 <li>Genie</li>
 <li>Analytics</li>
@@ -236,7 +236,7 @@ Targets can also be assigned by importing a JSON file using the Import from File
 </li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-1">Simulation Setup<a href="#simulation-setup-1" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
-<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>This tab displays the results of the measurement statements added under the <a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a> tab.</p>
 <p>Before running the simulation, Manage Dependencies must be completed.</p>
 <p>To add dependencies:</p>
 <ul>
@@ -273,7 +273,7 @@ Targets can also be assigned by importing a JSON file using the Import from File
 <p>For vector measurements, targets can be assigned using Graph Mode, since optimization occurs across multiple instances.</p>
 <p>Click Open Graph to assign vector targets.</p>
 <p><img decoding="async" loading="lazy" alt="Circuit Tutorial 27" src="/documentation/assets/images/ct27-39bdd72dcb80d1949ed696212536dc3c.jpg" width="885" height="568" class="img_ev3q"></p>
-<p>Select the X-axis label (e.g., <code>output</code>). The instances entered in the Measurements tab will be listed automatically.</p>
+<p>Select the X-axis label (e.g., <code>output</code>). The instances entered in the <a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a> tab will be listed automatically.</p>
 <p>Targets (Y-values) can be set:</p>
 <ul>
 <li>Manually (for a small number of points), or</li>
@@ -301,7 +301,7 @@ Targets can also be assigned by importing a JSON file using the Import from File
 <ul>
 <li>Netlist</li>
 <li>Design Parameters</li>
-<li>Measurements</li>
+<li><a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a></li>
 <li>Simulation Setup</li>
 <li>Genie</li>
 <li>Analytics</li>
@@ -354,22 +354,22 @@ Targets can also be assigned by importing a JSON file using the Import from File
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-capture-1">Data Capture<a href="#data-capture-1" class="hash-link" aria-label="Direct link to Data Capture" title="Direct link to Data Capture">​</a></h4>
 <p><img decoding="async" loading="lazy" alt="Circuit Tutorial 36" src="/documentation/assets/images/ct36-0770bbb6fa7bdcd4af36dd425f04e7ce.jpg" width="1075" height="459" class="img_ev3q"></p>
-<p>To extract variables directly from the netlist, a Data Capture measurement is used.</p>
+<p>To extract variables directly from the netlist, a <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> measurement is used.</p>
 <p>This method is suitable for measurements involving let statements.</p>
 <p><img decoding="async" loading="lazy" alt="Circuit Tutorial 37" src="/documentation/assets/images/ct37-8bf511d9d92f3036864c9500d3bc1185.jpg" width="807" height="690" class="img_ev3q"></p>
-<p>In this tutorial, the variables <code>ubw</code> and <code>pm</code> are calculated using let statements. Therefore, Data Capture is used.</p>
-<p>To add a Data Capture measurement:</p>
+<p>In this tutorial, the variables <code>ubw</code> and <code>pm</code> are calculated using let statements. Therefore, <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> is used.</p>
+<p>To add a <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> measurement:</p>
 <ul>
-<li>Click the Plus (+) icon under Data Capture</li>
+<li>Click the Plus (+) icon under <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a></li>
 <li>Enter the variable name exactly as defined in the netlist</li>
 </ul>
-<p>Vector measurements can also be used in Data Capture by:</p>
+<p>Vector measurements can also be used in <a href="/documentation/docs/Projects/manage-circuits/measurements/data-capture">Data Capture</a> by:</p>
 <ul>
 <li>Changing the measurement type from Scalar to Vector</li>
 <li>Entering multiple variable names separated by commas</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="simulation-setup-2">Simulation Setup<a href="#simulation-setup-2" class="hash-link" aria-label="Direct link to Simulation Setup" title="Direct link to Simulation Setup">​</a></h3>
-<p>This tab displays the results of the measurement statements added under the Measurements tab.</p>
+<p>This tab displays the results of the measurement statements added under the <a href="/documentation/docs/Projects/manage-circuits/measurements/">Measurements</a> tab.</p>
 <p>Before running the simulation, Manage Dependencies must be completed.</p>
 <p>To include dependencies:</p>
 <ul>
