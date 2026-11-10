@@ -70,3 +70,7 @@ The diagram explains the system architecture, and DGenie's role is to:
 - Provide a clear, visual way to track progress and improvements
 
 All you need is a browser, a supported simulator, and (optionally) an AI framework—DGenie handles the rest.
+
+---
+
+<small>© 2026 AsterQuanta Systems Inc. All rights reserved. Cadence, Synopsys, Mentor Graphics, Ansys, PyTorch, TensorFlow, and their respective logos are trademarks or registered trademarks of their respective owners. Used for illustrative purposes only; no affiliation or endorsement is implied.</small>
